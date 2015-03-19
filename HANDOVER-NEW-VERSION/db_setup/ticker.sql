@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 18, 2015 at 11:36 AM
+-- Generation Time: Mar 19, 2015 at 02:34 AM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.9
 
@@ -29,9 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `ticker` (
   `tickerDisplay` varchar(5) NOT NULL DEFAULT 'yes',
   `tickerDesc` varchar(190) NOT NULL,
-  `_userId` int(11) NOT NULL,
-  PRIMARY KEY (`tickerDesc`),
-  FOREIGN KEY (`_userId`) REFERENCES user(`userId`)
+  PRIMARY KEY (`tickerDesc`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 18, 2015 at 11:36 AM
+-- Generation Time: Mar 19, 2015 at 02:33 AM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.9
 
@@ -64,7 +64,6 @@ CREATE TABLE IF NOT EXISTS `dashstatus` (
   `cssNetwork` varchar(10) NOT NULL,
   `cssTelePbx` varchar(10) NOT NULL,
   `cssErpBss` varchar(10) NOT NULL,
-  `_userId` int(11) NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -73,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `dashstatus` (
 --
 
 INSERT INTO `dashstatus` (`id`, `freeSms`, `sectors`, `netAvail2G`, `trafVol2G`, `netLocSuc2G`, `netAvail3G`, `trafVol3G`, `voiceTraf2G`, `callCompRate2G`, `callSuccRate2G`, `callCompRate3G`, `callSuccRate3G`, `dataVol2G`, `edgeThru2G`, `gprsThru2G`, `dataVol3G`, `pakSetSuc3G`, `pakCompRate3G`, `mmsCompRate`, `smsCompRate`, `pssVoice`, `pssData`, `pssMessaging`, `pssRoaming`, `pss2GNetwork`, `pss3GNetwork`, `essCustMgmnt`, `essCustBill`, `essServProv`, `essTopUp`, `essRetPos`, `cssDataWareBI`, `cssEmail`, `cssNetwork`, `cssTelePbx`, `cssErpBss`) VALUES
-(1, 57, 97, 93, 96, 57, 92, 91, 93, 95, 96, 56, 9, 446, 112, 47, 117, 46, 119, 30, 39, 'amber', 'amber', 'amber', 'amber', 'amber', 'amber', 'red', 'red', 'red', 'red', 'red', 'amber', 'amber', 'amber', 'amber', 'amber');
+(1, 57, 97, 93, 96, 57, 92, 91, 93, 95, 96, 56, 40, 446, 112, 47, 117, 46, 119, 32, 40, 'amber', 'amber', 'amber', 'green', 'amber', 'amber', 'red', 'green', 'red', 'red', 'red', 'green', 'red', 'amber', 'green', 'green');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
