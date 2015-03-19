@@ -88,6 +88,7 @@ function getIncStatusMenu($incStatus=null)
 	}
 	return $incStatusMenu;
 }
+
 /**
  * Function builds a string for a user category SELECT box
  * 

@@ -17,15 +17,11 @@ if(!isset($_SESSION))
 function index()
 {
 	global $twig;
-	//global $isLoggedIn;
-	//global $username;
 	
 	# if this option is clicked then the user is assumed to not be logged in
 	unset($_SESSION);
 	
 	$args_array=array(
-		//'isLoggedIn' 	=> $isLoggedIn,
-		//'username'		=>	$username,
 	);
 	
 	$template = 'index';
@@ -88,8 +84,6 @@ function login()
 		header('Location: ./messageDisplay?messageId=1');
 	}
 }
-
-
 /**
  * Function informs the user that they have attempted an action that incorrect or not available
  */

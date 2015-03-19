@@ -165,21 +165,7 @@ function authIncident()
 		# action to be used in form
 		$action='./authUpdateIncident';
 	}
-	//else 
-	//{
-		//echo 'SUBMITTING QUERY LINE 162<BR>';
-		//ECHO '<br>start is..'.$start;
-		//echo '<br>count is '.$count;
-		
-		# retrieve the records
-		//$incArr=getIncRecordArr($searchParam,$start,$count);
-		
-		# get the total number of incidents of type RAN
-		//$totalRecords=sizeof($incArr);
-		
-		//echo '<br>totalRecords line 168-'.$totalRecords;
-	//}
-	
+
 	# Create Incident button doesn't display for DashDisplay incidents
 	if('DASHDISPLAYED'==$searchParam)
 	{
@@ -195,8 +181,6 @@ function authIncident()
 		'message'			=> $message,
 		'displayCreateBtn' 	=> $displayCreateBtn,
 	);
-	
-	//echo 'totalRecords '.$totalRecords;
 	
 	# if no previous incidents found
 	if($totalRecords==0)
@@ -348,8 +332,6 @@ function authUpdateIncident()
 		exit;
 	}
 	
-	//echo 'POST is ';
-	//print_r($_POST);
 	
 	# check that the form button was pressed before 
  	if(isset($_POST['updateInc']))
@@ -373,15 +355,11 @@ function authUpdateIncident()
 		
 		if($incUpdated)
 		{
-			//echo 'success';
-			//exit;
 			header('Location: ./messageDisplay?messageId=13&searchParam='.$incCat);		
 			exit;
 		}
 		else
 		{
-			//echo 'failure';
-			//exit;
 			header('Location: ./messageDisplay?messageId=14&searchParam='.$incCat);		
 			exit;
 		}		
@@ -457,74 +435,6 @@ function authExportMySqlToExcel()
 	
 	ob_end_flush();
 }
-
-/**
- * Function displays a list of RAN incidents or else a form to enter one
- */
-
-/*function authRAN()
-{
-	global $twig;
-	global $nav;
-	
-	$loggedInText=null;
-	$userCat=null;
-	
-	# check if user is authenticated
-	if(isset($_SESSION['authenticated']))
-	{
-		if(isset($_SESSION['loggedInText']))
-		{
-			$loggedInText=$_SESSION['loggedInText'];
-		}
-		if(isset($_SESSION['userCat']))
-		{
-			$userCat=$_SESSION['userCat'];
-		}
-	}
-	# retrieve the ticker value
-	$ticker=getTicker();
-	
-	echo 'in RAN section';
-	# check how many previous records exist of type Internet
-	
-	
-	/*$args_array=array(
-		'loggedInText' 	=> $loggedInText,
-		'ticker' 		=> $ticker,
-		'nav'			=> $nav,
-		'userCat'		=> $userCat,
-	);
-	$template='auth_incident';
-	echo $twig->render($template.'.html.twig',$args_array);	
-}*/
-
-/*
-function authCRM()
-{
-	echo 'CRM page';
-}
-
-function authBPOps()
-{
-	echo 'BPOps page';
-}
-
-function authLeon()
-{
-	echo 'Leon page';
-}
-
-function authShiftLead()
-{
-	echo 'ShiftLead page';
-}
-
-function authDashDisplayed()
-{
-	echo 'DashDisplayed page';
-}
-*/
 
 /**
  * Function provides access to authorised ticker page
@@ -726,44 +636,44 @@ function authDashAdmin()
 	$cssErpBssMenu  	=getTrafficLightMenu($dashAdminArr['cssErpBss'],'cssErpBss','ERP/BSS');  	
 	
 	$args_array=array(
-	'nav'			=> $nav,
-	'loggedInText'	=> $loggedInText,
-	'freeSms' =>  	$dashAdminArr['freeSms'], 
-	'sectors' =>  	$dashAdminArr['sectors'], 
-	'pssVoiceMenu' =>  	$pssVoiceMenu,
-	'pssDataMenu' =>  	$pssDataMenu, 
-	'pssMessagingMenu' =>  	$pssMessagingMenu, 
-	'pssRoamingMenu' =>  	$pssRoamingMenu, 
-	'pss2GNetworkMenu' =>  	$pss2GNetworkMenu, 
-	'pss3GNetworkMenu' =>  	$pss3GNetworkMenu, 
-	'essCustMgmntMenu' =>  	$essCustMgmntMenu, 
-	'essCustBillMenu' =>  	$essCustBillMenu, 
-	'essServProvMenu' =>  	$essServProvMenu, 
-	'essTopUpMenu' =>  		$essTopUpMenu, 
-	'essRetPosMenu' =>  	$essRetPosMenu, 
-	'cssDataWareBIMenu' =>  $cssDataWareBIMenu, 
-	'cssEmailMenu' 		=>  $cssEmailMenu, 
-	'cssNetworkMenu' =>  	$cssNetworkMenu, 
-	'cssTelePbxMenu' => 	$cssTelePbxMenu,
-	'cssErpBssMenu' =>  	$cssErpBssMenu, 
-	'netAvail2G' =>  	$dashAdminArr['netAvail2G'], 
-	'trafVol2G' =>  	$dashAdminArr['trafVol2G'], 
-	'netLocSuc2G' =>  	$dashAdminArr['netLocSuc2G'], 
-	'netAvail3G' =>  	$dashAdminArr['netAvail3G'], 
-	'trafVol3G' =>  	$dashAdminArr['trafVol3G'], 
-	'voiceTraf2G' =>  	$dashAdminArr['voiceTraf2G'], 
-	'callCompRate2G' =>  	$dashAdminArr['callCompRate2G'], 
-	'callSuccRate2G' =>  	$dashAdminArr['callSuccRate2G'], 
-	'callCompRate3G' =>  	$dashAdminArr['callCompRate3G'], 
-	'callSuccRate3G' =>  	$dashAdminArr['callSuccRate3G'], 
-	'dataVol2G' =>  	$dashAdminArr['dataVol2G'], 
-	'edgeThru2G' =>  	$dashAdminArr['edgeThru2G'], 
-	'gprsThru2G' =>  	$dashAdminArr['gprsThru2G'], 
-	'dataVol3G' =>  	$dashAdminArr['dataVol3G'], 
-	'pakSetSuc3G' =>  	$dashAdminArr['pakSetSuc3G'], 
-	'pakCompRate3G' =>  	$dashAdminArr['pakCompRate3G'], 
-	'mmsCompRate' =>  	$dashAdminArr['mmsCompRate'], 
-	'smsCompRate' =>  	$dashAdminArr['smsCompRate'], 
+	'nav'					=> $nav,
+	'loggedInText'			=> $loggedInText,
+	'freeSms' 				=> $dashAdminArr['freeSms'], 
+	'sectors' 				=> $dashAdminArr['sectors'], 
+	'pssVoiceMenu' 			=> $pssVoiceMenu,
+	'pssDataMenu' 			=> $pssDataMenu, 
+	'pssMessagingMenu' 		=> $pssMessagingMenu, 
+	'pssRoamingMenu' 		=> $pssRoamingMenu, 
+	'pss2GNetworkMenu' 		=> $pss2GNetworkMenu, 
+	'pss3GNetworkMenu' 		=> $pss3GNetworkMenu, 
+	'essCustMgmntMenu' 		=> $essCustMgmntMenu, 
+	'essCustBillMenu' 		=> $essCustBillMenu, 
+	'essServProvMenu' 		=> $essServProvMenu, 
+	'essTopUpMenu' 			=> $essTopUpMenu, 
+	'essRetPosMenu' 		=> $essRetPosMenu, 
+	'cssDataWareBIMenu' 	=> $cssDataWareBIMenu, 
+	'cssEmailMenu' 			=> $cssEmailMenu, 
+	'cssNetworkMenu' 		=> $cssNetworkMenu, 
+	'cssTelePbxMenu' 		=> $cssTelePbxMenu,
+	'cssErpBssMenu' 		=> $cssErpBssMenu, 
+	'netAvail2G' 			=> $dashAdminArr['netAvail2G'], 
+	'trafVol2G' 			=> $dashAdminArr['trafVol2G'], 
+	'netLocSuc2G' 			=> $dashAdminArr['netLocSuc2G'], 
+	'netAvail3G' 			=> $dashAdminArr['netAvail3G'], 
+	'trafVol3G' 			=> $dashAdminArr['trafVol3G'], 
+	'voiceTraf2G' 			=> $dashAdminArr['voiceTraf2G'], 
+	'callCompRate2G' 		=> $dashAdminArr['callCompRate2G'], 
+	'callSuccRate2G' 		=> $dashAdminArr['callSuccRate2G'], 
+	'callCompRate3G' 		=> $dashAdminArr['callCompRate3G'], 
+	'callSuccRate3G' 		=> $dashAdminArr['callSuccRate3G'], 
+	'dataVol2G' 			=> $dashAdminArr['dataVol2G'], 
+	'edgeThru2G' 			=> $dashAdminArr['edgeThru2G'], 
+	'gprsThru2G' 			=> $dashAdminArr['gprsThru2G'], 
+	'dataVol3G' 			=> $dashAdminArr['dataVol3G'], 
+	'pakSetSuc3G' 			=> $dashAdminArr['pakSetSuc3G'], 
+	'pakCompRate3G' 		=> $dashAdminArr['pakCompRate3G'], 
+	'mmsCompRate' 			=> $dashAdminArr['mmsCompRate'], 
+	'smsCompRate' 			=> $dashAdminArr['smsCompRate'], 
 	);
 	
 	$template='auth_dash_admin';
@@ -837,17 +747,11 @@ function authDashboardAdminUpdate()
 	
 		if($dashUpdated)
 		{
-			//echo 'success';
-			//exit;
-			
 			header('Location: ./messageDisplay?messageId=11');
 			exit;
 		}
 		else 
 		{
-			//echo 'not success';
-			//exit;
-			
 			header('Location: ./messageDisplay?messageId=12');
 			exit;
 		}
@@ -951,9 +855,6 @@ function authUserCreated()
 	# check that form was submitted else display an error message
 	if(isset($_POST['create']))
 	{
-		
-		//if(isset($_POST['userId']))
-		//	$userId=filter_input(INPUT_POST,'userId',FILTER_SANITIZE_NUMBER_INT);
 		if(isset($_POST['userFName']))
 			$userFName=filter_input(INPUT_POST,'userFName',FILTER_SANITIZE_STRING);
 		if(isset($_POST['userSName']))
@@ -966,8 +867,8 @@ function authUserCreated()
 		{
 			$userPassword=filter_input(INPUT_POST,'userPassword',FILTER_SANITIZE_STRING);
 			
-			# add SALT to the password and encrypt			
-			$userPasswordEncrypted=md5($userPassword);//.PASSWORD_SALT);
+			# encrypt			
+			$userPasswordEncrypted=md5($userPassword);
 		}
 		if(isset($_POST['userCat']))
 			$userCat=filter_input(INPUT_POST,'userCat',FILTER_SANITIZE_STRING);
@@ -1088,8 +989,6 @@ function authUserDeleted()
 				header('Location: ./messageDisplay?messageId=9');
 				exit;
 			}
-					
-
 		}
 	}
 	
@@ -1204,7 +1103,6 @@ function authEditUser()
 		{
 			$loggedInText=$_SESSION['loggedInText'];
 		}
-
 	}
 	
 	# check that form was submitted else display an error message

@@ -165,8 +165,6 @@ function findUserCat()
 	$query="INSERT INTO `user` (`userId`, `userFName`, `userSName`, `userLogin`, `userPassword`, `userCat`, `userEmail`, `userActive`) 
 			VALUES(NULL,'".$userFName."','".$userSName."','".$userLogin."','".$userPasswordEncrypted."','".$userCat."','".$userEmail."','Yes')";
 	
-	//echo $query;
-	//exit;
 	
 	# execute query and save result to an array
 	$createUser=$db->updateRecord($query);
@@ -323,13 +321,8 @@ function findUserCat()
 		
 		echo $query.'<br>';
 		
-
 		# execute each query and temp store result as a boolean before overwriting
 		$updateDashAdmin=$db->updateRecord($query);
-		
-		
-		//echo 'success '.$updateDashAdmin;
-		//exit;
 		
 		# if one of the updates fail then notify the user immediately for them to retry submiting the form
 		if(false==$updateDashAdmin)
