@@ -1,0 +1,83 @@
+{#--------------------------------#}
+{# templates/austh_admin.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Admin
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+	{{ loggedInText | raw }}
+{% endblock %}
+
+
+{#--------------------------------#}
+{% block nav %}
+	{{ nav | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+	
+<div id="adminSection">
+<table border ="0" cellpadding="2" cellspacing="2" width="90%">
+	<tr><td colspan="7"><div class="adminTable3"><h3>{{ numUsers }} {{ search }}</h3></div></td></tr>
+	
+	<tr>
+		<th><div class="adminTable4">Surname</div></th>
+		<th><div class="adminTable4">First Name</div></th>
+		<th><div class="adminTable4">Username</div></th>
+		<th><div class="adminTable4">Category</div></th>
+		<th><div class="adminTable4">Email</div></th>
+		<th>&nbsp;</th>
+		<th >	
+			<div class="adminTable">
+				<form action="./authCreateUser" method="POST" formID="formCreate">
+					<input type="submit" name="createUser" value="create user" class="btnUsers">
+				</form>
+			</div>
+		</th>
+	</tr>
+	
+	<!--THIS will loop through the associateive array USER Details-->
+	{% for user in userArr %}
+		<tr>
+			<td><div class="adminTable">{{ user.userSName }}</div></td>
+			<td><div class="adminTable">{{ user.userFName }}</div></td>
+			<td><div class="adminTable">{{ user.userLogin }}</div></td>
+			<td><div class="adminTable">{{ user.userCat }}</div></td>
+			<td><div class="adminTable">{{ user.userEmail }}</div></td>
+			<td>
+				<div class="adminTable">
+						<form action="./authEditUser" method="POST" formID="formUpdate">
+						<input type="hidden" name="userId" value="{{ user.userId }}">
+						<input type="submit" name="editUser" value="edit" class="btnUsers">
+						</form>
+				</div>
+			</td>
+
+			<td>				
+				<div class="adminTable">
+						<form action="./authDeleteUser" method="POST" formID="formUpdate">
+						<input type="hidden" name="userId" value="{{ user.userId }}">
+						<input type="submit" name="deleteUser" value="delete" class="btnUsers">
+						</form>
+				</div>
+			</td>
+			
+		</tr>
+	{% endfor %}
+</table>
+</div>
+
+
+
+
+	
+{% endblock %}

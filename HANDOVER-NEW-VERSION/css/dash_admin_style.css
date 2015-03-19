@@ -1,0 +1,48 @@
+#adminFormSearch .grid_8
+{
+	border-bottom: 1px solid #4D4D4D;
+	padding-bottom:1em;
+}
+
+#adminFormSearch .grid_8#btnDiv
+{
+	border-bottom: 0;
+}
+
+.smsOffAirDiv,
+.cssDiv,
+.essDiv,
+.css2Div
+{
+	display:inline;
+	padding-bottom:1em;
+	padding-right:3em;
+}
+
+#css h3,
+#ess h3,
+#css2 h3,
+#nsc h3
+{
+	text-decoration:underline;
+}
+
+#css h3,
+#cssContainer1,
+#cssContainer2,
+#ess h3,
+#essContainer1,
+#essContainer2,
+#essContainer3,
+#css2 h3,
+#css2Container1,
+#css2Container2,
+#nsc h3,
+#nscContainer1,
+#nscContainer2,
+#nscContainer3,
+.nscDiv,
+.dsDiv
+{
+	padding-top:1em;
+}

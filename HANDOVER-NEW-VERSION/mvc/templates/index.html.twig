@@ -1,0 +1,65 @@
+{#--------------------------------#}
+{# templates/index.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Index
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block nav %}
+	&nbsp;
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+	{#--------------- NEW LINE -----------------#}
+	<div id="spacer1" class="grid_12">&nbsp</div>
+	{#--------------- NEW LINE -----------------#}
+	<div id="spaced2" class="grid_12">&nbsp</div>
+	{#--------------- NEW LINE -----------------#}
+	
+	<form method="POST" action="./login">
+		<div id="spacer_left" class="grid_5">&nbsp;</div>
+		
+		<div id="login_form1" class="grid_2">	
+			<label for="userLogin">Username:</label> 
+			<input type="text" name="userLogin" class="textBox">
+		</div>		
+		
+		<div id="spacer_right" class="grid_5">&nbsp;</div>	
+		
+		{#--------------- NEW LINE -----------------#}	
+		
+		<div id="spaced3" class="grid_12">&nbsp</div>	
+		
+		{#--------------- NEW LINE -----------------#}	
+		
+		<div id="spacer_left2" class="grid_5">&nbsp;</div>			
+		
+		<div id="login_form2" class="grid_2">
+			<label for="userPassword">Password:</label>  
+			<input type="password" name="userPassword" class="textBox">
+		</div>
+		
+		<div id="spacer_right2" class="grid_5">&nbsp;</div>	
+		{#--------------- NEW LINE -----------------#}	
+		<div id="spaced4" class="grid_12">&nbsp</div>	
+		{#--------------- NEW LINE -----------------#}	
+		
+		<div id="spacer_left4" class="grid_5">&nbsp;</div>
+		
+		<div id="login_form3" class="grid_2">	
+			<input type="submit" name="login" value="login" class="btnLogin">
+			<input type="hidden" name="login" id="login">		
+		</div>	
+		
+		<div id="spacer_right2" class="grid_5">&nbsp;</div>		
+	</form>
+	
+{% endblock %}

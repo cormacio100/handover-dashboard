@@ -1,0 +1,41 @@
+{#--------------------------------#}
+{# templates/message_display.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Message Display
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+	{{ loggedInText | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block nav %}
+	{{ nav | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+	
+		{#--------------NEW LINE --------------#}
+		<div id="spacer1" class="grid_12">&nbsp</div>
+		{#--------------NEW LINE --------------#}
+		<div id="spaced2" class="grid_12">&nbsp</div>
+		{#--------------NEW LINE --------------#}
+			<div id="spacer_left" class="grid_3">&nbsp;</div>
+			<div id="login_form1" class="grid_6">	
+				{{ messageText | raw }}
+			</div>		
+			<div id="spacer_right" class="grid_3">&nbsp;</div>		
+		{#--------------NEW LINE --------------#}
+			<div id="spaced3" class="grid_12">&nbsp</div>	
+	
+{% endblock %}

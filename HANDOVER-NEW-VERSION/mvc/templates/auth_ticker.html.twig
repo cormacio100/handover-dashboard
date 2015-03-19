@@ -1,0 +1,68 @@
+{#--------------------------------#}
+{# templates/auth_ticker.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Ticker
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+	{{ loggedInText | raw }}
+{% endblock %}
+
+
+{#--------------------------------#}
+{% block nav %}
+	{{ nav | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+	
+<div id="adminFormSearch" class="container_12">
+	<div id="separator" class="grid_12">
+		&nbsp;
+	</div>
+	<div id="separator" class="grid_12">
+		&nbsp;
+	</div>
+<!-----------------------------------Line 1--------------------------------------------->
+	<div class="grid_1">
+		&nbsp;
+	</div>
+		<form action="./authCreateTicker" method="POST">
+			<div id="siteSelect" class="grid_10">		
+				<label for="tickerDesc">Ticker Description:</label>
+				<input type="text" name="tickerDesc" id="tickerDesc" value="{{ ticker }}" size="100" maxlength="190"></p>
+			</div>
+			
+			<div class="grid_1">
+				&nbsp;
+			</div>
+		
+			<!-----------------------------------Line 2--------------------------------------------->
+		
+			<div id="separator" class="grid_12">
+				&nbsp;
+			</div>
+		
+			<!-----------------------------------Line 3--------------------------------------------->
+			<div class="grid_5">&nbsp;</div>
+			
+			<div id="button" class="grid_3">
+				<input type="submit" name="createTicker" value="Create" class="btn">
+			</div>
+			
+			<div class="grid_4">&nbsp;</div>
+			
+		</form>
+
+</div> <!--END DIV adminFormSearch -----> 
+	
+{% endblock %}

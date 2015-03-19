@@ -1,0 +1,71 @@
+{#--------------------------------#}
+{# templates/auth_home.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Home
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+	{{ loggedInText | raw }}
+{% endblock %}
+
+
+{#--------------------------------#}
+{% block nav %}
+	{{ nav | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+	
+<div id="adminFormSearch" class="container_12">
+	<div id="separator" class="grid_12">
+		&nbsp;
+	</div>
+	<div id="separator" class="grid_12">
+		&nbsp;
+	</div>
+	{#-----------------------------------Line 1---------------------------------------------#}
+	<div id="blankLeft_3" class="grid_4">
+		&nbsp;
+	</div>
+	<form action="./authForwardTo" method="POST">
+		<div id="siteSelect" class="grid_4">		
+			<label for="authSection">Select a Site:</label>
+			{# Different menu options should be displayed to different user categories #}			
+			<select name="authSection" id="authSection">
+				<option value="handover">Handover</option>
+				{% if 'admin' in userCat %}
+					<option value="handoverAdmin">Handover Admin</option>
+				{% endif %}
+				<option value="dashboardAdmin">Dashboard Admin</option>
+				<option value="dashboardClient">Dashboard Client</option>
+			</select>	
+		</div>
+	
+		<div id="blankRight_3" class="grid_4">
+			&nbsp;
+		</div>
+		{#-----------------------------------Line 2--------------------------------------------#}
+		<div id="separator" class="grid_12">
+			&nbsp;
+		</div>
+		{#-----------------------------------Line 3--------------------------------------------#}
+		<div id="leftBlank5" class="grid_5">&nbsp;</div>
+		
+		<div id="button" class="grid_3">
+			<input class="btnAdmin" type="submit" name="goThere" value="Go There" >
+		</div>
+		
+		<div id="rightBlank5" class="grid_4">&nbsp;</div>
+	</form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,200 @@
+{#--------------------------------#}
+{# templates/auth_dash_admin.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+DashBoard Admin
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block style %}
+@import "css/dash_admin_style.css";
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+{{ loggedInText | raw }}
+{% endblock %}
+
+
+{#--------------------------------#}
+{% block nav %}
+{{ nav | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+<div id="adminFormSearch" class="container_12">
+	<form action="./authDashboardAdminUpdate" method="POST">
+		<div class="grid_12">
+			&nbsp;
+		</div>
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_2">
+			&nbsp;
+		</div>
+		<div id="mainDashAdmin1" class="grid_8">		
+			<h1>Dashboard Administration</h1>
+		</div>
+		<div class="grid_2">
+			&nbsp;
+		</div>
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_12">
+			&nbsp;
+		</div>
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_2">
+			&nbsp;
+		</div>
+		<div id="smsOffAir" class="grid_8">		
+			<div class="smsOffAirDiv">Free SMS <input type = "text" name = "freeSms" value="{{ freeSms }}" size="10" maxlength="190"></div>
+			<div class="smsOffAirDiv">Sectors Off Air <input type = "text" name = "sectors" value="{{ sectors }}" size="10" maxlength="190"></div>	
+		</div>
+		<div class="grid_2">
+			&nbsp;
+		</div>	
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_12">
+			&nbsp;
+		</div>
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_2">
+			&nbsp;
+		</div>
+		<div id="css" class="grid_8">		
+			<h2>Current Service Status</h2>
+			<h3>Primary Service Status</h3>
+			<div id="cssContainer1">
+				<div class="cssDiv">{{ pssVoiceMenu | raw }}</div>
+				<div class="cssDiv">{{ pssDataMenu | raw }}</div>
+				<div class="cssDiv">{{ pssMessagingMenu | raw  }}</div>
+			</div>	
+			<div id="cssContainer2">
+				<div class="cssDiv">{{ pssRoamingMenu | raw  }}</div>	
+				<div class="cssDiv">{{ pss2GNetworkMenu | raw  }}</div>	
+				<div class="cssDiv">{{ pss3GNetworkMenu | raw  }}</div>	
+			</div>	
+		</div>
+		<div class="grid_2">
+			&nbsp;
+		</div>		
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_12">
+			&nbsp;
+		</div>
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_2">
+			&nbsp;
+		</div>
+		<div id="ess" class="grid_8">		
+			<h3>Enablement Service Status</h3>
+			<div id="essContainer1">
+				<div class="essDiv">{{ essCustMgmntMenu | raw }}</div>
+				<div class="essDiv">{{ essCustBillMenu | raw }}</div>
+			</div>	
+			<div id="essContainer2">
+				<div class="essDiv">{{ essServProvMenu | raw }}</div>
+				<div class="essDiv">{{ essTopUpMenu | raw }}</div>
+			</div>	
+			<div id="essContainer3">
+				<div class="essDiv">{{ essRetPosMenu | raw }}</div>	
+			</div>	
+		</div>
+		<div class="grid_2">
+			&nbsp;
+		</div>	
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_12">
+			&nbsp;
+		</div>
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_2">
+			&nbsp;
+		</div>
+		<div id="css2" class="grid_8">		
+			<h3>Corporate Service Status</h3>
+			<div id="css2Container1">
+				<div class="essDiv">{{ cssDataWareBIMenu | raw }}</div>
+				<div class="essDiv">{{ cssEmailMenu | raw }}</div>
+				<div class="essDiv">{{ cssNetworkMenu | raw }}</div>
+			</div>	
+			<div id="css2Container2">
+				<div class="essDiv">{{ cssTelePbxMenu | raw }}</div>
+				<div class="essDiv">{{ cssErpBssMenu | raw }}</div>
+			</div>	
+		</div>
+		<div class="grid_2">
+			&nbsp;
+		</div>		
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_12">
+			&nbsp;
+		</div>
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_2">
+			&nbsp;
+		</div>
+		<div id="nsc" class="grid_8">		
+			<h2>Network Service Checks</h2>
+			<div id="nscContainer1">
+				<h3>2G/3G Network</h3>
+				<div class="nscDiv"><label for="netAvail2G">2G Network Availability (%):</label> <input type="text" id ="netAvail2G" name="netAvail2G" value="{{ netAvail2G }}" size="10" maxlength="10"></div>
+				<div class="nscDiv"><label for="trafVol2G">2G Traffic Volume (Erlangs):</label> <input type="text" id="trafVol2G"  name="trafVol2G" value="{{ trafVol2G }}" size="10" maxlength="10"></div>
+				<div class="nscDiv"><label for="netLocSuc2G">2G Network Location Success Rate (%):</label> <input type="text" id="netLocSuc2G" name="netLocSuc2G" value="{{ netLocSuc2G }}" size="10" maxlength="10"></div>
+				<div class="nscDiv"><label for="netAvail3G">3G Network Availability (%):</label> <input type="text" id="netAvail3G" name="netAvail3G" value="{{ netAvail3G }}" size="10" maxlength="10"></div>
+				<div class="nscDiv"><label for="trafVol3G">3G Traffic Volume (Erlangs): </label><input type="text" id="trafVol3G" name="trafVol3G" value="{{ trafVol3G }}" size="10" maxlength="10"></div>
+			</div>	
+			<div id="nscContainer2">
+				<h3>Voice Services</h3>
+				<div class="nscDiv"><label for="voiceTraf2G">2G Voice Traffic (mins): </label><input type="text" id="voiceTraf2G" name="voiceTraf2G" value="{{ voiceTraf2G }}" size="10" maxlength="10"></div>
+				<div class="nscDiv"><label for="callCompRate2G"> Call Completion Rate (%) :  </label><input type="text" id="callCompRate2G" name="callCompRate2G" value="{{ callCompRate2G }}" size="10" maxlength="10"></div>
+				<div class="nscDiv"><label for="callSuccRate2G">2G Call Success Rate (%) : </label> <input type="text" id="callSuccRate2G" name="callSuccRate2G" value="{{ callSuccRate2G }}" size="10" maxlength="10"></div>
+				<div class="nscDiv"><label for="callCompRate3G">3G Call Completion Rate (%) : </label> <input type="text" id="callCompRate3G" name="callCompRate3G" value="{{ callCompRate3G }}" size="10" maxlength="10"></div>
+				<div class="nscDiv"><label for="callSuccRate3G">3G Call Success Rate (%) :  </label><input type="text" id="callSuccRate3G" name="callSuccRate3G" value="{{ callSuccRate3G }}" size="10" maxlength="10"></div>
+			</div>	
+			<div id="nscContainer3">
+				<h3>Data Services</h3>
+				<div class="dsDiv"><label for="dataVol2G">2G Data Volumes (GB) : </label><input type="text" id="dataVol2G" name="dataVol2G" value="{{ dataVol2G }}" size="10" maxlength="10"></div>
+				<div class="dsDiv"><label for="edgeThru2G">2G Edge Throughput (Kb/s) : </label><input type="text" id="edgeThru2G" name="edgeThru2G" value="{{ edgeThru2G }}" size="10" maxlength="10"></div>
+				<div class="dsDiv"><label for="gprsThru2G">2G GPRS Throughput (Kb/s) : </label><input type="text" id="gprsThru2G" name="gprsThru2G" value="{{ gprsThru2G }}" size="10" maxlength="10"></div>
+				<div class="dsDiv"><label for="dataVol3G">3G Data Volumes (GB) : </label><input type="text" id="dataVol3G" name="dataVol3G" value="{{ dataVol3G }}" size="10" maxlength="10"></div>
+				<div class="dsDiv"><label for="pakSetSuc3G">3G Packet Setup Success Rate (Kb/s) :</label><input type="text" id="pakSetSuc3G"  name="pakSetSuc3G" value="{{ pakSetSuc3G }}" size="10" maxlength="10"></div>
+				<div class="dsDiv"><label for="pakCompRate3G">3G Packet Completion Rate (Kb/s) :</label><input type="text" id="pakCompRate3G" name="pakCompRate3G" value="{{ pakCompRate3G }}" size="10" maxlength="10"></div>
+			</div>
+			<div id="nscContainer4">
+				<h3>Messaging Services</h3>
+				<div class="dsDiv"><label for="mmsCompRate">MMS Completion Rate (%): </label><input type="text" id="mmsCompRate" name="mmsCompRate" value="{{ mmsCompRate }}" size="10" maxlength="10"></div>
+				<div class="dsDiv"><label for="smsCompRate">SMS Completion Rate (%) : </label><input type="text" id="smsCompRate" name="smsCompRate" value="{{ smsCompRate }}" size="10" maxlength="10"></div>
+			</div>
+		</div>
+		<div class="grid_2">
+			&nbsp;
+		</div>	
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_12">
+			&nbsp;
+		</div>
+		{#-----------------------------------New Line---------------------------------------------#}
+		<div class="grid_2">
+			&nbsp;
+		</div>
+		<div id="btnDiv" class="grid_8">		
+			<div id="btnContainer1">
+				<input type="hidden" name="posted" value="posted">
+				<input type="submit" name="updateDash" value="Update" class="btn">
+			</div>	
+		</div>
+		<div class="grid_2">
+			&nbsp;
+		</div>	
+	</form>
+</div>
+
+{% endblock %}
