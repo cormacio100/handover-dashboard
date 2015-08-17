@@ -1,0 +1,61 @@
+{#--------------------------------#}
+{# templates/auth_home.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Home
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+
+    <div class="dropdown">
+        <button class="btn btn-white dropdown-toggle" type="button" data-toggle="dropdown">
+            {{ loggedInText }}
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li class="divider"></li>
+            <li><a href="./logout">Log Out</a></li>
+        </ul>
+    </div>
+    
+{% endblock %}
+
+
+{#--------------------------------#}
+{% block navigation %}
+	&nbsp;
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+    <div class="row">
+        <form action="./authForwardTo" method="POST">
+            <div class="col-sm-4">&nbsp;</div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="authSection">Select a Site:</label>
+                    {# Different menu options should be displayed to different user categories #}
+                    <select name="authSection" id="authSection" class="form-control">
+                        <option value="handover">Handover</option>
+                        {% if 'admin' in userCat %}
+                            <option value="handoverAdmin">Handover Admin</option>
+                        {% endif %}
+                        <option value="dashboardAdmin">Dashboard Admin</option>
+                        <option value="dashboardClient">Dashboard Client</option>
+                    </select>
+                </div>
+                <button type="submit" name="goThere" class="btn btn-orange btn-block">Go There</button>
+            </div>
+            <div class="col-sm-4">&nbsp;</div>
+        </form>
+	</div>
+
+{% endblock %}
+

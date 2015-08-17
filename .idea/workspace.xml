@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21906bc3-dc9a-4d60-a4c1-10779c3d4984" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/handover-dashboard.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/login.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\.project" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\.settings\com.aptana.editor.php.prefs" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\classes\DBPager.class.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\classes\DataObject.class.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\classes\Database.class.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\classes\_Page.class.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\classes\_User.class.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\css\960\960.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\css\960\OLD_style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\css\960\reset.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\css\960\text.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\css\cl_dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\css\dash_admin_style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\db_setup\cr.sql" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\db_setup\dashstatus.sql" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\db_setup\incident.sql" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\db_setup\ticker.sql" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\db_setup\user.sql" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\960layout-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\960layout-2.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\960layout-3.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\960layout.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\960layout.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\Meteor-Intramet-logo[1].png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\amber.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\amber.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\cell-table.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\cell_id.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\corporate-logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\corporate-services-dash.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\corporate-services.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\coverage.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\create.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\demo.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\device.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\enablement-services-dash.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\enablement-services.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\green.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\green.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\header_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\inc_id.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\incident-options.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\incident-table.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\indicator.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\iss_status.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\led_amber.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\led_green.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\led_off.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\led_red.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\led_yellow.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\links.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\logo.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\logo2.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\logo3.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\logo3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\logo4.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\logout.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\logout2.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\menu_bg-old.GIF" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\menu_bg.GIF" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\meteor-logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\msisdn-table.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\msisdn.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\ops.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\primary-services-dash.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\primary-services.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\red.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\red.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\search.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\search.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\search.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\search2.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\searchby.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\side_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\site-design.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\site-design.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\site-design.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\smc-logo.GIF" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\smc-logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\spacer.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\status.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\sub-table.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\tab_bg.GIF" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\top.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\top.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\top2.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\top2.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\top3.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\top3.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\town.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\update.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\update.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\img\update.psd" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\js\cl_dashboard.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\js\cl_dashboard2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\js\jquery-1.11.2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\js\openWindow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\controller.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\controller_auth.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\controller_helper_functions.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\model.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\_layout.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\auth_admin.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\auth_dash_admin.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\auth_delete_user.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\auth_edit_user.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\auth_home.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\auth_incident.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\auth_incident_list.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\auth_ticker.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\dashboardClient.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\error404.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\home.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\index.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\logged_out.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\message_display.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\mvc\templates\template.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\phpinc\config.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\phpinc\includes.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\Epi.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiApi.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiCache.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiCache_Apc.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiCache_Memcached.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiConfig.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiCurl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiDatabase.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiDebug.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiException.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiLogger.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiRoute.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiSession.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiSession_Apc.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiSession_Memcached.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiSession_Php.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Epi\EpiTemplate.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Autoloader.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Compiler.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\CompilerInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Environment.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Error.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Error\Loader.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Error\Runtime.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Error\Syntax.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\ExistsLoaderInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\ExpressionParser.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Extension.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\ExtensionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Extension\Core.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Extension\Escaper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Extension\Optimizer.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Extension\Sandbox.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Extension\Staging.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Extension\StringLoader.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Filter.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\FilterCallableInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\FilterInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Filter\Function.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Filter\Method.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Filter\Node.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Function.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\FunctionCallableInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\FunctionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Function\Function.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Function\Method.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Function\Node.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Lexer.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\LexerInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\LoaderInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Loader\Array.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Loader\Chain.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Loader\Filesystem.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Loader\String.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Markup.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\NodeInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\NodeOutputInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\NodeTraverser.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\NodeVisitorInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\NodeVisitor\Escaper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\NodeVisitor\Optimizer.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\NodeVisitor\SafeAnalysis.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\NodeVisitor\Sandbox.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\AutoEscape.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Block.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\BlockReference.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Body.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Do.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Embed.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Array.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\AssignName.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Add.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\And.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\BitwiseAnd.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\BitwiseOr.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\BitwiseXor.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Concat.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Div.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\EndsWith.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Equal.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\FloorDiv.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Greater.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\GreaterEqual.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\In.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Less.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\LessEqual.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Matches.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Mod.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Mul.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\NotEqual.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\NotIn.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Or.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Power.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Range.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\StartsWith.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Binary\Sub.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\BlockReference.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Call.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Conditional.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Constant.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\ExtensionReference.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Filter.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Filter\Default.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Function.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\GetAttr.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\MethodCall.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Name.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Parent.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\TempName.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Test.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Test\Constant.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Test\Defined.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Test\Divisibleby.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Test\Even.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Test\Null.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Test\Odd.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Test\Sameas.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Unary.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Unary\Neg.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Unary\Not.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Expression\Unary\Pos.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Flush.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\For.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\ForLoop.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\If.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Import.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Include.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Macro.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Module.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Print.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Sandbox.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\SandboxedModule.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\SandboxedPrint.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Set.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\SetTemp.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Spaceless.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Node\Text.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Parser.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\ParserInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Sandbox\SecurityError.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Sandbox\SecurityPolicy.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Sandbox\SecurityPolicyInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\SimpleFilter.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\SimpleFunction.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\SimpleTest.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Template.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TemplateInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Test.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TestCallableInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TestInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\Token.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParserBroker.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParserBrokerInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParserInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\AutoEscape.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Block.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Do.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Embed.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Extends.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Filter.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Flush.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\For.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\From.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\If.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Import.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Include.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Macro.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Sandbox.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Set.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Spaceless.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenParser\Use.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\Twig\TokenStream.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\handover-dashboard\HANDOVER-NEW-VERSION\vendor\setup_twig.php" afterPath="" />
+    </list>
+    <ignored path="handover-dashboard.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="handover-dashboard" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="_layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-21.192308" vertical-offset="231" max-vertical-offset="1360">
+              <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1360">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.615385" vertical-offset="826" max-vertical-offset="8330">
+              <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
+              <folding>
+                <element signature="n#login#0;n#!!top" expanded="false" />
+                <marker date="1439767134735" expanded="true" signature="10189:10240" placeholder="SELECT freeS..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="10306:10357" placeholder="SELECT secto..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="10440:10494" placeholder="SELECT netAv..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="10547:10600" placeholder="SELECT trafV..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="10654:10709" placeholder="SELECT netLo..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="10764:10818" placeholder="SELECT netAv..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="10871:10924" placeholder="SELECT trafV..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="10978:11033" placeholder="SELECT voice..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="11091:11149" placeholder="SELECT callC..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="11210:11268" placeholder="SELECT callS..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="11329:11387" placeholder="SELECT callC..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="11448:11506" placeholder="SELECT callS..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="11562:11615" placeholder="SELECT dataV..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="11667:11721" placeholder="SELECT edgeT..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="11774:11828" placeholder="SELECT gprsT..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="11880:11933" placeholder="SELECT dataV..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="11986:12041" placeholder="SELECT pakSe..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="12098:12155" placeholder="SELECT pakCo..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="12212:12267" placeholder="SELECT mmsCo..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="12322:12377" placeholder="SELECT smsCo..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="12429:12481" placeholder="SELECT pssVo..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="12529:12580" placeholder="SELECT pssDa..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="12632:12688" placeholder="SELECT pssMe..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="12743:12797" placeholder="SELECT pssRo..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="12852:12908" placeholder="SELECT pss2G..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="12965:13021" placeholder="SELECT pss3G..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="13078:13134" placeholder="SELECT essCu..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="13190:13245" placeholder="SELECT essCu..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="13300:13355" placeholder="SELECT essSe..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="13407:13459" placeholder="SELECT essTo..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="13509:13562" placeholder="SELECT essRe..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="13613:13666" placeholder="SELECT essRe..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="13716:13768" placeholder="SELECT cssEm..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="13819:13873" placeholder="SELECT cssNe..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="13926:13980" placeholder="SELECT cssTe..dashStatus..." />
+                <marker date="1439767134735" expanded="true" signature="14032:14085" placeholder="SELECT cssEr..dashStatus..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller_auth.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.692308" vertical-offset="329" max-vertical-offset="15606">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <element signature="n#authIncident#0;n#!!top" expanded="false" />
+                <element signature="n#authAddIncident#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="10744">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <marker date="1439765213414" expanded="true" signature="476:596" placeholder="SELECT userF..user..." />
+                <marker date="1439765213414" expanded="true" signature="1188:1258" placeholder="UPDATE ticke..." />
+                <marker date="1439765213414" expanded="true" signature="1645:1708" placeholder="SElECT ticke..TICKER..." />
+                <marker date="1439765213414" expanded="true" signature="2153:2228" placeholder="SELECT * FRO..user..." />
+                <marker date="1439765213414" expanded="true" signature="2630:2683" placeholder="SElECT * FRO..user..." />
+                <marker date="1439765213414" expanded="true" signature="3043:3067" placeholder="SELECT userC..user..." />
+                <marker date="1439765213414" expanded="true" signature="3637:3894" placeholder="INSERT INTO ..." />
+                <marker date="1439765213414" expanded="true" signature="4493:4718" placeholder="UPDATE user ..." />
+                <marker date="1439765213414" expanded="true" signature="5184:5249" placeholder="UPDATE user ..." />
+                <marker date="1439765213414" expanded="true" signature="5671:5716" placeholder="SELECT * FRO..dashStatus..." />
+                <marker date="1439765213414" expanded="true" signature="6731:6752" placeholder="UPDATE dashS..." />
+                <marker date="1439765213414" expanded="true" signature="10882:11015" placeholder="SELECT incId..incident..." />
+                <marker date="1439765213414" expanded="true" signature="11862:11909" placeholder="SELECT * FRO..incident..." />
+                <marker date="1439765213414" expanded="true" signature="12550:12863" placeholder="INSERT INTO ..." />
+                <marker date="1439765213414" expanded="true" signature="13418:13662" placeholder="UPDATE incid..." />
+                <marker date="1439765213414" expanded="true" signature="16745:16853" placeholder="SELECT incRe..incident..." />
+                <marker date="1439765213414" expanded="true" signature="17246:17329" placeholder="SELECT incRe..incident..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/login.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.346154" vertical-offset="197" max-vertical-offset="799">
+              <caret line="32" column="99" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth_home.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_home.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6888112" vertical-offset="31" max-vertical-offset="1139">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigation.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/HANDOVER-NEW-VERSION/mvc/templates/_layout.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/index.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/index.php" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/phpinc/config.inc.php" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/model.php" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/login.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller.php" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/css/custom.css" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_home.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HANDOVER_Bootstrapped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HANDOVER_Bootstrapped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpinc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HANDOVER_Bootstrapped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HANDOVER_Bootstrapped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HANDOVER_Bootstrapped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handover-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HANDOVER_Bootstrapped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="configurable.group.appearance" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\handover-dashboard\HANDOVER_Bootstrapped\mvc\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21906bc3-dc9a-4d60-a4c1-10779c3d4984" name="Default" comment="" />
+      <created>1439758112992</created>
+      <option name="number" value="Default" />
+      <updated>1439758112992</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller.php</url>
+          <line>111</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/phpinc/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="544">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73846155" vertical-offset="27" max-vertical-offset="612">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5811966" vertical-offset="0" max-vertical-offset="585">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="10744">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1439765213414" expanded="true" signature="476:596" placeholder="SELECT userF..user..." />
+            <marker date="1439765213414" expanded="true" signature="1188:1258" placeholder="UPDATE ticke..." />
+            <marker date="1439765213414" expanded="true" signature="1645:1708" placeholder="SElECT ticke..TICKER..." />
+            <marker date="1439765213414" expanded="true" signature="2153:2228" placeholder="SELECT * FRO..user..." />
+            <marker date="1439765213414" expanded="true" signature="2630:2683" placeholder="SElECT * FRO..user..." />
+            <marker date="1439765213414" expanded="true" signature="3043:3067" placeholder="SELECT userC..user..." />
+            <marker date="1439765213414" expanded="true" signature="3637:3894" placeholder="INSERT INTO ..." />
+            <marker date="1439765213414" expanded="true" signature="4493:4718" placeholder="UPDATE user ..." />
+            <marker date="1439765213414" expanded="true" signature="5184:5249" placeholder="UPDATE user ..." />
+            <marker date="1439765213414" expanded="true" signature="5671:5716" placeholder="SELECT * FRO..dashStatus..." />
+            <marker date="1439765213414" expanded="true" signature="6731:6752" placeholder="UPDATE dashS..." />
+            <marker date="1439765213414" expanded="true" signature="10882:11015" placeholder="SELECT incId..incident..." />
+            <marker date="1439765213414" expanded="true" signature="11862:11909" placeholder="SELECT * FRO..incident..." />
+            <marker date="1439765213414" expanded="true" signature="12550:12863" placeholder="INSERT INTO ..." />
+            <marker date="1439765213414" expanded="true" signature="13418:13662" placeholder="UPDATE incid..." />
+            <marker date="1439765213414" expanded="true" signature="16745:16853" placeholder="SELECT incRe..incident..." />
+            <marker date="1439765213414" expanded="true" signature="17246:17329" placeholder="SELECT incRe..incident..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="611">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.615385" vertical-offset="826" max-vertical-offset="8330">
+          <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
+          <folding>
+            <element signature="n#login#0;n#!!top" expanded="false" />
+            <marker date="1439767134735" expanded="true" signature="10189:10240" placeholder="SELECT freeS..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="10306:10357" placeholder="SELECT secto..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="10440:10494" placeholder="SELECT netAv..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="10547:10600" placeholder="SELECT trafV..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="10654:10709" placeholder="SELECT netLo..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="10764:10818" placeholder="SELECT netAv..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="10871:10924" placeholder="SELECT trafV..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="10978:11033" placeholder="SELECT voice..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="11091:11149" placeholder="SELECT callC..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="11210:11268" placeholder="SELECT callS..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="11329:11387" placeholder="SELECT callC..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="11448:11506" placeholder="SELECT callS..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="11562:11615" placeholder="SELECT dataV..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="11667:11721" placeholder="SELECT edgeT..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="11774:11828" placeholder="SELECT gprsT..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="11880:11933" placeholder="SELECT dataV..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="11986:12041" placeholder="SELECT pakSe..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="12098:12155" placeholder="SELECT pakCo..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="12212:12267" placeholder="SELECT mmsCo..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="12322:12377" placeholder="SELECT smsCo..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="12429:12481" placeholder="SELECT pssVo..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="12529:12580" placeholder="SELECT pssDa..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="12632:12688" placeholder="SELECT pssMe..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="12743:12797" placeholder="SELECT pssRo..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="12852:12908" placeholder="SELECT pss2G..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="12965:13021" placeholder="SELECT pss3G..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="13078:13134" placeholder="SELECT essCu..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="13190:13245" placeholder="SELECT essCu..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="13300:13355" placeholder="SELECT essSe..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="13407:13459" placeholder="SELECT essTo..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="13509:13562" placeholder="SELECT essRe..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="13613:13666" placeholder="SELECT essRe..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="13716:13768" placeholder="SELECT cssEm..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="13819:13873" placeholder="SELECT cssNe..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="13926:13980" placeholder="SELECT cssTe..dashStatus..." />
+            <marker date="1439767134735" expanded="true" signature="14032:14085" placeholder="SELECT cssEr..dashStatus..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.692308" vertical-offset="329" max-vertical-offset="15606">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="n#authIncident#0;n#!!top" expanded="false" />
+            <element signature="n#authAddIncident#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.346154" vertical-offset="197" max-vertical-offset="799">
+          <caret line="32" column="99" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.192308" vertical-offset="231" max-vertical-offset="1360">
+          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1360">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6888112" vertical-offset="31" max-vertical-offset="1139">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

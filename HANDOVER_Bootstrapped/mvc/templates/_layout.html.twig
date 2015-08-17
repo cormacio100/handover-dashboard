@@ -1,0 +1,74 @@
+{# _layout.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Generator" CONTENT="Aptana Studio">
+		<meta name="Author" CONTENT="Cormac Liston">
+		<meta name="Keywords" CONTENT="Handover">
+		<meta name="Description" CONTENT="Handover Dashboard system">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			{% block title %}SMC Handover{% endblock %}
+		</title>
+		<style>
+		    @import "css/bootstrap.min.css";
+		    @import "css/custom.css";
+			{% block style %}{% endblock %}
+		</style>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/respond.js"></script>
+    </head>
+ <body>
+    <header>
+        <div class="row" id="header1">
+            <div class="col-sm-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <img src="img/meteor_logo.png" alt="corporate-logo">
+                        </div>
+                        <div class="col-sm-3">
+                            {% block loggedIn %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="header2">
+            <nav class="navbar navbar-default ">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            {% block navigation %}{% endblock %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <marquee class="ticker">
+        {{ ticker }}
+    </marquee>
+
+    <main class="row">
+        <div class="col-sm-12">
+            <div class="container">
+                {% block main %}{% endblock %}
+            </div>
+        </div>
+    </main>
+
+
+ </body>
+</html>

@@ -1,0 +1,66 @@
+{#--------------------------------#}
+{# templates/auth_delete_user.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Delete User
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+	{{ loggedInText | raw }}
+{% endblock %}
+
+
+{#--------------------------------#}
+{% block nav %}
+	{{ nav | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+	
+<div id="editConfirm" class="container_12">
+	
+<div id="spacer1" class="grid_12">&nbsp;</div>
+
+{#--------------NEW LINE --------------#}
+
+	<form action="{{ action }}" method ="POST">
+
+	<div id="leftSpacer1" class="grid_3">&nbsp;</div>
+
+	<div id="deleteUser" class="grid_6">
+		Please confirm that you wish to delete user: {{ userName }}?
+	</div>
+	
+	<div id="rightSpacer1" class="grid_3">&nbsp;</div>
+
+{#--------------NEW LINE --------------#}		
+		
+	<div id="spacer1" class="grid_12">&nbsp;</div>
+	
+{#--------------NEW LINE --------------#}
+		
+	<div id="leftSpacer8" class="grid_3">&nbsp;</div>	
+	<div id="divDelYes" class="grid_3">		
+		<input type="hidden" name="userId" value="{{ userId }}">
+		<input type="submit" name="{{ button1 }}" value="Yes" class="btnUsers">
+	</div>	
+	<div id="buttonDelNo" class="grid_3">		
+		<input type="hidden" name="userId" value="{{ userId }}">
+		<input type="submit" name="{{ button2 }}" value="No" class="btnUsers">
+	</div>
+	<div id="rightSpacer9" class="grid_3">&nbsp;</div>	
+	
+	</form>
+
+	
+</div><!--spacer1-->
+	
+{% endblock %}

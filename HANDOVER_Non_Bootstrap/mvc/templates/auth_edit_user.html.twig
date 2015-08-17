@@ -1,0 +1,173 @@
+{#--------------------------------#}
+{# templates/auth_edit_user.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Edit User
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+	{{ loggedInText | raw }}
+{% endblock %}
+
+
+{#--------------------------------#}
+{% block nav %}
+	{{ nav | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+	
+<div id="editConfirm" class="container_12">
+	
+<div id="spacer1" class="grid_12">&nbsp;</div>
+
+{#--------------NEW LINE --------------#}
+
+	<form action="{{ action }}" method ="POST">
+
+	<div id="leftSpacer1" class="grid_3">&nbsp;</div>
+
+	<div class="grid_6">
+		 {{ userName }}
+	</div>
+	
+	<div id="rightSpacer1" class="grid_3">&nbsp;</div>
+			
+
+{#--------------NEW LINE --------------#}		
+		
+	<div id="spacer1" class="grid_12">&nbsp;</div>	
+
+			
+{#--------------NEW LINE --------------#}
+		
+	<div id="leftSpacer2" class="grid_3">&nbsp;</div>
+	
+	<div  class="grid_3">				
+		First Name
+	</div>
+	
+	<div  class="grid_3">
+		<input type = "text" name="userFName" value="{{ userArr.userFName }}" >
+	</div>
+
+	<div id="rightSpacer2" class="grid_3">&nbsp;</div>		
+
+{#--------------NEW LINE --------------#}		
+		
+	<div id="spacer1" class="grid_12">&nbsp;</div>
+	
+{#--------------NEW LINE --------------#}
+
+	<div id="leftSpacer3" class="grid_3">&nbsp;</div>
+	
+	<div  class="grid_3">		
+		Surname
+	</div>
+	
+	<div  class="grid_3">		
+		<input type = "text" name = "userSName" value="{{ userArr.userSName }}" >	
+	</div>
+	
+	<div id="rightSpacer3" class="grid_3">&nbsp;</div>		
+
+{#--------------NEW LINE --------------#}		
+		
+	<div id="spacer1" class="grid_12">&nbsp;</div>
+			
+{#--------------NEW LINE --------------#}
+	<div id="leftSpacer3" class="grid_3">&nbsp;</div>
+	
+	<div class="grid_3">		
+		Email
+	</div>
+	
+	<div class="grid_3">		
+		<input type="text" name="userEmail" value="{{ userArr.userEmail }}" >	
+	</div>
+	
+	<div id="rightSpacer3" class="grid_3">&nbsp;</div>		
+
+{#--------------NEW LINE --------------#}		
+		
+	<div id="spacer1" class="grid_12">&nbsp;</div>
+			
+{#--------------NEW LINE --------------#}
+	<div id="leftSpacer4" class="grid_3">&nbsp;</div>	
+	
+	<div class="grid_3">			
+		Username
+	</div>
+	
+	<div class="grid_4" >
+		<input type="text" name="userLogin" value="{{ userArr.userLogin }}" {{ readOnly | raw }} >
+		<span id="usernameLoading"><img src="./img/indicator.gif" alt="" /></span>
+		<span id="usernameResult">{{ readOnlyNotice }}</span>
+	</div>
+
+	<div id="rightSpacer4" class="grid_2">&nbsp;</div>		
+	
+{#--------------NEW LINE --------------#}
+	
+	<div id="spacer1" class="grid_12">&nbsp;</div>	
+	
+{#--------------NEW LINE --------------#}
+
+	<div id="leftSpacer5" class="grid_3">&nbsp;</div>	
+	
+	<div class="grid_3">		
+		Password
+	</div>
+	
+	<div class="grid_3">
+		<input type = "password" name = "userPassword" value="{{ userArr.userPassword }}" >
+	</div>
+	
+	<div id="rightSpacer5" class="grid_3">&nbsp;</div>	
+{#--------------NEW LINE --------------#}		
+		
+	<div id="spacer1" class="grid_12">&nbsp;</div>
+	
+{#--------------NEW LINE --------------#}
+		
+
+	
+{#--------------NEW LINE --------------#}
+		
+	<div id="leftSpacer6" class="grid_3">&nbsp;</div>			
+	
+	<div class="grid_3">
+		Category
+	</div>
+	
+	{{ catMenu | raw }}
+
+	<div id="rightSpacer6" class="grid_3">&nbsp;</div>	
+
+{#--------------NEW LINE --------------#}		
+		
+	<div id="spacer1" class="grid_12">&nbsp;</div>
+	
+{#--------------NEW LINE --------------#}
+		
+	<div id="leftSpacer8" class="grid_6">&nbsp;</div>	
+	
+	<div class="grid_3">		
+		<input type="hidden" name="userId" value="{{ userId }}">
+		<input type="submit" name="{{ button }}" value="{{ button }}" class="btnUsers">
+	</div>
+	<div id="rightSpacer9" class="grid_3">&nbsp;</div>	
+	
+	</form>
+
+</div>
+	
+{% endblock %}

@@ -1,0 +1,53 @@
+{#--------------------------------#}
+{# templates/error404.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Logged Out
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block header %}
+	<div id="960headerContainer" class="container_12">
+		
+		<div id="welcome" class="grid_3">
+			&nbsp;
+		</div>
+		<div id="blank_top" class="grid_6">
+			&nbsp;
+		</div>
+		<div id="logo" class="grid_3">
+			<img src="img/corporate-logo.gif">
+		</div>
+		<div id="title" class="grid_12">
+			Handover Portal
+		</div>
+		<div id="navSpacer" class="grid_12">&nbsp;</div>
+		<div id="navContainer" class="grid_12">&nbsp;</div>
+	</div><!--end 960HeaderContainer-->
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+	
+		{#--------------NEW LINE --------------#}
+		<div id="spacer1" class="grid_12">&nbsp</div>
+		{#--------------NEW LINE --------------#}
+		<div id="spaced2" class="grid_12">&nbsp</div>
+		{#--------------NEW LINE --------------#}
+			<div id="spacer_left" class="grid_3">&nbsp;</div>
+			<div id="login_form1" class="grid_6">	
+				{% if messageId==1 %}
+					Incorrect Username/Password combination supplied. <br>Click <a href="./">here</a> to log in again
+				{% endif %}
+			</div>		
+			<div id="spacer_right" class="grid_3">&nbsp;</div>		
+		{#--------------NEW LINE --------------#}
+			<div id="spaced3" class="grid_12">&nbsp</div>	
+	
+{% endblock %}

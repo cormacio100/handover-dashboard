@@ -1,0 +1,30 @@
+{#--------------------------------#}
+{# templates/message_display.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Message Display
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+	{{ loggedInText | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block nav %}
+	{{ nav | raw }}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+
+    {{ messageText | raw }}
+
+{% endblock %}
