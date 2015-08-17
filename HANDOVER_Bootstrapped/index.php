@@ -24,7 +24,7 @@ Epi::setSetting('exceptions', true);
 getRoute()->get('/','index');
 getRoute()->get('/login','login');
 getRoute()->post('/loggingIn','loggingIn');
-getRoute()->post('/logOut','logOut');
+getRoute()->get('/logOut','logOut');
 getRoute()->get('/authHome','authHome');
 getRoute()->get('/authAdmin','authAdmin');
 getRoute()->post('/authForwardTo','authForwardTo');

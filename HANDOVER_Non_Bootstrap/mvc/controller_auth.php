@@ -246,8 +246,6 @@ function authIncident()
  */
 function authAddIncident()
 {
-	//print_r($_POST);
-	//EXIT;
 	 $incCat=null;
 	 $incStatus=null;
 	 $incRef=null;
@@ -298,7 +296,6 @@ function authAddIncident()
 		header('Location: ./messageDisplay?messageId=14&searchParam='.$incCat);		
 		exit;
 	}
-
 }
 
 /**

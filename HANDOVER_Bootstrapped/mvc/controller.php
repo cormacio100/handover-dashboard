@@ -53,6 +53,11 @@ function login()
  */
 function loggingIn()
 {
+
+    //print_r($_POST);EXIT;
+
+    $userPasswordEncrypted=null;
+
 	# if  this option is clicked then the user is assumed to not be logged in
 	unset($_SESSION['authenticated']);
 
@@ -84,8 +89,9 @@ function loggingIn()
 			$_SESSION['userName']=$userName;
 			
 			//$loggedInText=$userName.' is logged in<br><a href="./messageDisplay?messageId=4" class="logOut">log out</a>';
-            $loggedInText=$userName.' is logged in';
-			$_SESSION['loggedInText']=$loggedInText;
+            //$loggedInText=$userName
+			//$_SESSION['loggedInText']=$loggedInText;
+            $_SESSION['loggedInText']=$userName;
 	
 			# allow the user access	
 			header('Location: ./messageDisplay?messageId=3');

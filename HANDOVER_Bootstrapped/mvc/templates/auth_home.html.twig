@@ -12,18 +12,7 @@
 {#--------------------------------#}
 
 {% block loggedIn %}
-
-    <div class="dropdown">
-        <button class="btn btn-white dropdown-toggle" type="button" data-toggle="dropdown">
-            {{ loggedInText }}
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-            <li>&nbsp;</li>
-            <li><a href="./logout" class="orange">Log Out</a></li>
-        </ul>
-    </div>
-
+    {% include 'logged_in.html.twig' %}
 {% endblock %}
 
 
@@ -36,7 +25,7 @@
 
 {% block main %}
     <div class="row">
-        <form action="./authForwardTo" method="POST">
+        <form action="./authForwardTo" method="POST" id="authForwardTo" name="authForwardTo">
             <div class="col-sm-4">&nbsp;</div>
             <div class="col-sm-4">
                 <div class="form-group">

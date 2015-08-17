@@ -49,9 +49,9 @@ function login()
 			$userPassword=filter_input(INPUT_POST, 'userPassword',FILTER_SANITIZE_STRING);	
 
 		# DB stored passwords include a SALT and encryption so need to do the same to values passed in for comparison		
-		$userPasswordEncrypted=md5($userPassword);
+		//$userPasswordEncrypted=md5($userPassword);
 
-		$userArr=isValidUsernamePassword($userLogin,$userPasswordEncrypted);
+		$userArr=isValidUsernamePassword($userLogin,$userPassword);//Encrypted);
 			
 		if(!empty($userArr))
 		{

@@ -20,7 +20,7 @@
 	
 	# create query
 	$query="SELECT userFName,userSName,userCat FROM user WHERE userName='".$userName."' AND userPassword='".$userPassword."' LIMIT 1";
-	
+	//echo $query;exit;
 	$authenticatedUser=$db->getSingleRecord($query);
 	
 	# housekeeping - remove reference to object
@@ -151,10 +151,10 @@ function findUserCat()
 /**
  * Function creates a new user
  * 
- * @param $userFName,$userSName,$userEmail,$userLogin,$userPasswordEncrypted,$userCat
+ * @param $userFName,$userSName,$userEmail,$userName,$userPasswordEncrypted,$userCat
  * @return - boolean value depending on if value was updated
  */
- function createUser($userFName,$userSName,$userEmail,$userLogin,$userPasswordEncrypted,$userCat)
+ function createUser($userFName,$userSName,$userEmail,$userName,$userPasswordEncrypted,$userCat)
  {
  	$createUser=false;	
 		
@@ -162,8 +162,8 @@ function findUserCat()
 	$db=new Database();
 	
 	# create the query
-	$query="INSERT INTO `user` (`userId`, `userFName`, `userSName`, `userLogin`, `userPassword`, `userCat`, `userEmail`, `userActive`) 
-			VALUES(NULL,'".$userFName."','".$userSName."','".$userLogin."','".$userPasswordEncrypted."','".$userCat."','".$userEmail."','Yes')";
+	$query="INSERT INTO `user` (`userId`, `userFName`, `userSName`, `userName`, `userPassword`, `userCat`, `userEmail`, `userActive`)
+			VALUES(NULL,'".$userFName."','".$userSName."','".$userName."','".$userPasswordEncrypted."','".$userCat."','".$userEmail."','Yes')";
 	
 	
 	# execute query and save result to an array
@@ -177,10 +177,10 @@ function findUserCat()
 /**
  * Function updates a user's details
  * 
- * @param $userId,$userFName,$userSName,$userEmail,$userLogin,$userPasswordEncrypted,$userCat
+ * @param $userId,$userFName,$userSName,$userEmail,$userName,$userPasswordEncrypted,$userCat
  * @return - boolean value depending on if value was updated
  */
- function updateUser($userId,$userFName,$userSName,$userEmail,$userLogin,$userPasswordEncrypted,$userCat)
+ function updateUser($userId,$userFName,$userSName,$userEmail,$userName,$userPasswordEncrypted,$userCat)
  {
  	$updateUser=false;	
 		
@@ -189,7 +189,7 @@ function findUserCat()
 	
 	# create the query
 	$query="UPDATE user 
-			SET userFName ='".$userFName."',userSName='".$userSName."',userLogin='".$userLogin."',userPassword='".$userPasswordEncrypted."', userCat='".$userCat."', userEmail='".$userEmail."'
+			SET userFName ='".$userFName."',userSName='".$userSName."',userName='".$userName."',userPassword='".$userPasswordEncrypted."', userCat='".$userCat."', userEmail='".$userEmail."'
 			WHERE userId='".$userId."'";
 	
 	# execute query and save result to an array
