@@ -104,6 +104,15 @@ function loggingIn()
 	}
 }
 
+/**
+ * Function logs user out of the system
+ */
+function logOut()
+{
+    unset($_SESSION);
+
+    header('Location: ./messageDisplay&messageId=4');
+}
 
 
 /**
@@ -147,11 +156,10 @@ function loggingIn()
 	}
 	else if(4==$messageId)
 	{
-		# clear the session and log user out
+		# Display that user is logging out and forward to the index page
 		$messageText='Logging Out..';
 		$forward=true;
 		$location='./';
-		unset($_SESSION);	
 	}
 	else if(5==$messageId)
 	{
