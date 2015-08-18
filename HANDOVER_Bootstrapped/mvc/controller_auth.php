@@ -19,7 +19,7 @@ if(!isset($_SESSION))
 function authHome()
 {
 	global $twig;
-	global $nav;
+	//global $nav;
 	
 	$loggedInText=null;
 	$userCat=null;
@@ -43,7 +43,7 @@ function authHome()
 	$args_array=array(
 		'loggedInText' 	=> $loggedInText,
 		'ticker' 		=> $ticker,
-		'nav'			=> $nav,
+		//'nav'			=> $nav,
 		'userCat'		=> $userCat,
 	);
 	$template='auth_home';
@@ -776,7 +776,7 @@ function authDashboardAdminUpdate()
 function authCreateUser()
 {
 	global $twig;
-	global $nav;
+	//global $nav;
 	$loggedInText=null;
 	$userArr=array();
 	$userId=null;
@@ -807,7 +807,7 @@ function authCreateUser()
 		'userId'	=> $userId,
 		'loggedInText' 	=> $loggedInText,
 		'ticker' 		=> $ticker,
-		'nav'			=> $nav,
+		//'nav'			=> $nav,
 		'userName'		=> $userName,
 		'userArr'		=> $userArr,
 		'catMenu'		=> $catMenu,
@@ -1015,11 +1015,13 @@ function authUserDeleted()
 function authEditUser()
 {
 	global $twig;
-	global $nav;
+	//global $nav;
 	$loggedInText=null;
 	$userName=null;
 	$userArr=array();
 	$userId=null;
+    $pageAction='edit';
+    $userCat=null;
 	
 	if(isset($_SESSION['authenticated']))
 	{
@@ -1036,12 +1038,14 @@ function authEditUser()
 
 	# retrieve the user details
 	$userArr = getUser($userId);
+
+	//$userName='Edit User: '.$userArr['userFName'].' '.$userArr['userSName'];
+    $userName=$userArr['userFName'].' '.$userArr['userSName'];
 	
-	$userName='Edit User: '.$userArr['userFName'].' '.$userArr['userSName'];
-	
-	# retrieve catageories available for building a select menu with relevant option selected
-	$catMenu = getUserCatMenu($userArr['userCat']); 
-	
+	# retrieve categeories available for building a select menu with relevant option selected
+	//$catMenu = getUserCatMenu($userArr['userCat']);
+	$userCat=$userArr['userCat'];
+
 	# set the form action
 	$action='./authUserEdited';
 	
@@ -1053,19 +1057,20 @@ function authEditUser()
 	
 	# set the username field to readOnly
 	$readOnly='readonly class="readOnly"';
-	$readOnlyNotice='(Read Only)';
+	//$readOnlyNotice='(Read Only)';
 	
 	$args_array=array(
 		'userId'	=> $userId,
 		'loggedInText' 	=> $loggedInText,
 		'ticker' 		=> $ticker,
-		'nav'			=> $nav,
+		'pageAction'	=> $pageAction,
 		'userName'		=> $userName,
 		'userArr'		=> $userArr,
-		'catMenu'		=> $catMenu,
+		//'catMenu'		=> $catMenu,
+        'userCat'       => $userCat,
 		'action'		=> $action,
 		'readOnly'		=> $readOnly,
-		'readOnlyNotice'=> $readOnlyNotice,
+		//'readOnlyNotice'=> $readOnlyNotice,
 		'button'		=> $button,
 	);
 	

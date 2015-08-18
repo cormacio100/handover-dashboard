@@ -1,0 +1,1 @@
+-find alternative to using marquee as it is not HTML5. It fails validation

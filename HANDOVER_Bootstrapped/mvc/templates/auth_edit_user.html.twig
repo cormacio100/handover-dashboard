@@ -4,170 +4,123 @@
 
 {% extends "_layout.html.twig" %}
 
-{#--------------------------------#}
+
 {% block title %}
 	Edit User
 {% endblock %}
 
-{#--------------------------------#}
-
 {% block loggedIn %}
-	{{ loggedInText | raw }}
+    {% include 'logged_in.html.twig' %}
 {% endblock %}
 
 
-{#--------------------------------#}
-{% block nav %}
-	{{ nav | raw }}
+{% block navigation %}
+    {% include 'navigation.html.twig' %}
 {% endblock %}
-
-{#--------------------------------#}
 
 {% block main %}
-	
-<div id="editConfirm" class="container_12">
-	
-<div id="spacer1" class="grid_12">&nbsp;</div>
 
-{#--------------NEW LINE --------------#}
+    {% set actionCreate = 'create' %}
+    {% set actionEdit = 'edit' %}
 
 	<form action="{{ action }}" method ="POST">
+        <div class="row">
+            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-6">
+                {% if actionCreate == pageAction %}
+                    <h3>Create User:</h3>
+                {% elseif actionEdit == pageAction %}
+                    <h3>Edit User: <span class="orange">{{ userName }}</span></h3>
+                {% endif %}
+            </div>
+            <div class="col-sm-3">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-6 formSpacer">&nbsp;</div>
+            <div class="col-sm-3">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="userLogin">User Login Name</label>
+                    <input type="text" class="form-control" id="userLogin" name="userLogin" value="{{ userArr.userName }}" placeholder="User Login Name" {{ readOnly | raw }}>
+                    <span id="usernameLoading"><img src="./img/indicator.gif" alt="" /></span>
+                </div>
+            </div>
+            <div class="col-sm-3">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input type="text" class="form-control" id="userPassword" name="userPassword" value="{{ userArr.userPassword }}" placeholder="Password">
+                </div>
+            </div>
+            <div class="col-sm-3">&nbsp;</div>
+        </div> <!-- END ROW 1 -->
+        <div class="row">
+            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="userFName">First Name</label>
+                    <input type="text" class="form-control" id="userFName" name="userFName" value="{{ userArr.userFName }}" placeholder="First Name">
+                </div>
+            </div>
+            <div class="col-sm-3">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="userSName">Surname</label>
+                    <input type="text" class="form-control" id="userSName" name="userSName" value="{{ userArr.userSName }}" placeholder="Surname">
+                </div>
+            </div>
+            <div class="col-sm-3">&nbsp;</div>
+        </div> <!-- END ROW 2 -->
 
-	<div id="leftSpacer1" class="grid_3">&nbsp;</div>
-
-	<div class="grid_6">
-		 {{ userName }}
-	</div>
-	
-	<div id="rightSpacer1" class="grid_3">&nbsp;</div>
-			
-
-{#--------------NEW LINE --------------#}		
-		
-	<div id="spacer1" class="grid_12">&nbsp;</div>	
-
-			
-{#--------------NEW LINE --------------#}
-		
-	<div id="leftSpacer2" class="grid_3">&nbsp;</div>
-	
-	<div  class="grid_3">				
-		First Name
-	</div>
-	
-	<div  class="grid_3">
-		<input type = "text" name="userFName" value="{{ userArr.userFName }}" >
-	</div>
-
-	<div id="rightSpacer2" class="grid_3">&nbsp;</div>		
-
-{#--------------NEW LINE --------------#}		
-		
-	<div id="spacer1" class="grid_12">&nbsp;</div>
-	
-{#--------------NEW LINE --------------#}
-
-	<div id="leftSpacer3" class="grid_3">&nbsp;</div>
-	
-	<div  class="grid_3">		
-		Surname
-	</div>
-	
-	<div  class="grid_3">		
-		<input type = "text" name = "userSName" value="{{ userArr.userSName }}" >	
-	</div>
-	
-	<div id="rightSpacer3" class="grid_3">&nbsp;</div>		
-
-{#--------------NEW LINE --------------#}		
-		
-	<div id="spacer1" class="grid_12">&nbsp;</div>
-			
-{#--------------NEW LINE --------------#}
-	<div id="leftSpacer3" class="grid_3">&nbsp;</div>
-	
-	<div class="grid_3">		
-		Email
-	</div>
-	
-	<div class="grid_3">		
-		<input type="text" name="userEmail" value="{{ userArr.userEmail }}" >	
-	</div>
-	
-	<div id="rightSpacer3" class="grid_3">&nbsp;</div>		
-
-{#--------------NEW LINE --------------#}		
-		
-	<div id="spacer1" class="grid_12">&nbsp;</div>
-			
-{#--------------NEW LINE --------------#}
-	<div id="leftSpacer4" class="grid_3">&nbsp;</div>	
-	
-	<div class="grid_3">			
-		Username
-	</div>
-	
-	<div class="grid_4" >
-		<input type="text" name="userLogin" value="{{ userArr.userLogin }}" {{ readOnly | raw }} >
-		<span id="usernameLoading"><img src="./img/indicator.gif" alt="" /></span>
-		<span id="usernameResult">{{ readOnlyNotice }}</span>
-	</div>
-
-	<div id="rightSpacer4" class="grid_2">&nbsp;</div>		
-	
-{#--------------NEW LINE --------------#}
-	
-	<div id="spacer1" class="grid_12">&nbsp;</div>	
-	
-{#--------------NEW LINE --------------#}
-
-	<div id="leftSpacer5" class="grid_3">&nbsp;</div>	
-	
-	<div class="grid_3">		
-		Password
-	</div>
-	
-	<div class="grid_3">
-		<input type = "password" name = "userPassword" value="{{ userArr.userPassword }}" >
-	</div>
-	
-	<div id="rightSpacer5" class="grid_3">&nbsp;</div>	
-{#--------------NEW LINE --------------#}		
-		
-	<div id="spacer1" class="grid_12">&nbsp;</div>
-	
-{#--------------NEW LINE --------------#}
-		
-
-	
-{#--------------NEW LINE --------------#}
-		
-	<div id="leftSpacer6" class="grid_3">&nbsp;</div>			
-	
-	<div class="grid_3">
-		Category
-	</div>
-	
-	{{ catMenu | raw }}
-
-	<div id="rightSpacer6" class="grid_3">&nbsp;</div>	
-
-{#--------------NEW LINE --------------#}		
-		
-	<div id="spacer1" class="grid_12">&nbsp;</div>
-	
-{#--------------NEW LINE --------------#}
-		
-	<div id="leftSpacer8" class="grid_6">&nbsp;</div>	
-	
-	<div class="grid_3">		
-		<input type="hidden" name="userId" value="{{ userId }}">
-		<input type="submit" name="{{ button }}" value="{{ button }}" class="btnUsers">
-	</div>
-	<div id="rightSpacer9" class="grid_3">&nbsp;</div>	
-	
+        <div class="row">
+            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="userEmail">Email</label>
+                    <input type="text" class="form-control" id="userEmail" name="userEmail" value="{{ userArr.userEmail }}" placeholder="Email">
+                </div>
+            </div>
+            <div class="col-sm-3">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    {% set catGeneral = 'general' %}
+                    {% set catAdmin = 'admin' %}
+                    <label for="userCat">User Category</label>
+                    <select name="userCat" class="form-control">
+                        {% if catGeneral == userCat %}
+                            <option value="general" selected>General</option>
+                            <option value="admin">Admin</option>
+                        {% elseif catAdmin == userCat %}
+                            <option value="general">General</option>
+                            <option value="admin" selected>Admin</option>
+                        {% endif %}
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-3">&nbsp;</div>
+        </div> <!-- END ROW 3 -->
+        <div class="row">
+            <div class="col-sm-3">&nbsp;</div>
+            <div class="col-sm-6">
+                <input type="hidden" name="userId" value="{{ userId }}">
+                <input type="submit" name="{{ button }}" value="{{ button }}" class="btn btn-orange btn-block btn-user">
+            </div>
+            <div class="col-sm-3">&nbsp;</div>
 	</form>
 
-</div>
+
 	
 {% endblock %}
