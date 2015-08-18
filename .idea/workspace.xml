@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21906bc3-dc9a-4d60-a4c1-10779c3d4984" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/progress/to-do.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_admin.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_admin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_home.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_home.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/css/custom.css" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/index.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/logged_in.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/logged_in.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/login.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/login.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="handover-dashboard.iws" />
@@ -37,31 +31,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_layout.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_layout.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64771324" vertical-offset="309" max-vertical-offset="1343">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+            <state vertical-scroll-proportion="-12.0" vertical-offset="411" max-vertical-offset="1343">
+              <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/css/bootstrap.css">
+      <file leaf-file-name="auth_ticker.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.206897" vertical-offset="50675" max-vertical-offset="112030">
-              <caret line="3000" column="18" selection-start-line="3000" selection-start-column="18" selection-end-line="3000" selection-end-column="18" />
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="833">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/index.html.twig">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="561">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.961538" vertical-offset="131" max-vertical-offset="1122">
+              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -77,83 +71,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller.php">
+      <file leaf-file-name="navigation.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.23077" vertical-offset="764" max-vertical-offset="2516">
-              <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-              <folding>
-                <element signature="n#index#0;n#!!top" expanded="false" />
-                <element signature="n#messageDisplay#0;n#!!top" expanded="false" />
-                <element signature="e#3148#7806#0#PHP" expanded="false" />
-                <element signature="e#3316#7806#0#PHP" expanded="false" />
-                <element signature="e#3484#7806#0#PHP" expanded="false" />
-                <element signature="e#3667#7806#0#PHP" expanded="false" />
-                <element signature="n#dashClient#0;n#!!top" expanded="false" />
-                <element signature="n#dashJSON#0;n#!!top" expanded="false" />
-                <element signature="n#error404#0;n#!!top" expanded="false" />
-                <marker date="1439819732826" expanded="true" signature="10443:10494" placeholder="SELECT freeS..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="10560:10611" placeholder="SELECT secto..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="10694:10748" placeholder="SELECT netAv..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="10801:10854" placeholder="SELECT trafV..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="10908:10963" placeholder="SELECT netLo..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="11018:11072" placeholder="SELECT netAv..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="11125:11178" placeholder="SELECT trafV..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="11232:11287" placeholder="SELECT voice..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="11345:11403" placeholder="SELECT callC..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="11464:11522" placeholder="SELECT callS..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="11583:11641" placeholder="SELECT callC..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="11702:11760" placeholder="SELECT callS..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="11816:11869" placeholder="SELECT dataV..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="11921:11975" placeholder="SELECT edgeT..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12028:12082" placeholder="SELECT gprsT..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12134:12187" placeholder="SELECT dataV..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12240:12295" placeholder="SELECT pakSe..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12352:12409" placeholder="SELECT pakCo..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12466:12521" placeholder="SELECT mmsCo..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12576:12631" placeholder="SELECT smsCo..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12683:12735" placeholder="SELECT pssVo..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12783:12834" placeholder="SELECT pssDa..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12886:12942" placeholder="SELECT pssMe..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="12997:13051" placeholder="SELECT pssRo..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="13106:13162" placeholder="SELECT pss2G..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="13219:13275" placeholder="SELECT pss3G..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="13332:13388" placeholder="SELECT essCu..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="13444:13499" placeholder="SELECT essCu..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="13554:13609" placeholder="SELECT essSe..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="13661:13713" placeholder="SELECT essTo..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="13763:13816" placeholder="SELECT essRe..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="13867:13920" placeholder="SELECT essRe..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="13970:14022" placeholder="SELECT cssEm..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="14073:14127" placeholder="SELECT cssNe..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="14180:14234" placeholder="SELECT cssTe..dashStatus..." />
-                <marker date="1439819732826" expanded="true" signature="14286:14339" placeholder="SELECT cssEr..dashStatus..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+              <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller_auth.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php">
+      <file leaf-file-name="auth_dash_admin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.509091" vertical-offset="2944" max-vertical-offset="5151">
-              <caret line="1051" column="28" selection-start-line="1051" selection-start-column="28" selection-end-line="1051" selection-end-column="28" />
-              <folding>
-                <element signature="n#authIncident#0;n#!!top" expanded="false" />
-                <element signature="n#authAddIncident#0;n#!!top" expanded="false" />
-                <element signature="n#authUpdateIncident#0;n#!!top" expanded="false" />
-                <element signature="n#authExportMySqlToExcel#0;n#!!top" expanded="false" />
-                <element signature="n#authTicker#0;n#!!top" expanded="false" />
-                <element signature="n#authCreateTicker#0;n#!!top" expanded="false" />
-                <element signature="n#authForwardTo#0;n#!!top" expanded="false" />
-                <element signature="n#authAdmin#0;n#!!top" expanded="false" />
-                <element signature="n#authDashAdmin#0;n#!!top" expanded="false" />
-                <element signature="n#authDashboardAdminUpdate#0;n#!!top" expanded="false" />
-                <element signature="n#authCreateUser#0;n#!!top" expanded="false" />
-                <element signature="n#authUserCreated#0;n#!!top" expanded="false" />
-                <element signature="n#authDeleteUser#0;n#!!top" expanded="false" />
-                <element signature="n#authUserDeleted#0;n#!!top" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="3502">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,8 +94,8 @@
       <file leaf-file-name="auth_edit_user.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.036364" vertical-offset="272" max-vertical-offset="2244">
-              <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            <state vertical-scroll-proportion="-5.2545457" vertical-offset="0" max-vertical-offset="2244">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -187,12 +120,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/HANDOVER-NEW-VERSION/mvc/templates/_layout.html.twig" />
-        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/phpinc/config.inc.php" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/model.php" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller.php" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/index.php" />
-        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/index.html.twig" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/progress/to-do.txt" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_home.html.twig" />
@@ -203,6 +134,10 @@
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_admin.html.twig" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/css/custom.css" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig" />
       </list>
     </option>
   </component>
@@ -492,42 +427,42 @@
             <element signature="n#dashClient#0;n#!!top" expanded="false" />
             <element signature="n#dashJSON#0;n#!!top" expanded="false" />
             <element signature="n#error404#0;n#!!top" expanded="false" />
-            <marker date="1439819732826" expanded="true" signature="10443:10494" placeholder="SELECT freeS..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="10560:10611" placeholder="SELECT secto..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="10694:10748" placeholder="SELECT netAv..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="10801:10854" placeholder="SELECT trafV..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="10908:10963" placeholder="SELECT netLo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11018:11072" placeholder="SELECT netAv..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11125:11178" placeholder="SELECT trafV..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11232:11287" placeholder="SELECT voice..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11345:11403" placeholder="SELECT callC..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11464:11522" placeholder="SELECT callS..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11583:11641" placeholder="SELECT callC..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11702:11760" placeholder="SELECT callS..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11816:11869" placeholder="SELECT dataV..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11921:11975" placeholder="SELECT edgeT..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12028:12082" placeholder="SELECT gprsT..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12134:12187" placeholder="SELECT dataV..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12240:12295" placeholder="SELECT pakSe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12352:12409" placeholder="SELECT pakCo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12466:12521" placeholder="SELECT mmsCo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12576:12631" placeholder="SELECT smsCo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12683:12735" placeholder="SELECT pssVo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12783:12834" placeholder="SELECT pssDa..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12886:12942" placeholder="SELECT pssMe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12997:13051" placeholder="SELECT pssRo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13106:13162" placeholder="SELECT pss2G..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13219:13275" placeholder="SELECT pss3G..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13332:13388" placeholder="SELECT essCu..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13444:13499" placeholder="SELECT essCu..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13554:13609" placeholder="SELECT essSe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13661:13713" placeholder="SELECT essTo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13763:13816" placeholder="SELECT essRe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13867:13920" placeholder="SELECT essRe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13970:14022" placeholder="SELECT cssEm..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="14073:14127" placeholder="SELECT cssNe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="14180:14234" placeholder="SELECT cssTe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="14286:14339" placeholder="SELECT cssEr..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT freeS..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT secto..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT netAv..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT trafV..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT netLo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT netAv..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT trafV..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT voice..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT callC..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT callS..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT callC..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT callS..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT dataV..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT edgeT..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT gprsT..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT dataV..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pakSe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pakCo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT mmsCo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT smsCo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pssVo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pssDa..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pssMe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pssRo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pss2G..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pss3G..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essCu..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essCu..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essSe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essTo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essRe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essRe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT cssEm..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT cssNe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT cssTe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT cssEr..dashStatus..." />
           </folding>
         </state>
       </provider>
@@ -613,13 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73846155" vertical-offset="27" max-vertical-offset="612">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.7454543" vertical-offset="8235" max-vertical-offset="10744">
@@ -668,51 +596,43 @@
             <element signature="n#dashClient#0;n#!!top" expanded="false" />
             <element signature="n#dashJSON#0;n#!!top" expanded="false" />
             <element signature="n#error404#0;n#!!top" expanded="false" />
-            <marker date="1439819732826" expanded="true" signature="10443:10494" placeholder="SELECT freeS..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="10560:10611" placeholder="SELECT secto..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="10694:10748" placeholder="SELECT netAv..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="10801:10854" placeholder="SELECT trafV..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="10908:10963" placeholder="SELECT netLo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11018:11072" placeholder="SELECT netAv..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11125:11178" placeholder="SELECT trafV..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11232:11287" placeholder="SELECT voice..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11345:11403" placeholder="SELECT callC..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11464:11522" placeholder="SELECT callS..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11583:11641" placeholder="SELECT callC..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11702:11760" placeholder="SELECT callS..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11816:11869" placeholder="SELECT dataV..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="11921:11975" placeholder="SELECT edgeT..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12028:12082" placeholder="SELECT gprsT..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12134:12187" placeholder="SELECT dataV..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12240:12295" placeholder="SELECT pakSe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12352:12409" placeholder="SELECT pakCo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12466:12521" placeholder="SELECT mmsCo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12576:12631" placeholder="SELECT smsCo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12683:12735" placeholder="SELECT pssVo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12783:12834" placeholder="SELECT pssDa..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12886:12942" placeholder="SELECT pssMe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="12997:13051" placeholder="SELECT pssRo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13106:13162" placeholder="SELECT pss2G..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13219:13275" placeholder="SELECT pss3G..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13332:13388" placeholder="SELECT essCu..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13444:13499" placeholder="SELECT essCu..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13554:13609" placeholder="SELECT essSe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13661:13713" placeholder="SELECT essTo..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13763:13816" placeholder="SELECT essRe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13867:13920" placeholder="SELECT essRe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="13970:14022" placeholder="SELECT cssEm..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="14073:14127" placeholder="SELECT cssNe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="14180:14234" placeholder="SELECT cssTe..dashStatus..." />
-            <marker date="1439819732826" expanded="true" signature="14286:14339" placeholder="SELECT cssEr..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT freeS..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT secto..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT netAv..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT trafV..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT netLo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT netAv..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT trafV..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT voice..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT callC..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT callS..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT callC..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT callS..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT dataV..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT edgeT..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT gprsT..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT dataV..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pakSe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pakCo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT mmsCo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT smsCo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pssVo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pssDa..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pssMe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pssRo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pss2G..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT pss3G..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essCu..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essCu..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essSe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essTo..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essRe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT essRe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT cssEm..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT cssNe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT cssTe..dashStatus..." />
+            <marker date="1439819732826" expanded="true" signature="-1:-1" placeholder="SELECT cssEr..dashStatus..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.846154" vertical-offset="185" max-vertical-offset="1122">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,14 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20286396" vertical-offset="0" max-vertical-offset="838">
           <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="825">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -795,14 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.036364" vertical-offset="272" max-vertical-offset="2244">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.653847" vertical-offset="204" max-vertical-offset="1428">
@@ -821,8 +725,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64771324" vertical-offset="309" max-vertical-offset="1343">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        <state vertical-scroll-proportion="-12.0" vertical-offset="411" max-vertical-offset="1343">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="833">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2545457" vertical-offset="0" max-vertical-offset="2244">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="3502">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.961538" vertical-offset="131" max-vertical-offset="1122">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
           <folding />
         </state>
       </provider>

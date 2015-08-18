@@ -12,13 +12,13 @@
 {#--------------------------------#}
 
 {% block loggedIn %}
-	{{ loggedInText | raw }}
+    {% include 'logged_in.html.twig' %}
 {% endblock %}
 
 {#--------------------------------#}
 
-{% block nav %}
-	{{ nav | raw }}
+{% block navigation %}
+    {% include 'navigation.html.twig' %}
 {% endblock %}
 
 {#--------------------------------#}

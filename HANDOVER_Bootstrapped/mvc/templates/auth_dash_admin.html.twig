@@ -12,19 +12,19 @@ DashBoard Admin
 {#--------------------------------#}
 
 {% block style %}
-@import "css/dash_admin_style.css";
+
 {% endblock %}
 
 {#--------------------------------#}
 
 {% block loggedIn %}
-{{ loggedInText | raw }}
+    {% include 'logged_in.html.twig' %}
 {% endblock %}
 
 
 {#--------------------------------#}
-{% block nav %}
-{{ nav | raw }}
+{% block navigation %}
+    {% include 'navigation.html.twig' %}
 {% endblock %}
 
 {#--------------------------------#}
