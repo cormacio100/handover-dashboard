@@ -807,7 +807,6 @@ function authCreateUser()
 		'userId'	=> $userId,
 		'loggedInText' 	=> $loggedInText,
 		'ticker' 		=> $ticker,
-		//'nav'			=> $nav,
 		'userName'		=> $userName,
 		'userArr'		=> $userArr,
 		'catMenu'		=> $catMenu,

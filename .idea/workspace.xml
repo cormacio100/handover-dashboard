@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21906bc3-dc9a-4d60-a4c1-10779c3d4984" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php" afterPath="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="handover-dashboard.iws" />
@@ -41,71 +39,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth_ticker.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig">
+      <file leaf-file-name="controller_auth.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="833">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="39" />
-              <folding />
+            <state vertical-scroll-proportion="-7.6545453" vertical-offset="2265" max-vertical-offset="3655">
+              <caret line="808" column="35" selection-start-line="808" selection-start-column="35" selection-end-line="808" selection-end-column="35" />
+              <folding>
+                <element signature="n#authIncident#0;n#!!top" expanded="false" />
+                <element signature="n#authAddIncident#0;n#!!top" expanded="false" />
+                <element signature="n#authUpdateIncident#0;n#!!top" expanded="false" />
+                <element signature="n#authExportMySqlToExcel#0;n#!!top" expanded="false" />
+                <element signature="n#authTicker#0;n#!!top" expanded="false" />
+                <element signature="n#authCreateTicker#0;n#!!top" expanded="false" />
+                <element signature="n#authForwardTo#0;n#!!top" expanded="false" />
+                <element signature="n#authAdmin#0;n#!!top" expanded="false" />
+                <element signature="n#authDashAdmin#0;n#!!top" expanded="false" />
+                <element signature="n#authDashboardAdminUpdate#0;n#!!top" expanded="false" />
+                <element signature="n#authUserCreated#0;n#!!top" expanded="false" />
+                <element signature="n#authDeleteUser#0;n#!!top" expanded="false" />
+                <element signature="n#authUserDeleted#0;n#!!top" expanded="false" />
+                <element signature="n#authEditUser#0;n#!!top" expanded="false" />
+                <element signature="n#authUserEdited#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.961538" vertical-offset="131" max-vertical-offset="1122">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/css/custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.310345" vertical-offset="1394" max-vertical-offset="2567">
-              <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navigation.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-              <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth_dash_admin.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="3502">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth_edit_user.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="auth_edit_user.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.2545457" vertical-offset="0" max-vertical-offset="2244">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth_admin.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_admin.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.653847" vertical-offset="204" max-vertical-offset="1428">
-              <caret line="39" column="102" selection-start-line="39" selection-start-column="102" selection-end-line="39" selection-end-column="102" />
+            <state vertical-scroll-proportion="0.42303032" vertical-offset="1300" max-vertical-offset="2244">
+              <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -129,8 +93,6 @@
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_home.html.twig" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/logged_in.html.twig" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/login.html.twig" />
-        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig" />
-        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_admin.html.twig" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/css/custom.css" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig" />
@@ -138,6 +100,8 @@
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/message_display.html.twig" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig" />
         <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php" />
+        <option value="$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig" />
       </list>
     </option>
   </component>
@@ -490,10 +454,11 @@
             <element signature="n#authAdmin#0;n#!!top" expanded="false" />
             <element signature="n#authDashAdmin#0;n#!!top" expanded="false" />
             <element signature="n#authDashboardAdminUpdate#0;n#!!top" expanded="false" />
-            <element signature="n#authCreateUser#0;n#!!top" expanded="false" />
             <element signature="n#authUserCreated#0;n#!!top" expanded="false" />
             <element signature="n#authDeleteUser#0;n#!!top" expanded="false" />
             <element signature="n#authUserDeleted#0;n#!!top" expanded="false" />
+            <element signature="n#authEditUser#0;n#!!top" expanded="false" />
+            <element signature="n#authUserEdited#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -684,29 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.509091" vertical-offset="2944" max-vertical-offset="5151">
-          <caret line="1051" column="28" selection-start-line="1051" selection-start-column="28" selection-end-line="1051" selection-end-column="28" />
-          <folding>
-            <element signature="n#authIncident#0;n#!!top" expanded="false" />
-            <element signature="n#authAddIncident#0;n#!!top" expanded="false" />
-            <element signature="n#authUpdateIncident#0;n#!!top" expanded="false" />
-            <element signature="n#authExportMySqlToExcel#0;n#!!top" expanded="false" />
-            <element signature="n#authTicker#0;n#!!top" expanded="false" />
-            <element signature="n#authCreateTicker#0;n#!!top" expanded="false" />
-            <element signature="n#authForwardTo#0;n#!!top" expanded="false" />
-            <element signature="n#authAdmin#0;n#!!top" expanded="false" />
-            <element signature="n#authDashAdmin#0;n#!!top" expanded="false" />
-            <element signature="n#authDashboardAdminUpdate#0;n#!!top" expanded="false" />
-            <element signature="n#authCreateUser#0;n#!!top" expanded="false" />
-            <element signature="n#authUserCreated#0;n#!!top" expanded="false" />
-            <element signature="n#authDeleteUser#0;n#!!top" expanded="false" />
-            <element signature="n#authUserDeleted#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.653847" vertical-offset="204" max-vertical-offset="1428">
@@ -717,24 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.310345" vertical-offset="1394" max-vertical-offset="2567">
-          <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0" vertical-offset="411" max-vertical-offset="1343">
-          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="833">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.18323353" vertical-offset="1394" max-vertical-offset="2567">
+          <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -747,17 +673,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig">
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2545457" vertical-offset="0" max-vertical-offset="2244">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="40" />
+        <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="442">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_dash_admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="3502">
+        <state vertical-scroll-proportion="0.39151517" vertical-offset="0" max-vertical-offset="3502">
           <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding />
         </state>
@@ -765,16 +691,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.961538" vertical-offset="131" max-vertical-offset="1122">
+        <state vertical-scroll-proportion="0.3711217" vertical-offset="131" max-vertical-offset="1122">
           <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/navigation.html.twig">
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_ticker.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.28848484" vertical-offset="0" max-vertical-offset="833">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="411" max-vertical-offset="1343">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/controller_auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6545453" vertical-offset="2265" max-vertical-offset="3655">
+          <caret line="808" column="35" selection-start-line="808" selection-start-column="35" selection-end-line="808" selection-end-column="35" />
+          <folding>
+            <element signature="n#authIncident#0;n#!!top" expanded="false" />
+            <element signature="n#authAddIncident#0;n#!!top" expanded="false" />
+            <element signature="n#authUpdateIncident#0;n#!!top" expanded="false" />
+            <element signature="n#authExportMySqlToExcel#0;n#!!top" expanded="false" />
+            <element signature="n#authTicker#0;n#!!top" expanded="false" />
+            <element signature="n#authCreateTicker#0;n#!!top" expanded="false" />
+            <element signature="n#authForwardTo#0;n#!!top" expanded="false" />
+            <element signature="n#authAdmin#0;n#!!top" expanded="false" />
+            <element signature="n#authDashAdmin#0;n#!!top" expanded="false" />
+            <element signature="n#authDashboardAdminUpdate#0;n#!!top" expanded="false" />
+            <element signature="n#authUserCreated#0;n#!!top" expanded="false" />
+            <element signature="n#authDeleteUser#0;n#!!top" expanded="false" />
+            <element signature="n#authUserDeleted#0;n#!!top" expanded="false" />
+            <element signature="n#authEditUser#0;n#!!top" expanded="false" />
+            <element signature="n#authUserEdited#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HANDOVER_Bootstrapped/mvc/templates/auth_edit_user.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42303032" vertical-offset="1300" max-vertical-offset="2244">
+          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
           <folding />
         </state>
       </provider>
