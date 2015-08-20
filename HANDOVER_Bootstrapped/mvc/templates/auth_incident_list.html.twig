@@ -12,31 +12,33 @@
 {#--------------------------------#}
 
 {% block loggedIn %}
-	{{ loggedInText | raw }}
+    {% include 'logged_in.html.twig' %}
 {% endblock %}
 
 
 {#--------------------------------#}
-{% block nav %}
-	{{ nav | raw }}
+{% block navigation %}
+    {% include 'navigation.html.twig' %}
 {% endblock %}
 
 {#--------------------------------#}
 
 {% block main %}
-	<table class="searchTable" width="100%">
-		<tr class="boldtable2">
-		<td class="underline" colspan="7">
+	<table class="table table-striped table-hover" >
+		<tr>
+		<th colspan="7">
 			<h3>{{ totalRecords }} Open Incidents (ordered by age) for {{ searchParam }}</h3>
-		</td>
+		</th>
 		</tr>
+
 		{#--------------NEW LINE --------------#}
-		<tr class="boldtable2">
-			<td colspan="7">
-				<span id="pager">Page:</span>{{ links | raw }}
+		<tr >
+            <td class="wideRow">Page:</td>
+			<td class="wideRow" colspan="6">
+				{{ links | raw }}
 			</td>
 		</tr>
-		<tr class="boldtable3">
+		<tr >
 			<td width ="140"><b>Status</b></td>
 			<td><b>Reference</b></td>
 			<td width="95"><b>Category</b></td>
@@ -48,7 +50,7 @@
 		{# THIS will loop through the associateive array $msisdnIncs #}
 		
 		{% for inc in incArr %}
-			<tr class="boldtable">
+			<tr >
 				<td>{{ inc.incStatus }}</td>
 				<td>{{ inc.incRef }}</td>
 				<td>{{ inc.incCat }}</td>
@@ -58,12 +60,12 @@
 					<form action="./authIncident" method="GET" formID="formUpdate">
 						<input type="hidden" name="incId" value="{{ inc.incId }}">
 						<input type="hidden" name="searchParam" value="{{ searchParam }}">
-						<input type="submit" name="updateInc" value="update" class="btn">
+						<input type="submit" name="updateInc" value="update" class="btn btn-orange">
 					</form>
 				</td>
 			</tr>
 		{% endfor %}
-			<tr class="boldtable2">
+			<tr >
 				<td class="underline" colspan="7">
 					<a href ="./authExportMySqlToExcel?incType={{ searchParam }}" target="_blank">Click here to export results to excel</a>
 					<hr />
@@ -71,14 +73,14 @@
 			</tr>
 			{# CREATE BUTTON IS NOT CREATE FOR DASHDISPLAY INCIDENTS #}
 			{% if 'Yes' in displayCreateBtn %}
-				<tr class="boldtable2">
+				<tr >
 					<td colspan="6">
 						<h3>Create a new Incident for this Category</h3>
 					</td>
 					<td align="center">
 						<form action="./authIncident" method="GET" formID="formCreate">
 							<input type="hidden" name="searchParam" value="{{ searchParam }}">
-							<input type="submit" name="createInc" value="create" class="btn">
+							<input type="submit" name="createInc" value="create" class="btn btn-grey">
 						</form>
 					</td>
 				</tr>

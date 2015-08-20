@@ -12,154 +12,64 @@
 {#--------------------------------#}
 
 {% block loggedIn %}
-	{{ loggedInText | raw }}
+    {% include 'logged_in.html.twig' %}
 {% endblock %}
 
 {#--------------------------------#}
-{% block nav %}
-	{{ nav | raw }}
+{% block navigation %}
+    {% include 'navigation.html.twig' %}
 {% endblock %}
 
 {#--------------------------------#}
 
 {% block main %}
-	
-<div id="editConfirm" class="container_12">
-	
-<div id="spacer1" class="grid_12">&nbsp;</div>
+	<form action="{{ action | raw }}" method="POST" id="incidentCreate" >
+	    <div class="row">
+	        <div class="col-lg-4">&nbsp;</div>
+	        <div class="col-lg-4">
+                <h3>{{ message }}</h3>
 
-{#--------------NEW LINE --------------#}
-
-	<form action="{{ action | raw }}" method="POST" id="incidentCreate">
-
-		<div id="leftSpacer1" class="grid_3">&nbsp;</div>
-	
-		<div class="grid_6">
-			<h3>{{ message }}</h3>
-		</div>
-		
-		<div id="rightSpacer1" class="grid_3">&nbsp;</div>
-
-	{#--------------NEW LINE --------------#}		
-			
-		<div id="spacer1" class="grid_12">&nbsp;</div>	
-
-			
-	{#--------------NEW LINE --------------#}
-			
-		<div id="leftSpacer2" class="grid_3">&nbsp;</div>
-		
-		<div class="grid_3">				
-			Category
-		</div>
-		
-		<div class="grid_3">
-			<input type="text" name="incCat" id="incCat" value="{{ searchParam }}" readonly class="bGColor">
-		</div>
-	
-		<div id="rightSpacer2" class="grid_3">&nbsp;</div>		
-
-	{#--------------NEW LINE --------------#}		
-			
-		<div id="spacer1" class="grid_12">&nbsp;</div>
-		
-	{#--------------NEW LINE --------------#}
-
-		<div id="leftSpacer3" class="grid_3">&nbsp;</div>
-		
-		<div class="grid_3">		
-			Incident Status 
-		</div>
-		
-		<div class="grid_3">	
-			{% if 'updateInc' in button %}
-				{{ incStatusMenu | raw }}	
-			{% else %}
-				<select name="incStatus" id="incStatus">
-					<option value="Open">Open</option>
-					<option value="Closed">Closed</option>
-				</select>
-			{% endif %}
-		</div>
-		
-		<div id="rightSpacer3" class="grid_3">&nbsp;</div>		
-
-	{#--------------NEW LINE --------------#}		
-		
-		<div id="spacer1" class="grid_12">&nbsp;</div>
-			
-	{#--------------NEW LINE --------------#}
-		<div id="leftSpacer3" class="grid_3">&nbsp;</div>
-		
-		<div class="grid_3">		
-			Ticket Reference
-		</div>
-		
-		<div class="grid_3">		
-			<input type="text" name="incRef" id="incRef" value="{{ incRef }}" size=8 maxsize=7>	
-		</div>
-		
-		<div id="rightSpacer3" class="grid_3">&nbsp;</div>		
-
-	{#--------------NEW LINE --------------#}		
-			
-		<div id="spacer1" class="grid_12">&nbsp;</div>
-				
-	{#--------------NEW LINE --------------#}
-		<div id="leftSpacer4" class="grid_3">&nbsp;</div>	
-		
-		<div class="grid_3">			
-			Description
-		</div>
-		
-		<div class="grid_4" >
-			<input type="text" name="incDesc" id="incDesc" value="{{ incDesc }}" size="30" maxlength="160">
-		</div>
-	
-		<div id="rightSpacer4" class="grid_2">&nbsp;</div>		
-		
-	{#--------------NEW LINE --------------#}
-		
-		<div id="spacer1" class="grid_12">&nbsp;</div>	
-		
-	{#--------------NEW LINE --------------#}
-	
-		<div id="leftSpacer5" class="grid_3">&nbsp;</div>	
-		
-		<div class="grid_3">		
-			Display On Dashboard
-		</div>
-		
-		<div class="grid_3">
-			{% if 'updateInc' in button %}
-				{{ incDashDisplayMenu | raw }}
-			{% else %}
-			<select name="incDashDisplay">
-				<option value="No">No</option>
-				<option value="Major-Incident">Major-Incident</option>
-				<option value="Minor-Incident">Minor-Incident</option>
-			</select>
-			{% endif %}
-		</div>
-		
-		<div id="rightSpacer5" class="grid_3">&nbsp;</div>		
-	
-	{#--------------NEW LINE --------------#}		
-			
-		<div id="spacer1" class="grid_12">&nbsp;</div>
-		
-	{#--------------NEW LINE --------------#}
-			
-		<div id="leftSpacer8" class="grid_6">&nbsp;</div>	
-		
-		<div class="grid_3">		
-			<input type="hidden" name="userId" value="{{ userId }}">
-			<input type="hidden" name="incId" value="{{ incId }}">
-			<input type="hidden" name="searchParm" value="{{ searchParam }}">
-			<input type="submit" name="{{ button }}" value="{{ buttonVal }}" class="btnUsers">
-		</div>
-		<div id="rightSpacer9" class="grid_3">&nbsp;</div>	
-	
+                <div class="form-group">
+                    <label for="incCat" class="control-label">Category</label>
+                    <input type="text" name="incCat" id="incCat" class="form-control" value="{{ searchParam }}" readonly >
+                </div>
+                <div class="form-group">
+                    <label for="incStatus" class="control-label">Incident Status </label>
+                    {% if 'updateInc' in button %}
+                        {{ incStatusMenu | raw }}
+                    {% else %}
+                        <select name="incStatus" id="incStatus" class="form-control">
+                            <option value="Open">Open</option>
+                            <option value="Closed">Closed</option>
+                        </select>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="incRef" class="control-label">Ticket Reference</label>
+                    <input type="number" name="incRef" id="incRef" class="form-control" pattern="[0-9]{6}" value="{{ incRef }}" >
+                </div>
+                <div class="form-group">
+                    <label for="incDesc" class="control-label">Description</label>
+                    <input type="text" name="incDesc" id="incDesc" class="form-control" value="{{ incDesc }}" maxlength="160">
+                </div>
+                <div class="form-group">
+                    <label for="incDesc" class="control-label">Display On Dashboard</label>
+                    {% if 'updateInc' in button %}
+                        {{ incDashDisplayMenu | raw }}
+                    {% else %}
+                    <select name="incDashDisplay" class="form-control">
+                        <option value="No">No</option>
+                        <option value="Major-Incident">Major-Incident</option>
+                        <option value="Minor-Incident">Minor-Incident</option>
+                    </select>
+                    {% endif %}
+                </div>
+                <input type="hidden" name="userId" value="{{ userId }}">
+                <input type="hidden" name="incId" value="{{ incId }}">
+                <input type="hidden" name="searchParm" value="{{ searchParam }}">
+                <input type="submit" name="{{ button }}" value="{{ buttonVal }}" class="btn btn-orange btn-block">
+            </div>
+            <div class="col-lg-4">&nbsp;</div>
 	</form>
 </div>
 	

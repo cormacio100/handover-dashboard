@@ -38,6 +38,8 @@ function login()
 	# if  this option is clicked then the user is assumed to not be logged in
 	unset($_SESSION['authenticated']);
 	
+	//PRINT_R($_POST); exit;
+	
 	# process the script only if the login button has been pressed
 	if(array_key_exists('login',$_POST))
 	{

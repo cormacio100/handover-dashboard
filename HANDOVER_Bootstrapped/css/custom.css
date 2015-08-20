@@ -15,13 +15,24 @@ body
     overflow-x: hidden;
 }
 
+/* LINKS */
+a
+{
+    color:#f26900;
+}
+
+a:hover
+{
+    color:#FFFFFF;
+}
+
 /* CONTAINER */
 .customContainer
 {
     margin:0;
 }
 
-/* LINKS and SPANS */
+/* SPANS */
 .orange
 {
     color:#f26900;
@@ -87,6 +98,12 @@ main
 /* TABLES */
 @-moz-document url-prefix() {
     fieldset { display: table-cell; }
+}
+
+.wideRow
+{
+    background-color:#4d4d4d;
+    color: #f26900;
 }
 
 /* FORMS */

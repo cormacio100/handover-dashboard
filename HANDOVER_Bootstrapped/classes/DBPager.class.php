@@ -21,7 +21,7 @@ class DBPager
 		# total number of records to be displayed	
 		$this->totalRecords=$totalRecords;
 		
-		$modulus=$this->totalRecords%10;
+		$modulus=$this->totalRecords%5;
 		
 		# The ususal number of records per page and the number of pages
 		$this->recordsPerPage=$pageSize;
@@ -45,13 +45,14 @@ class DBPager
 	 * @return $outputHTML - String of links
 	 */
 	
-	function displayNavLinks()
+	public function displayNavLinks()
 	{
-		$outputHTML="<hr/>";
+		//$outputHTML="<hr/>";
+        $outputHTML="";
 		$start=0;
 		
 		#	ceil function rounds up to next integer
-		if($this->totalRecords%10>0)
+		if($this->totalRecords%5>0)
 		{
 			for($i=0; $i<ceil($this->totalPages);$i++)
 			{
@@ -70,9 +71,12 @@ class DBPager
 			}
 			
 		}
-			$outputHTML.="<hr/>";
-					
-			return $outputHTML;
+			//$outputHTML.="<hr/>";
+
+        # remove any trailing hyphens
+        $outputHTML=rtrim($outputHTML, "-");
+
+		return $outputHTML;
 	}
 	
 	/**
@@ -80,7 +84,7 @@ class DBPager
 	 * 
 	 *  @return $linkText - HTML string for each page link
 	 */
-	function createLink($pageNum, $start)
+	private function createLink($pageNum, $start)
 	{
 		$pageNum=$pageNum+1;
 		
@@ -97,7 +101,7 @@ class DBPager
 		
 		$displayStart=$start+1;
 		
-		$displayCount=$displayStart+9;
+		$displayCount=$displayStart+4;
 		
 		$linkText.="\">($displayStart-$displayCount)</a>\n";
 		

@@ -52,12 +52,12 @@ function authHome()
 
 
 /**
- * Function displays a list of Internet incidents or else a form to enter one
+ * Function displays a list of incidents (DEPENDING ON CATEGORY) or else a form to enter one
  */
 function authIncident()
 {
 	global $twig;
-	global $nav;
+	//global $nav;
 	
 	$loggedInText=null;
 	$userCat=null;
@@ -70,10 +70,10 @@ function authIncident()
 	$buttonVal='create';
 	
 	# used for LIMITING the query for each page
-	$pageSize=10;
+	$pageSize=5;
 	$pageNum=1;
 	$start=0;	# starting limiter for query
-	$count=10;	# count for num records to retrieve
+	$count=5;	# count for num records to retrieve
 			
 	$action='./authAddIncident';	# default action to be used in form
 	$totalRecords=0;
@@ -175,7 +175,7 @@ function authIncident()
 	$args_array=array(
 		'loggedInText' 		=> $loggedInText,
 		'ticker' 			=> $ticker,
-		'nav'				=> $nav,
+		//'nav'				=> $nav,
 		'userCat'			=> $userCat,
 		'searchParam'		=> $searchParam,
 		'message'			=> $message,
@@ -200,6 +200,9 @@ function authIncident()
 			$args_array['incStatusMenu']=$incStatusMenu;
 			$args_array['incRef']=$incRef;
 			$args_array['incDesc']=$incDesc;
+
+            //echo $incDashDisplayMenu; exit;
+
 			$args_array['incDashDisplayMenu']=$incDashDisplayMenu;
 		}
 		
@@ -222,7 +225,7 @@ function authIncident()
 		$pager = new DBPager($totalRecords,$pageSize,$searchParamArr,$url);
 		
 		# retrieve links string
-		$links=$pager->displayNavLinks();	
+		$links=$pager->displayNavLinks();
 		
 		# the query will be used to export results to excel
 		$queryExport = $incArr[0]['sqlQuery'];
