@@ -38,6 +38,12 @@ a:hover
     color:#f26900;
 }
 
+.messageHeading
+{
+    text-align:center;
+    border-bottom:1px solid #4d4d4d;
+    padding-bottom: 1em;
+}
 
 /* HEADER */
 header

@@ -1,0 +1,49 @@
+{#--------------------------------#}
+{# templates/auth_ticker.html.twig #}
+{#--------------------------------#}
+
+{% extends "_layout.html.twig" %}
+
+{#--------------------------------#}
+{% block title %}
+	Ticker
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block loggedIn %}
+    {% include 'logged_in.html.twig' %}
+{% endblock %}
+
+
+{#--------------------------------#}
+{% block navigation %}
+    {% include 'navigation.html.twig' %}
+{% endblock %}
+
+{#--------------------------------#}
+
+{% block main %}
+        <div class="row">
+            <div class="col-sm-2">&nbsp;</div>
+            <div class="col-sm-8">
+                <form class="form-horizontal" action="./authUpdateOnGoingCr" method="POST">
+                    <div class="form-group">
+                        <label for="crDesc" class="control-label">Ongoing Change Requests:</label>
+                        <textarea class="form-control" rows="10" name="crDesc" id="crDesc" maxlength="1000" wrap="hard">{{ crDesc }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="crDashDisplay" class="control-label">Display On DashBoard?</label>
+                        <select name="crDashDisplay" id="crDashDisplay" class="form-control">
+                            <option value="No" selected>No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-orange btn-block" name="createTicker" value="Create" type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-2">&nbsp;</div>
+        </div>
+{% endblock %}

@@ -30,6 +30,8 @@ getRoute()->get('/authAdmin','authAdmin');
 getRoute()->post('/authForwardTo','authForwardTo');
 getRoute()->post('/authCreateTicker','authCreateTicker');
 getRoute()->get('/authDisplayTicker','authDisplayTicker');
+getRoute()->get('/authOnGoingCr','authOnGoingCr');
+getRoute()->post('/authUpdateOnGoingCr','authUpdateOnGoingCr');
 
 # navigation
 getRoute()->get('/authIncident','authIncident');

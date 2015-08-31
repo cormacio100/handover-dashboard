@@ -22,27 +22,44 @@
 
 {#--------------------------------#}
 
+{#-- variables for Status menu --#}
+{% set Open='Open' %}
+{% set Closed='Closed' %}
+
+{#-- variables for Dash Display menu--#}
+{% set No='No' %}
+{% set MajorIncident='Major-Incident' %}
+{% set MinorIncident='Minor-Incident' %}
+
 {% block main %}
 	<form action="{{ action | raw }}" method="POST" id="incidentCreate" >
 	    <div class="row">
 	        <div class="col-lg-4">&nbsp;</div>
 	        <div class="col-lg-4">
-                <h3>{{ message }}</h3>
-
+                <h3 class="messageHeading">{{ message | raw }}</h3>
                 <div class="form-group">
                     <label for="incCat" class="control-label">Category</label>
                     <input type="text" name="incCat" id="incCat" class="form-control" value="{{ searchParam }}" readonly >
                 </div>
                 <div class="form-group">
                     <label for="incStatus" class="control-label">Incident Status </label>
-                    {% if 'updateInc' in button %}
-                        {{ incStatusMenu | raw }}
-                    {% else %}
+                    {% if Closed==incStatus %}
                         <select name="incStatus" id="incStatus" class="form-control">
                             <option value="Open">Open</option>
+                            <option value="Closed" selected>Closed</option>
+                        </select>
+                    {% elseif Open==incStatus %}
+                        <select name="incStatus" id="incStatus" class="form-control">
+                            <option value="Open" selected>Open</option>
+                            <option value="Closed">Closed</option>
+                        </select>
+                    {% else %}
+                        <select name="incStatus" id="incStatus" class="form-control">
+                            <option value="Open" selected>Open</option>
                             <option value="Closed">Closed</option>
                         </select>
                     {% endif %}
+
                 </div>
                 <div class="form-group">
                     <label for="incRef" class="control-label">Ticket Reference</label>
@@ -54,14 +71,30 @@
                 </div>
                 <div class="form-group">
                     <label for="incDesc" class="control-label">Display On Dashboard</label>
-                    {% if 'updateInc' in button %}
-                        {{ incDashDisplayMenu | raw }}
+                    {% if No==incDashDisplay %}
+                        <select name="incDashDisplay" class="form-control">
+                            <option value="No" selected>No</option>
+                            <option value="Major-Incident">Major-Incident</option>
+                            <option value="Minor-Incident">Minor-Incident</option>
+                        </select>
+                    {% elseif MajorIncident==incDashDisplay %}
+                        <select name="incDashDisplay" class="form-control">
+                            <option value="No">No</option>
+                            <option value="Major-Incident" selected>Major-Incident</option>
+                            <option value="Minor-Incident">Minor-Incident</option>
+                        </select>
+                    {% elseif MinorIncident==incDashDisplay %}
+                        <select name="incDashDisplay" class="form-control">
+                            <option value="No">No</option>
+                            <option value="Major-Incident">Major-Incident</option>
+                            <option value="Minor-Incident" selected>Minor-Incident</option>
+                        </select>
                     {% else %}
-                    <select name="incDashDisplay" class="form-control">
-                        <option value="No">No</option>
-                        <option value="Major-Incident">Major-Incident</option>
-                        <option value="Minor-Incident">Minor-Incident</option>
-                    </select>
+                        <select name="incDashDisplay" class="form-control">
+                            <option value="No">No</option>
+                            <option value="Major-Incident">Major-Incident</option>
+                            <option value="Minor-Incident">Minor-Incident</option>
+                        </select>
                     {% endif %}
                 </div>
                 <input type="hidden" name="userId" value="{{ userId }}">

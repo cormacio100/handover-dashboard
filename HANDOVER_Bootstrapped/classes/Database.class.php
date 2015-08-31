@@ -86,6 +86,7 @@ class Database
 		
 		return $records;
 	}
+
 	/**
 	 * function processes query and returns the recordSet without converting it to an array
 	 * 
@@ -113,7 +114,7 @@ class Database
 	 public function updateRecord($query)
 	 {
 	 	# create a connection
-		$this->createDbConnection();
+		//$this->createDbConnection();
 		
 		# execute the query
 		$updated=mysqli_query($this->link,$query);

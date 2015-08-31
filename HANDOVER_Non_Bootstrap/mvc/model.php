@@ -19,7 +19,9 @@
 	$db=new Database();
 	
 	# create query
-	$query="SELECT userFName,userSName,userCat FROM user WHERE userName='".$userLogin."' AND userPassword='".$userPassword."' LIMIT 1";
+	$query="SELECT userFName,userSName,userCat FROM user WHERE userLogin='".$userLogin."' AND userPassword='".$userPassword."' LIMIT 1";
+	
+	//echo $query; exit;
 	
 	$authenticatedUser=$db->getSingleRecord($query);
 	

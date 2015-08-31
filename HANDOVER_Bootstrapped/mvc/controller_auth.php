@@ -23,7 +23,8 @@ function authHome()
 	
 	$loggedInText=null;
 	$userCat=null;
-	
+
+
 	# check if user is authenticated
 	if(isset($_SESSION['authenticated']))
 	{
@@ -57,8 +58,7 @@ function authHome()
 function authIncident()
 {
 	global $twig;
-	//global $nav;
-	
+
 	$loggedInText=null;
 	$userCat=null;
 	$searchParam=null;
@@ -98,9 +98,9 @@ function authIncident()
 	if(isset($_GET['searchParam']))
 	{
 		$searchParam=filter_input(INPUT_GET,'searchParam',FILTER_SANITIZE_STRING);
-		
-		# default message if no incidennts are found for this search parameter
-		$message='No Incidents found for '.$searchParam.'. Create a new Incident'; 
+
+    	# default message if no incidennts are found for this search parameter
+		$message='No Incidents found for <span class="orange">'.$searchParam.'</span><BR>Create a new Incident';
 	}
 	else
 	{
@@ -118,7 +118,6 @@ function authIncident()
 	{
 		$start=filter_input(INPUT_GET,'start',FILTER_SANITIZE_NUMBER_INT);
 		$count=filter_input(INPUT_GET,'count',FILTER_SANITIZE_NUMBER_INT);
-		
 	}
 
 	# create incident screen gets displayed if the totalRecords values is set to 0. 
@@ -143,7 +142,7 @@ function authIncident()
 		$incId=filter_input(INPUT_GET,'incId',FILTER_SANITIZE_NUMBER_INT);	
 	
 		# change message at top of screen
-		$message='Update '.$searchParam.' Incident. ID: '.$incId; 
+		$message='Update <span class="orange">'.$searchParam.'</span> Incident.<br>  ID: <span class="orange">'.$incId.'</span>';
 		
 		$totalRecords=0;
 		$button='updateInc';
@@ -154,14 +153,11 @@ function authIncident()
 		
 		# retrieve values and build menus with relevant options selected
 		$incStatus=$incToUpdateArr['incStatus'];
-			$incStatusMenu=getIncStatusMenu($incStatus=null);	# generate menu
-			
+
 		$incRef=$incToUpdateArr['incRef'];
 		$incDesc=$incToUpdateArr['incDesc'];
 		
 		$incDashDisplay=$incToUpdateArr['incDashDisplay'];
-			$incDashDisplayMenu=getDashDisplayMenu($incDashDisplay);	# generate menu
-		
 		# action to be used in form
 		$action='./authUpdateIncident';
 	}
@@ -175,7 +171,6 @@ function authIncident()
 	$args_array=array(
 		'loggedInText' 		=> $loggedInText,
 		'ticker' 			=> $ticker,
-		//'nav'				=> $nav,
 		'userCat'			=> $userCat,
 		'searchParam'		=> $searchParam,
 		'message'			=> $message,
@@ -192,18 +187,15 @@ function authIncident()
 		# add this to the argsArray
 		$args_array['action']=$action;
 		
-		# check if incId hass been set and if so need to add template variables
+		# check if incId has been set and if so need to add template variables
 		if($incId)
 		{
 			# when updateInc button is pressed the inc values populate the form
 			$args_array['incId']=$incId;
-			$args_array['incStatusMenu']=$incStatusMenu;
+			$args_array['incStatus']=$incStatus;
 			$args_array['incRef']=$incRef;
 			$args_array['incDesc']=$incDesc;
-
-            //echo $incDashDisplayMenu; exit;
-
-			$args_array['incDashDisplayMenu']=$incDashDisplayMenu;
+			$args_array['incDashDisplay']=$incDashDisplay;
 		}
 		
 		$template='auth_incident';
@@ -448,7 +440,7 @@ function authTicker()
 	global $twig;
 	global $nav;
 	$loggedInText=null;
-	
+
 	if(isset($_SESSION['authenticated']))
 	{
 		if(isset($_SESSION['loggedInText']))
@@ -470,7 +462,6 @@ function authTicker()
 	
 	ob_end_flush();
 }
-
 
 /**
  * Function updates the database with the value entered for ticker
@@ -502,7 +493,8 @@ function authTicker()
 	
 	ob_end_flush();
  }
- 
+
+
  /**
  * Function forwards the user to the admin page selected
  * Page calls function using AJAX
@@ -591,6 +583,81 @@ function authAdmin()
 	echo $twig->render($template.'.html.twig',$args_array);	
 	ob_end_flush();
 }
+
+/**
+ * Function allows user to view ongoing CRs
+ */
+function authOnGoingCr()
+{
+    global $twig;
+    $loggedInText=null;
+    $crArray=array();
+
+
+    if(isset($_SESSION['authenticated']))
+    {
+        if(isset($_SESSION['loggedInText']))
+        {
+            $loggedInText=$_SESSION['loggedInText'];
+        }
+    }
+
+    # retrieve the ticker value
+    $crArray=getCRs();
+
+    print_r($crArray);
+
+    $args_array=array(
+        'loggedInText' 	=>  $loggedInText,
+        'crDesc' 		=>  $crArray['crDesc'],
+        'crDashDisplay' =>  $crArray['crDashDisplay'],
+    );
+
+    $template='auth_cr';
+    echo $twig->render($template.'.html.twig',$args_array);
+
+    ob_end_flush();
+}
+
+/**
+ * Function saves OnGoing Cr list to DB
+ */
+function authUpdateOnGoingCr()
+{
+    //print_r($_POST);
+
+    $crDesc=null;
+    $crDashDisplay=null;
+
+    if(isset($_POST['crDesc']))
+    {
+        $crDesc=trim(filter_input(INPUT_POST,'crDesc',FILTER_SANITIZE_STRING));
+    }
+    if(isset($_POST['crDashDisplay']))
+    {
+        $crDashDisplay=trim(filter_input(INPUT_POST,'crDashDisplay',FILTER_SANITIZE_STRING));
+    }
+
+    //echo 'crDesc is '.$crDesc;
+
+    # update the database with the new ticker
+    $crUpdated=updateCr($crDesc,$crDashDisplay);
+
+    if($crUpdated)
+    {
+        header('Location: ./messageDisplay?messageId=16');
+        exit;
+    }
+    else
+    {
+        header('Location: ./messageDisplay?messageId=17');
+        exit;
+    }
+
+    ob_end_flush();
+
+}
+
  /**
  * Function Allows user access to update statistics on the Dashboard admin page
  * 

@@ -315,6 +315,26 @@ function logOut()
 		if(isset($_SESSION['authenticated']))
 			$authenticated=true;	
 	}
+    else if(16==$messageId)
+    {
+        # retrieve the current ticker value
+        $ticker=getTicker();
+        $messageText='Change Requests updated. Forwarding...';
+        $forward=true;
+        $location='./authOnGoingCr';
+        if(isset($_SESSION['authenticated']))
+            $authenticated=true;
+    }
+    else if(17==$messageId)
+    {
+        # retrieve the current ticker value
+        $ticker=getTicker();
+
+        $messageText='Change Requests were NOT updated';
+
+        if(isset($_SESSION['authenticated']))
+            $authenticated=true;
+    }
 	else 
 	{
 		$messageText='Page not available. Please login again <a href="./">here</a>';
@@ -330,7 +350,11 @@ function logOut()
 			$searchParam=filter_input(INPUT_GET, 'searchParam',FILTER_SANITIZE_STRING);
 		
 			# determine which incident page to forward back to
-			if('INTERNET'==$searchParam)
+            if('VAS'==$searchParam)
+            {
+                $location='./authDashDisplayed=VAS';
+            }
+			else if('INTERNET'==$searchParam)
 			{
 				$location='./authIncident&searchParam=INTERNET';
 			}
@@ -350,6 +374,7 @@ function logOut()
 			{
 				$location='./authIncident&searchParam=LEON';
 			}
+
 			else if('SHIFTLEAD'==$searchParam)
 			{
 				$location='./authIncident&searchParam=SHIFTLEAD';
@@ -358,6 +383,8 @@ function logOut()
 			{
 				$location='./authDashDisplayed=DASHDISPLAYED';
 			}
+
+
 		}
 	}	
 	

@@ -73,7 +73,9 @@ function getTrafficLightMenu($colour=null,$menuName=null,$menuLabel=null)
  * @param $incStatus - status retrieved from DB
  * @return $incStatusMenu - HTML SELECT string 
  */
-function getIncStatusMenu($incStatus=null) 
+
+/*
+function getIncStatusMenu($incStatus=null)
 {
 	$incStatusMenu = '<select name="incStatus" id="incStatus">
 				<option value="Open">Open</option>
@@ -87,7 +89,7 @@ function getIncStatusMenu($incStatus=null)
 		$incStatusMenu= htmlSelected($incStatusMenu, $incStatus, $incStatusLen);
 	}
 	return $incStatusMenu;
-}
+}*/
 
 /**
  * Function builds a string for a user category SELECT box
@@ -95,6 +97,7 @@ function getIncStatusMenu($incStatus=null)
  * @param $$incDashDisplay - Dash Display status retrieved from DB
  * @return $incDashDisplayMenu - HTML SELECT string 
  */
+/*
 function getDashDisplayMenu($incDashDisplay=null) 
 {
 	//echo 'incDashDisplay '.$incDashDisplay;
@@ -113,7 +116,7 @@ function getDashDisplayMenu($incDashDisplay=null)
 		$incDashDisplayMenu=htmlSelected($incDashDisplayMenu, $incDashDisplay, $incDashDisplayLen);
 	}
 	return $incDashDisplayMenu;
-}
+}*/
 
 /**
  * Function Dynamically inserts the SELECTED tag into a SELECT list depending on the value that was selected previously

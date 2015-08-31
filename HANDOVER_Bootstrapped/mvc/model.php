@@ -77,7 +77,51 @@
 	
 	return $displayTicker['tickerDesc'];
  }
- 
+
+/**
+ * Function updates the CR list
+ */
+function updateCr($crDesc,$crDashDisplay)
+{
+    # create a database object
+    $db=new database;
+
+    # create a query
+    $query='UPDATE ongoingCr SET crDesc="'.$crDesc.'" AND crDashDisplay="'.$crDashDisplay.'" WHERE crId=1';
+
+    //echo $query;exit;
+
+
+    $updateCr=$db->updateRecord($query);
+
+    # housekeeping - remove reference to object
+    unset($db);
+
+    return $updateCr;
+}
+
+/**
+ * Function retrieves CRs
+ */
+function getCRs()
+{
+    $crArray=null;
+
+    # create a database object
+    $db=new Database();
+
+    # create a query
+    $query="SELECT crDesc,crDashDisplay FROM ongoingCR WHERE crId=1";
+
+    $crArray=$db->getSingleRecord($query);
+
+    # housekeeping - remove reference to object
+    unset($db);
+
+    return $crArray;
+}
+
+
  /**
   * Function retrieves details of all the users active on the system
   * 
