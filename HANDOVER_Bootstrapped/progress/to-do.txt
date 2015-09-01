@@ -11,3 +11,4 @@ In Progress
 - Pager for INTERNET page throws an error Undefined OFFSET 0 when page 21-25 is clicked
 - Change the pager to reflect page numbers rather than record numbers
 - minimized navigation button is not working
+- apply colours to select options in dash admin

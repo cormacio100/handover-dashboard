@@ -670,7 +670,7 @@ function authDashAdmin()
 	$loggedInText=null;
 	$dashAdminArr=array();
     $dashAdminSelectArr=array();
-	
+
 	if(isset($_SESSION['authenticated']))
 	{
 		if(isset($_SESSION['loggedInText']))
@@ -681,23 +681,31 @@ function authDashAdmin()
 	
 	# retrieve all values for dashboard
 	$dashAdminArr=retrieveDashAdminValues();
+    $dashAdminArr['empty']='';
 
-    $dashAdminSelectArr['pssVoice']=$dashAdminArr['pssVoice'];
-    $dashAdminSelectArr['pssData']=$dashAdminArr['pssData'];
-    $dashAdminSelectArr['pssMessaging']=$dashAdminArr['pssMessaging'];
-    $dashAdminSelectArr['pssRoaming']=$dashAdminArr['pssRoaming'];
-    $dashAdminSelectArr['pss2GNetwork']=$dashAdminArr['pss2GNetwork'];
-    $dashAdminSelectArr['pss3GNetwork']=$dashAdminArr['pss3GNetwork'];
-    $dashAdminSelectArr['essCustMgmnt']=$dashAdminArr['essCustMgmnt'];
-    $dashAdminSelectArr['essCustBill']=$dashAdminArr['essCustBill'];
-    $dashAdminSelectArr['essServProv']=$dashAdminArr['essServProv'];
-    $dashAdminSelectArr['essTopUp']=$dashAdminArr['essTopUp'];
-    $dashAdminSelectArr['essRetPos']=$dashAdminArr['essRetPos'];
-    $dashAdminSelectArr['cssDataWareBI']=$dashAdminArr['cssDataWareBI'];
-    $dashAdminSelectArr['cssEmail']=$dashAdminArr['cssEmail'];
-    $dashAdminSelectArr['cssNetwork']=$dashAdminArr['cssNetwork'];
-    $dashAdminSelectArr['cssTelePbx']=$dashAdminArr['cssTelePbx'];
-    $dashAdminSelectArr['cssErpBss']=$dashAdminArr['cssErpBss'];
+    $dashAdminSelectArrR1['pssVoice']=$dashAdminArr['pssVoice'];
+    $dashAdminSelectArrR1['pssData']=$dashAdminArr['pssData'];
+    $dashAdminSelectArrR1['pssMessaging']=$dashAdminArr['pssMessaging'];
+
+    $dashAdminSelectArrR2['pssRoaming']=$dashAdminArr['pssRoaming'];
+    $dashAdminSelectArrR2['pss2GNetwork']=$dashAdminArr['pss2GNetwork'];
+    $dashAdminSelectArrR2['pss3GNetwork']=$dashAdminArr['pss3GNetwork'];
+
+    $dashAdminSelectArrR3['essCustMgmnt']=$dashAdminArr['essCustMgmnt'];
+    $dashAdminSelectArrR3['essCustBill']=$dashAdminArr['essCustBill'];
+    $dashAdminSelectArrR3['essServProv']=$dashAdminArr['essServProv'];
+
+    $dashAdminSelectArrR4['essTopUp']=$dashAdminArr['essTopUp'];
+    $dashAdminSelectArrR4['essRetPos']=$dashAdminArr['essRetPos'];
+    $dashAdminSelectArrR4['empty']=$dashAdminArr['empty'];
+
+    $dashAdminSelectArrR5['cssDataWareBI']=$dashAdminArr['cssDataWareBI'];
+    $dashAdminSelectArrR5['cssEmail']=$dashAdminArr['cssEmail'];
+    $dashAdminSelectArrR5['cssNetwork']=$dashAdminArr['cssNetwork'];
+
+    $dashAdminSelectArrR6['cssTelePbx']=$dashAdminArr['cssTelePbx'];
+    $dashAdminSelectArrR6['cssErpBss']=$dashAdminArr['cssErpBss'];
+    $dashAdminSelectArrR6['empty']=$dashAdminArr['empty'];
 
 //  /  print_r($dashAdminArr);exit;
 
@@ -764,7 +772,13 @@ function authDashAdmin()
 	'pakCompRate3G' 		=> $dashAdminArr['pakCompRate3G'], 
 	'mmsCompRate' 			=> $dashAdminArr['mmsCompRate'],
 	'smsCompRate' 			=> $dashAdminArr['smsCompRate'],
-    'dashAdminSelectArr'     => $dashAdminSelectArr,
+    'dashAdminSelectArrR1'     => $dashAdminSelectArrR1,
+    'dashAdminSelectArrR2'     => $dashAdminSelectArrR2,
+    'dashAdminSelectArrR3'     => $dashAdminSelectArrR3,
+    'dashAdminSelectArrR4'     => $dashAdminSelectArrR4,
+    'dashAdminSelectArrR5'     => $dashAdminSelectArrR5,
+    'dashAdminSelectArrR6'     => $dashAdminSelectArrR6,
+
 	);
 	
 	$template='auth_dash_admin';

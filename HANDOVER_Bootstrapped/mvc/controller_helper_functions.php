@@ -48,7 +48,7 @@ function getUserCatMenu($userCat=null)
  * @param $colour - Value passed in to the function which will be selected
  * @return
  */
-function getTrafficLightMenu($colour=null,$menuName=null,$menuLabel=null)
+/*function getTrafficLightMenu($colour=null,$menuName=null,$menuLabel=null)
 {
 	$trafficLightMenu='
 		<label for="'.$menuName.'">'.$menuLabel.':</label>
@@ -65,7 +65,7 @@ function getTrafficLightMenu($colour=null,$menuName=null,$menuLabel=null)
 		$trafficLightMenu = htmlSelected($trafficLightMenu, $colour, $menuLen);
 	}
 	return $trafficLightMenu;
-}
+}*/
 
 /**
  * Function builds a string for a user category SELECT box
@@ -125,7 +125,7 @@ function getDashDisplayMenu($incDashDisplay=null)
  * @param $dbVal - the value pulled from the DB
  * @param $dbVarLen - the length of the DB value String 
  */
-function htmlSelected($menu, $dbVal, $dbVarLen) 
+/*function htmlSelected($menu, $dbVal, $dbVarLen)
 {
 
 	#Position of start of word
@@ -149,4 +149,4 @@ function htmlSelected($menu, $dbVal, $dbVarLen)
 	$menu = $subString1 . $subString2;
 
 	return $menu;
-}
+}*/

@@ -12,12 +12,11 @@ DashBoard Admin
 {#--------------------------------#}
 
 {% block style %}
-
 {% endblock %}
 
 {#--------------------------------#}
 
-{% block loggedIn %}
+{% block loggedInText %}
     {% include 'logged_in.html.twig' %}
 {% endblock %}
 
@@ -34,6 +33,11 @@ DashBoard Admin
         <div class="col-sm-2"></div>
         <div class="col-sm-8"><h1>Dashboard Administration</h1></div>
         <div class="col-sm-2">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 lineSpacer">&nbsp;</div>
+        <div class="col-sm-1">&nbsp;</div>
     </div>
     <div class="row">
         <div class="col-sm-2">&nbsp;</div>
@@ -56,47 +60,239 @@ DashBoard Admin
                 <h3 class="orange">Current Service Status</h3>
                 <h4 class="orange underline">Primary Service Status</h4>
 
-                    {% set green = 'green' %}
-                    {% set amber = 'amber' %}
-                    {% set red = 'red' %}
-                    {% for key, dashSelect in dashAdminSelectArr %}
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <li>{{ key }} : {{ dashSelect }} </li>
+                {% set green = 'green' %}
+                {% set amber = 'amber' %}
+                {% set red = 'red' %}
+
+                <div class="row">
+                    {% for key, dashSelect in dashAdminSelectArrR1 %}
+
+                            {# SET THE MENULABELS #}
+                            {% if  'pssVoice'== key %}
+                                {% set menuLabel='Voice:' %}
+                            {% elseif 'pssData'== key %}
+                                {% set menuLabel='Data:' %}
+                            {% elseif 'pssMessaging'== key  %}
+                                {% set menuLabel='Messaging:' %}
+                            {% endif %}
+
+                        {# INITIALISE VALUES #}
+                        {% set greenSelected = '' %}
+                        {% set amberSelected = '' %}
+                        {% set redSelected = '' %}
+
+                        {% if 'green' == dashSelect %}
+                            {% set greenSelected = ' SELECTED' %}
+                        {% elseif 'amber' == dashSelect %}
+                            {% set amberSelected = ' SELECTED' %}
+                        {% elseif 'red' == dashSelect %}
+                            {% set redSelected = ' SELECTED' %}
+                        {% endif %}
+
+                        {% if 'empty' == key %}
+                            <div class="col-sm-4">&nbsp;</div>
+                        {% else %}
+                            <div class="col-sm-4">
+                                <label for={{ key }} class="labelSpacer">{{ menuLabel }}</label>
+                                <select  class="form-control spacer" id="{{ key }}" name="{{ key }}">
+                                    <option value="green"  {{ greenSelected }}>GREEN</option>
+                                    <option value="amber"  {{ amberSelected }}>AMBER</option>
+                                    <option value="red" {{ redSelected }}>RED</option>
+                                </select>
                             </div>
-
-                            <label for="{{ key }}" class="control-label">'.$menuLabel.':</label>
-                            <select class="form-control" id="{{ key }}" name="{{ key }}">
-
-
-                                if(green==dashSelect)
-
-                               
-
-                                <option value="green">GREEN</option>
-                                <option value="amber">AMBER</option>
-                                <option value="red">RED</option>
-                            </select> ';
-
-                        </div>
+                        {% endif %}
                     {% endfor %}
-
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="netAvail2G" class="control-label">2G Network Availability (%):</label>
-                            <input type="text" class="form-control" id ="netAvail2G" name="netAvail2G" value="{{ netAvail2G }}" size="10" maxlength="10">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="trafVol2G" class="control-label">2G Traffic Volume (Erlangs):</label>
-                            <input type="text" class="form-control" id ="trafVol2G" name="trafVol2G" value="{{ trafVol2G }}" size="10" maxlength="10">
-                        </div>
-                    </div>
                 </div>
-				<div class="cssDiv">{{ pssVoiceMenu | raw }}</div>
-				<div class="cssDiv">{{ pssDataMenu | raw }}</div>
-				<div class="cssDiv">{{ pssMessagingMenu | raw  }}</div>
+
+                <div class="row">
+                    {% for key, dashSelect in dashAdminSelectArrR2 %}
+                        {# SET THE MENULABELS #}
+                        {% if  'pssRoaming'== key  %}
+                            {% set menuLabel='Roaming:' %}
+                        {% elseif 'pss2GNetwork'== key  %}
+                            {% set menuLabel='2G Network:' %}
+                        {% elseif 'pss3GNetwork'== key  %}
+                            {% set menuLabel='3G Network:' %}
+                        {% endif %}
+
+                        {# INITIALISE VALUES #}
+                        {% set greenSelected = '' %}
+                        {% set amberSelected = '' %}
+                        {% set redSelected = '' %}
+
+                        {% if 'green' == dashSelect %}
+                            {% set greenSelected = 'SELECTED' %}
+                        {% elseif 'amber' == dashSelect %}
+                            {% set amberSelected = 'SELECTED' %}
+                        {% elseif 'red' == dashSelect %}
+                            {% set redSelected = 'SELECTED' %}
+                        {% endif %}
+
+                        {% if 'empty' == key %}
+                            <div class="col-sm-4">&nbsp;</div>
+                        {% else %}
+                            <div class="col-sm-4">
+                                <label for={{ key }} class="labelSpacer">{{ menuLabel }}</label>
+                                <select  class="form-control" id="{{ key }}" name="{{ key }}">
+                                    <option value="green" {{ greenSelected }}>GREEN</option>
+                                    <option value="amber" {{ amberSelected }}>AMBER</option>
+                                    <option value="red" {{ redSelected }}>RED</option>
+                                </select>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% for key, dashSelect in dashAdminSelectArrR3 %}
+
+                        {# SET THE MENULABELS #}
+                        {% if 'essCustMgmnt'== key  %}
+                            {% set menuLabel='Customer Management:' %}
+                        {% elseif 'essCustBill'== key  %}
+                            {% set menuLabel='Customer Billing:' %}
+                        {% elseif 'essServProv'== key  %}
+                            {% set menuLabel='Service Provisioning:' %}
+                        {% endif %}
+
+                        {# INITIALISE VALUES #}
+                        {% set greenSelected = '' %}
+                        {% set amberSelected = '' %}
+                        {% set redSelected = '' %}
+
+                        {% if 'green' == dashSelect %}
+                            {% set greenSelected = 'SELECTED' %}
+                        {% elseif 'amber' == dashSelect %}
+                            {% set amberSelected = 'SELECTED' %}
+                        {% elseif 'red' == dashSelect %}
+                            {% set redSelected = 'SELECTED' %}
+                        {% endif %}
+
+                        {% if 'empty' == key %}
+                            <div class="col-sm-4">&nbsp;</div>
+                        {% else %}
+                            <div class="col-sm-4">
+                                <label for={{ key }} class="labelSpacer">{{ menuLabel }}</label>
+                                <select  class="form-control" id="{{ key }}" name="{{ key }}">
+                                    <option value="green" {{ greenSelected }}>GREEN</option>
+                                    <option value="amber" {{ amberSelected }}>AMBER</option>
+                                    <option value="red" {{ redSelected }}>RED</option>
+                                </select>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% for key, dashSelect in dashAdminSelectArrR4 %}
+                        {# SET THE MENULABELS #}
+                        {% if 'essTopUp'== key  %}
+                            {% set menuLabel='Top Up:' %}
+                        {% elseif 'essRetPos'== key  %}
+                            {% set menuLabel='Retail/POS:' %}
+                        {% endif %}
+                        {# loop though so that the select menus are 3 across #}
+
+                        {% if 'empty' == key %}
+                            <div class="col-sm-4">&nbsp;</div>
+                        {% else %}
+                            <div class="col-sm-4">
+                                {# INITIALISE VALUES #}
+                                {% set greenSelected = '' %}
+                                {% set amberSelected = '' %}
+                                {% set redSelected = '' %}
+
+                                {% if 'green' == dashSelect %}
+                                    {% set greenSelected = 'SELECTED' %}
+                                {% elseif 'amber' == dashSelect %}
+                                    {% set amberSelected = 'SELECTED' %}
+                                {% elseif 'red' == dashSelect %}
+                                    {% set redSelected = 'SELECTED' %}
+                                {% endif %}
+
+                                <label for={{ key }} class="labelSpacer">{{ menuLabel }}</label>
+                                <select  class="form-control" id="{{ key }}" name="{{ key }}">
+                                    <option value="green" {{ greenSelected }}>GREEN</option>
+                                    <option value="amber" {{ amberSelected }}>AMBER</option>
+                                    <option value="red" {{ redSelected }}>RED</option>
+                                </select>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% for key, dashSelect in dashAdminSelectArrR5 %}
+                        {# SET THE MENULABELS #}
+                        {% if 'cssDataWareBI'== key  %}
+                            {% set menuLabel='Data WareHouse/BI:' %}
+                        {% elseif 'cssEmail'== key  %}
+                            {% set menuLabel='E-Mail:' %}
+                        {% elseif 'cssNetwork'== key  %}
+                            {% set menuLabel='Network:' %}
+                        {% endif %}
+                        {# loop though so that the select menus are 3 across #}
+
+                        {% if 'empty' == key %}
+                            <div class="col-sm-4">&nbsp;</div>
+                        {% else %}
+                            <div class="col-sm-4">
+                                {# INITIALISE VALUES #}
+                                {% set greenSelected = '' %}
+                                {% set amberSelected = '' %}
+                                {% set redSelected = '' %}
+
+                                {% if 'green' == dashSelect %}
+                                    {% set greenSelected = 'SELECTED' %}
+                                {% elseif 'amber' == dashSelect %}
+                                    {% set amberSelected = 'SELECTED' %}
+                                {% elseif 'red' == dashSelect %}
+                                    {% set redSelected = 'SELECTED' %}
+                                {% endif %}
+
+                                <label for={{ key }} class="labelSpacer">{{ menuLabel }}</label>
+                                <select  class="form-control" id="{{ key }}" name="{{ key }}">
+                                    <option value="green" {{ greenSelected }}>GREEN</option>
+                                    <option value="amber" {{ amberSelected }}>AMBER</option>
+                                    <option value="red" {{ redSelected }}>RED</option>
+                                </select>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% for key, dashSelect in dashAdminSelectArrR6 %}
+                        {# SET THE MENULABELS #}
+                        {% if 'cssTelePbx'== key %}
+                            {% set menuLabel='Telephony/PBX:' %}
+                        {% elseif 'cssErpBss'== key %}
+                            {% set menuLabel='ERP/BSS:' %}
+                        {% endif %}
+                        {# loop though so that the select menus are 3 across #}
+                        {% if 'empty' == key %}
+                            <div class="col-sm-4">&nbsp;</div>
+                        {% else %}
+                            <div class="col-sm-4">
+                                {# INITIALISE VALUES #}
+                                {% set greenSelected = '' %}
+                                {% set amberSelected = '' %}
+                                {% set redSelected = '' %}
+
+                                {% if 'green' == dashSelect %}
+                                    {% set greenSelected = 'SELECTED' %}
+                                {% elseif 'amber' == dashSelect %}
+                                    {% set amberSelected = 'SELECTED' %}
+                                {% elseif 'red' == dashSelect %}
+                                    {% set redSelected = 'SELECTED' %}
+                                {% endif %}
+
+                                <label for={{ key }} class="labelSpacer">{{ menuLabel }}</label>
+                                <select  class="form-control" id="{{ key }}" name="{{ key }}">
+                                    <option value="green" {{ greenSelected }}>GREEN</option>
+                                    <option value="amber" {{ amberSelected }}>AMBER</option>
+                                    <option value="red" {{ redSelected }}>RED</option>
+                                </select>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
 
                 <h3 class="orange">Network Service Checks</h3>
                 <h4 class="orange underline">2G/3G Network</h4>
@@ -230,102 +426,19 @@ DashBoard Admin
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         &nbsp;
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <input type="hidden" name="posted" value="posted">
-				        <input type="submit" name="updateDash" value="Update" class="btn btn-orange btn-block">
+				        <input type="submit" name="updateDash" value="Update Dashboard" class="btn btn-orange btn-block btn-space">
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         &nbsp;
                     </div>
                 </div>
-
-
             </form>
         </div>
         <div class="col-sm-2">&nbsp;</div>
     </div>
-
-
-
-
-
-<div id="adminFormSearch" class="container_12">
-	<form action="./authDashboardAdminUpdate" method="POST">
-
-		<div id="css" class="grid_8">		
-			<h2>Current Service Status</h2>
-
-			<div id="cssContainer1">
-
-			</div>	
-			<div id="cssContainer2">
-				<div class="cssDiv">{{ pssRoamingMenu | raw  }}</div>	
-				<div class="cssDiv">{{ pss2GNetworkMenu | raw  }}</div>	
-				<div class="cssDiv">{{ pss3GNetworkMenu | raw  }}</div>	
-			</div>	
-		</div>
-		<div class="grid_2">
-			&nbsp;
-		</div>		
-		{#-----------------------------------New Line---------------------------------------------#}
-		<div class="grid_12">
-			&nbsp;
-		</div>
-		{#-----------------------------------New Line---------------------------------------------#}
-		<div class="grid_2">
-			&nbsp;
-		</div>
-		<div id="ess" class="grid_8">		
-			<h3>Enablement Service Status</h3>
-			<div id="essContainer1">
-				<div class="essDiv">{{ essCustMgmntMenu | raw }}</div>
-				<div class="essDiv">{{ essCustBillMenu | raw }}</div>
-			</div>	
-			<div id="essContainer2">
-				<div class="essDiv">{{ essServProvMenu | raw }}</div>
-				<div class="essDiv">{{ essTopUpMenu | raw }}</div>
-			</div>	
-			<div id="essContainer3">
-				<div class="essDiv">{{ essRetPosMenu | raw }}</div>	
-			</div>	
-		</div>
-		<div class="grid_2">
-			&nbsp;
-		</div>	
-		{#-----------------------------------New Line---------------------------------------------#}
-		<div class="grid_12">
-			&nbsp;
-		</div>
-		{#-----------------------------------New Line---------------------------------------------#}
-		<div class="grid_2">
-			&nbsp;
-		</div>
-		<div id="css2" class="grid_8">		
-			<h3>Corporate Service Status</h3>
-			<div id="css2Container1">
-				<div class="essDiv">{{ cssDataWareBIMenu | raw }}</div>
-				<div class="essDiv">{{ cssEmailMenu | raw }}</div>
-				<div class="essDiv">{{ cssNetworkMenu | raw }}</div>
-			</div>	
-			<div id="css2Container2">
-				<div class="essDiv">{{ cssTelePbxMenu | raw }}</div>
-				<div class="essDiv">{{ cssErpBssMenu | raw }}</div>
-			</div>	
-		</div>
-
-		</div>
-		<div id="btnDiv" class="grid_8">		
-			<div id="btnContainer1">
-
-			</div>	
-		</div>
-		<div class="grid_2">
-			&nbsp;
-		</div>	
-	</form>
-</div>
-
 {% endblock %}
