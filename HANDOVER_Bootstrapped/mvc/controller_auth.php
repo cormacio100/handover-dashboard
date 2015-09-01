@@ -669,6 +669,7 @@ function authDashAdmin()
 	$search='users listed';
 	$loggedInText=null;
 	$dashAdminArr=array();
+    $dashAdminSelectArr=array();
 	
 	if(isset($_SESSION['authenticated']))
 	{
@@ -680,11 +681,30 @@ function authDashAdmin()
 	
 	# retrieve all values for dashboard
 	$dashAdminArr=retrieveDashAdminValues();
-	
+
+    $dashAdminSelectArr['pssVoice']=$dashAdminArr['pssVoice'];
+    $dashAdminSelectArr['pssData']=$dashAdminArr['pssData'];
+    $dashAdminSelectArr['pssMessaging']=$dashAdminArr['pssMessaging'];
+    $dashAdminSelectArr['pssRoaming']=$dashAdminArr['pssRoaming'];
+    $dashAdminSelectArr['pss2GNetwork']=$dashAdminArr['pss2GNetwork'];
+    $dashAdminSelectArr['pss3GNetwork']=$dashAdminArr['pss3GNetwork'];
+    $dashAdminSelectArr['essCustMgmnt']=$dashAdminArr['essCustMgmnt'];
+    $dashAdminSelectArr['essCustBill']=$dashAdminArr['essCustBill'];
+    $dashAdminSelectArr['essServProv']=$dashAdminArr['essServProv'];
+    $dashAdminSelectArr['essTopUp']=$dashAdminArr['essTopUp'];
+    $dashAdminSelectArr['essRetPos']=$dashAdminArr['essRetPos'];
+    $dashAdminSelectArr['cssDataWareBI']=$dashAdminArr['cssDataWareBI'];
+    $dashAdminSelectArr['cssEmail']=$dashAdminArr['cssEmail'];
+    $dashAdminSelectArr['cssNetwork']=$dashAdminArr['cssNetwork'];
+    $dashAdminSelectArr['cssTelePbx']=$dashAdminArr['cssTelePbx'];
+    $dashAdminSelectArr['cssErpBss']=$dashAdminArr['cssErpBss'];
+
+//  /  print_r($dashAdminArr);exit;
+
 	# Build HTML Menu Strings with correct option selected
 	
 	# Primary Service Status Section Menus
-	$pssVoiceMenu 	=getTrafficLightMenu($dashAdminArr['pssVoice'],'pssVoice','Voice');
+	/*$pssVoiceMenu 	=getTrafficLightMenu($dashAdminArr['pssVoice'],'pssVoice','Voice');
 	$pssDataMenu   	=getTrafficLightMenu($dashAdminArr['pssData'],'pssData','Data');
 	$pssMessagingMenu  	=getTrafficLightMenu($dashAdminArr['pssMessaging'],'pssMessaging','Messaging'); 
 	$pssRoamingMenu  	=getTrafficLightMenu($dashAdminArr['pssRoaming'],'pssRoaming','Roaming'); 
@@ -703,29 +723,29 @@ function authDashAdmin()
 	$cssEmailMenu   	=getTrafficLightMenu($dashAdminArr['cssEmail'],'cssEmail','E-Mail');
 	$cssNetworkMenu  	=getTrafficLightMenu($dashAdminArr['cssNetwork'],'cssNetwork','Network'); 
 	$cssTelePbxMenu  	=getTrafficLightMenu($dashAdminArr['cssTelePbx'],'cssTelePbx','Telephony/PBX'); 
-	$cssErpBssMenu  	=getTrafficLightMenu($dashAdminArr['cssErpBss'],'cssErpBss','ERP/BSS');  	
+	$cssErpBssMenu  	=getTrafficLightMenu($dashAdminArr['cssErpBss'],'cssErpBss','ERP/BSS');  */
 	
 	$args_array=array(
 	'nav'					=> $nav,
 	'loggedInText'			=> $loggedInText,
 	'freeSms' 				=> $dashAdminArr['freeSms'], 
-	'sectors' 				=> $dashAdminArr['sectors'], 
-	'pssVoiceMenu' 			=> $pssVoiceMenu,
-	'pssDataMenu' 			=> $pssDataMenu, 
-	'pssMessagingMenu' 		=> $pssMessagingMenu, 
-	'pssRoamingMenu' 		=> $pssRoamingMenu, 
-	'pss2GNetworkMenu' 		=> $pss2GNetworkMenu, 
-	'pss3GNetworkMenu' 		=> $pss3GNetworkMenu, 
-	'essCustMgmntMenu' 		=> $essCustMgmntMenu, 
-	'essCustBillMenu' 		=> $essCustBillMenu, 
-	'essServProvMenu' 		=> $essServProvMenu, 
-	'essTopUpMenu' 			=> $essTopUpMenu, 
-	'essRetPosMenu' 		=> $essRetPosMenu, 
-	'cssDataWareBIMenu' 	=> $cssDataWareBIMenu, 
-	'cssEmailMenu' 			=> $cssEmailMenu, 
-	'cssNetworkMenu' 		=> $cssNetworkMenu, 
-	'cssTelePbxMenu' 		=> $cssTelePbxMenu,
-	'cssErpBssMenu' 		=> $cssErpBssMenu, 
+	'sectors' 				=> $dashAdminArr['sectors'],
+	//'pssVoiceMenu' 			=> $pssVoiceMenu,
+	//'pssDataMenu' 			=> $pssDataMenu,
+	//'pssMessagingMenu' 		=> $pssMessagingMenu,
+	//'pssRoamingMenu' 		=> $pssRoamingMenu,
+	//'pss2GNetworkMenu' 		=> $pss2GNetworkMenu,
+	//'pss3GNetworkMenu' 		=> $pss3GNetworkMenu,
+	//'essCustMgmntMenu' 		=> $essCustMgmntMenu,
+	//'essCustBillMenu' 		=> $essCustBillMenu,
+	//'essServProvMenu' 		=> $essServProvMenu,
+	//'essTopUpMenu' 			=> $essTopUpMenu,
+	//'essRetPosMenu' 		=> $essRetPosMenu,
+	//'cssDataWareBIMenu' 	=> $cssDataWareBIMenu,
+	//'cssEmailMenu' 			=> $cssEmailMenu,
+	//'cssNetworkMenu' 		=> $cssNetworkMenu,
+	//'cssTelePbxMenu' 		=> $cssTelePbxMenu,
+	//'cssErpBssMenu' 		=> $cssErpBssMenu,
 	'netAvail2G' 			=> $dashAdminArr['netAvail2G'], 
 	'trafVol2G' 			=> $dashAdminArr['trafVol2G'], 
 	'netLocSuc2G' 			=> $dashAdminArr['netLocSuc2G'], 
@@ -742,8 +762,9 @@ function authDashAdmin()
 	'dataVol3G' 			=> $dashAdminArr['dataVol3G'], 
 	'pakSetSuc3G' 			=> $dashAdminArr['pakSetSuc3G'], 
 	'pakCompRate3G' 		=> $dashAdminArr['pakCompRate3G'], 
-	'mmsCompRate' 			=> $dashAdminArr['mmsCompRate'], 
-	'smsCompRate' 			=> $dashAdminArr['smsCompRate'], 
+	'mmsCompRate' 			=> $dashAdminArr['mmsCompRate'],
+	'smsCompRate' 			=> $dashAdminArr['smsCompRate'],
+    'dashAdminSelectArr'     => $dashAdminSelectArr,
 	);
 	
 	$template='auth_dash_admin';

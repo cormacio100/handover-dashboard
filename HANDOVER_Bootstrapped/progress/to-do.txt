@@ -1,9 +1,13 @@
--find alternative to using marquee as it is not HTML5. It fails validation
+In Progress
+- Dashboard Admin page to be styled
+
+----------------------------------------------------------------------------------------
+- find alternative to using marquee as it is not HTML5. It fails validation
 
 - Change Requests not displaying correctly
 - Link for dashboard on top should display items that are shown on the dashboard instead of the dashboard admin page
-- Dashboard Admin page to be styled
 - Dashboard client to be styled
 - Search to be styled or removed
 - Pager for INTERNET page throws an error Undefined OFFSET 0 when page 21-25 is clicked
 - Change the pager to reflect page numbers rather than record numbers
+- minimized navigation button is not working

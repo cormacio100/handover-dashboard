@@ -38,6 +38,17 @@ a:hover
     color:#f26900;
 }
 
+.lightGrey
+{
+    color:#e7e7e7;
+}
+
+
+.underline
+{
+    text-decoration: underline;
+}
+
 .messageHeading
 {
     text-align:center;
