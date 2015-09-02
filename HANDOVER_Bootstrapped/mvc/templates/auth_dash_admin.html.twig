@@ -16,9 +16,7 @@ DashBoard Admin
 
 {#--------------------------------#}
 
-{% block loggedInText %}
-    {% include 'logged_in.html.twig' %}
-{% endblock %}
+{% block loggedIn %}{% include 'logged_in.html.twig' %}{% endblock %}
 
 
 {#--------------------------------#}
@@ -35,9 +33,9 @@ DashBoard Admin
         <div class="col-sm-2">&nbsp;</div>
     </div>
     <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10 lineSpacer">&nbsp;</div>
-        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 lineSpacer">&nbsp;</div>
+        <div class="col-sm-2">&nbsp;</div>
     </div>
     <div class="row">
         <div class="col-sm-2">&nbsp;</div>
@@ -47,13 +45,13 @@ DashBoard Admin
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="freeSms" class="control-label">Free SMS:</label>
-                            <input type="text" class="form-control" name="freeSms" id="freeSms" value="{{ freeSms }}" size="10" maxlength="190">
+                            <input type="number" class="form-control" name="freeSms" id="freeSms" value="{{ freeSms }}" size="10" maxlength="190">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="freeSms" class="control-label">Sectors Off Air:</label>
-                            <input type="text" class="form-control" name="sectors" id="sectors" value="{{ sectors }}" size="10" maxlength="190">
+                            <input type="number" class="form-control" name="sectors" id="sectors" value="{{ sectors }}" size="10" maxlength="190">
                         </div>
                     </div>
                 </div>
@@ -142,6 +140,7 @@ DashBoard Admin
                         {% endif %}
                     {% endfor %}
                 </div>
+                <h4 class="orange underline">Enablement Service Status</h4>
                 <div class="row">
                     {% for key, dashSelect in dashAdminSelectArrR3 %}
 
@@ -218,6 +217,7 @@ DashBoard Admin
                         {% endif %}
                     {% endfor %}
                 </div>
+                <h4 class="orange underline">Corporate Service Status</h4>
                 <div class="row">
                     {% for key, dashSelect in dashAdminSelectArrR5 %}
                         {# SET THE MENULABELS #}
@@ -259,12 +259,14 @@ DashBoard Admin
                 </div>
                 <div class="row">
                     {% for key, dashSelect in dashAdminSelectArrR6 %}
+
                         {# SET THE MENULABELS #}
                         {% if 'cssTelePbx'== key %}
                             {% set menuLabel='Telephony/PBX:' %}
                         {% elseif 'cssErpBss'== key %}
                             {% set menuLabel='ERP/BSS:' %}
                         {% endif %}
+
                         {# loop though so that the select menus are 3 across #}
                         {% if 'empty' == key %}
                             <div class="col-sm-4">&nbsp;</div>
@@ -300,13 +302,13 @@ DashBoard Admin
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="netAvail2G" class="control-label">2G Network Availability (%):</label>
-                            <input type="text" class="form-control" id ="netAvail2G" name="netAvail2G" value="{{ netAvail2G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id ="netAvail2G" name="netAvail2G" value="{{ netAvail2G }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="trafVol2G" class="control-label">2G Traffic Volume (Erlangs):</label>
-                            <input type="text" class="form-control" id ="trafVol2G" name="trafVol2G" value="{{ trafVol2G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id ="trafVol2G" name="trafVol2G" value="{{ trafVol2G }}" size="10" maxlength="10">
                         </div>
                     </div>
                 </div>
@@ -314,13 +316,13 @@ DashBoard Admin
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="netLocSuc2G" class="control-label">2G Network Location Success Rate (%):</label>
-                            <input type="text" class="form-control" id ="netLocSuc2G" name="netLocSuc2G" value="{{ netLocSuc2G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id ="netLocSuc2G" name="netLocSuc2G" value="{{ netLocSuc2G }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="netAvail3G" class="control-label">3G Network Availability (%):</label>
-                            <input type="text" class="form-control" id ="netAvail3G" name="netAvail3G" value="{{ netAvail3G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id ="netAvail3G" name="netAvail3G" value="{{ netAvail3G }}" size="10" maxlength="10">
                         </div>
                     </div>
                 </div>
@@ -328,7 +330,7 @@ DashBoard Admin
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="trafVol3G" class="control-label">3G Traffic Volume (Erlangs): </label>
-                            <input type="text" class="form-control" id ="trafVol3G" name="trafVol3G" value="{{ trafVol3G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id ="trafVol3G" name="trafVol3G" value="{{ trafVol3G }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -340,13 +342,13 @@ DashBoard Admin
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="voiceTraf2G" class="control-label">2G Voice Traffic (mins):</label>
-                            <input type="text" class="form-control" id ="voiceTraf2G" name="voiceTraf2G" value="{{ voiceTraf2G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id ="voiceTraf2G" name="voiceTraf2G" value="{{ voiceTraf2G }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="callCompRate2G" class="control-label">Call Completion Rate (%):</label>
-                            <input type="text" class="form-control" id="callCompRate2G" name="callCompRate2G" value="{{ callCompRate2G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id="callCompRate2G" name="callCompRate2G" value="{{ callCompRate2G }}" size="10" maxlength="10">
                         </div>
                     </div>
                 </div>
@@ -354,13 +356,13 @@ DashBoard Admin
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="callSuccRate2G" class="control-label">2G Call Success Rate (%):</label>
-                            <input type="text" class="form-control" id="callSuccRate2G" name="callSuccRate2G" value="{{ callSuccRate2G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id="callSuccRate2G" name="callSuccRate2G" value="{{ callSuccRate2G }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="callCompRate3G" class="control-label">3G Call Completion Rate (%):</label>
-                            <input type="text" class="form-control" id="callCompRate3G" name="callCompRate3G" value="{{ callCompRate3G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id="callCompRate3G" name="callCompRate3G" value="{{ callCompRate3G }}" size="10" maxlength="10">
                         </div>
                     </div>
                 </div>
@@ -368,7 +370,7 @@ DashBoard Admin
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="callSuccRate3G" class="control-label">3G Call Success Rate (%):</label>
-                            <input type="text" class="form-control" id ="callSuccRate3G" name="callSuccRate3G" value="{{ callSuccRate3G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id ="callSuccRate3G" name="callSuccRate3G" value="{{ callSuccRate3G }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -380,36 +382,36 @@ DashBoard Admin
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="dataVol2G" class="control-label">2G Data Volumes (GB):</label>
-                            <input type="text" class="form-control" id ="dataVol2G" name="dataVol2G" value="{{ dataVol2G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id ="dataVol2G" name="dataVol2G" value="{{ dataVol2G }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <label for="edgeThru2G" class="control-label">2G Edge Throughput (Kb/s): </label>
-                        <input type="text" class="form-control" id ="edgeThru2G" name="edgeThru2G" value="{{ edgeThru2G }}" size="10" maxlength="10">
+                        <input type="number" class="form-control" id ="edgeThru2G" name="edgeThru2G" value="{{ edgeThru2G }}" size="10" maxlength="10">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="gprsThru2G" class="control-label">2G GPRS Throughput (Kb/s): </label>
-                            <input type="text" class="form-control" id ="gprsThru2G" name="gprsThru2G" value="{{ gprsThru2G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id ="gprsThru2G" name="gprsThru2G" value="{{ gprsThru2G }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <label for="dataVol3G" class="control-label">3G Data Volumes (GB): </label>
-                        <input type="text" class="form-control" id ="dataVol3G" name="dataVol3G" value="{{ dataVol3G }}" size="10" maxlength="10">
+                        <input type="number" class="form-control" id ="dataVol3G" name="dataVol3G" value="{{ dataVol3G }}" size="10" maxlength="10">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="pakSetSuc3G" class="control-label">3G Packet Setup Success Rate (Kb/s):</label>
-                            <input type="text" class="form-control" id="pakSetSuc3G" name="pakSetSuc3G" value="{{ pakSetSuc3G }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id="pakSetSuc3G" name="pakSetSuc3G" value="{{ pakSetSuc3G }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <label for="pakCompRate3G" class="control-label">3G Packet Completion Rate (Kb/s):</label>
-                        <input type="text" class="form-control" id ="pakCompRate3G" name="pakCompRate3G" value="{{ pakCompRate3G }}" size="10" maxlength="10">
+                        <input type="number" class="form-control" id ="pakCompRate3G" name="pakCompRate3G" value="{{ pakCompRate3G }}" size="10" maxlength="10">
                     </div>
                 </div>
                 <h4 class="orange underline">Messaging Services</h4>
@@ -417,12 +419,12 @@ DashBoard Admin
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="mmsCompRate" class="control-label">MMS Completion Rate (%): </label>
-                            <input type="text" class="form-control" id="mmsCompRate" name="mmsCompRate" value="{{ mmsCompRate }}" size="10" maxlength="10">
+                            <input type="number" class="form-control" id="mmsCompRate" name="mmsCompRate" value="{{ mmsCompRate }}" size="10" maxlength="10">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <label for="smsCompRate" class="control-label">SMS Completion Rate (%):</label>
-                        <input type="text" class="form-control" id="smsCompRate" name="smsCompRate" value="{{ smsCompRate }}" size="10" maxlength="10">
+                        <input type="number" class="form-control" id="smsCompRate" name="smsCompRate" value="{{ smsCompRate }}" size="10" maxlength="10">
                     </div>
                 </div>
                 <div class="row">

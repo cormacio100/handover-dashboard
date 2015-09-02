@@ -47,6 +47,7 @@ a:hover
 .underline
 {
     text-decoration: underline;
+    margin-top:1em;
 }
 
 .messageHeading

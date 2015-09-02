@@ -114,7 +114,7 @@ class Database
 	 public function updateRecord($query)
 	 {
 	 	# create a connection
-		//$this->createDbConnection();
+		$this->createDbConnection();
 		
 		# execute the query
 		$updated=mysqli_query($this->link,$query);

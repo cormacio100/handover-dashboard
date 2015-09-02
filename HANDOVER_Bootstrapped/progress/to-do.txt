@@ -1,8 +1,11 @@
 In Progress
 - Dashboard Admin page to be styled
+- look at maxlength for dashboard admin fields. Particularly % values
 
 ----------------------------------------------------------------------------------------
 - find alternative to using marquee as it is not HTML5. It fails validation
+
+- user Cormac Liston is hardcoded to appear as logged in on butt. Need to make dynamic
 
 - Change Requests not displaying correctly
 - Link for dashboard on top should display items that are shown on the dashboard instead of the dashboard admin page

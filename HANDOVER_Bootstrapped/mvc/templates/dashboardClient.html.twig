@@ -1,786 +1,91 @@
+
 <!DOCTYPE html>
-<head lang="en">
-	<meta charset="utf-8">
-	<title>SMC Service Dashboard</title>
-	<style>
-		@import "css/cl_dashboard.css";
-	</style>
-	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
-    <script type="text/javascript" src="js/cl_dashboard2.js"></script>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="Generator" CONTENT="Aptana Studio">
+    <meta name="Author" CONTENT="Cormac Liston">
+    <meta name="Keywords" CONTENT="Handover">
+    <meta name="Description" CONTENT="Handover Dashboard system">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Ticker
+    </title>
+    <style>
+        @import "css/bootstrap.min.css";
+        @import "css/custom.css";
+        @import "css/dashBoardClientCustom.css";
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/respond.js"></script>
 </head>
- 
 <body>
-<div id="header_wrapper">
-  <div id="header"><h1>Meteor Services Dashboard<h1></div>
-</div>
-<div id="mainContainer">
-	{# --------------- LEFT SIDE COLUMN --------------  #}
-	<div id="leftSide">
-		<h3>Change Management</h3>
-			<div id="div1_left" class="featureboxSide">
-				See <a href="http://fsc.meteor.ie/" target="blank">here</a> for details of recently sheduled and implemented change requests.<BR><BR>
-				For queries, please contact the <a href="mailto:TechnologyOperationsChangeManagement@meteor.ie?subject=Change Request Query">Change Management Team</a>
-				<br>
-				<br>
-			</div>
-			{#-- Link To On Call Roster--#}
-			<h3>On Call Roster</h3>
-			<div id="On-Call"  class="featureboxSide" >
-				Click <a href="http://sharepoint/technology/Operations/Shared%20Documents/Forms/AllItems.aspx" Target="_blank">here</a> for the current on call roster
-			</div>
-			<h3>Number of NON Triggered SMS</h3>
-			<div id="div_Free_SMS" name="div_Free_SMS" class="featureboxSide"></div>
- 
-			<h3>Sectors Off Air</h3>
-			<div id="div_sectors" name="div_sectors" class="featureboxSide" ></div>
-	</div>	
-	
-	{# --------------- CENTER CONTENT COLUMN --------------  #}
-	<div id="center">
-		<div id="currentServiceStatus" >
-		
-			<div class="featureboxCenter" >Current Service Status:</div>
-			{#--TABLE 1--#}
-			
-			<div id="topTableContainer">
-				<table id="networkStatusTable1" width="770"  border ="0" class='featurebox_center3'>
-					{#--ROW 1--#}
-					<tr>
-						<th>
-							Primary Services Status: 
-						</th>
-						<th width="10%" >
-							&nbsp
-						</th>
-						<th width="24%" >
-							Enablement Service Status:  
-						</th>
-						<th width="10%" >
-							&nbsp
-						</th>
-						<th width="23%" >
-							Corporate Services Status:  
-						</th>
-						<th width="10%">
-							&nbsp
-						</th>		
-					</tr>
-				{#--ROW 2--#}
-					<tr bgcolor="#E0E0E0">
-						<td width="23%">
-							<a href="javascript:openWin2()" alt="Click Here for more details">Voice </a>
-						</td>
-						<td width="10%">
-							<div name="div_prser_voice_status"><img id="div_prser_voice_status"id="voiceImg" ></div>
-						</td>
-						<td width="24%">
-							<a href="javascript:openWin3()" alt="Click Here for more details">Customer Management </a>
-						</td>
-						<td  width="10%">
-							<div  name="div_enaser_custmanag_status"><img id="div_enaser_custmanag_status"></div>
-						</td>
-						<td width="23%">
-							<a href="javascript:openWin4()" alt="Click Here for more details"> Data WareHouse/BI </a> 
-						</td>
-						<td width="10%">
-							<div  name="div_corpser_datware_status"><img id="div_corpser_datware_status"></div>
-						</td>
-					</tr>
-				{#--ROW 3--#}
-					<tr>
-						<td width="23%">
-							<a href="javascript:openWin2()" alt="Click Here for more details">Data</a>
-						</td>
-						<td width="10%">
-							<div  name="div_prser_data_status"><img id="div_prser_data_status"></div>
-						</td>
-						<td  width="24%">
-							<a href="javascript:openWin3()" alt="Click Here for more details">Customer Billing </>
-						</td>
-						<td  width="10%">
-							<div  name="div_enaser_custbill_status"><img id="div_enaser_custbill_status"></div>
-						</td>
-						<td  width="23%">
-							<a href="javascript:openWin4()" alt="Click Here for more details">E-mail  </a>
-						</td>
-						<td width="10%">
-							<div name="div_corpser_datware_status"><img id="div_corpser_email_status"></div>
-						</td>
-					</tr>
-				{#--ROW 4--#}
-					<tr bgcolor="#E0E0E0">
-						<td width="23%">
-							<a href="javascript:openWin2()"alt="Click Here for more details">Messaging</a>
-						</td>
-						<td width="10%">
-							<div  name="div_prser_messaging_status"><img id="div_prser_messaging_status"></div>
-						</td>
-						<td width="24%">
-			
-							<a href="javascript:openWin3()"alt="Click Here for more details">Service Provisioning </a>
-						
-						</td>
-						<td width="10%">
-							<div name="div_enaser_servprov_status"><img id="div_enaser_servprov_status"></div>
-						</td>
-						<td width="23%">
-						
-							<a href="javascript:openWin4()"alt="Click Here for more details">Network</a>
-						
-						</td>
-						<td width="10%">
-							<div  name="div_corpser_network_status"><img id="div_corpser_network_status"></div>
-						</td>
-					</tr>
-				{#--ROW 5--#}
-					<tr>
-						<td width="23%">
-						
-							<a href="javascript:openWin2()"alt="Click Here for more details">Roaming </a>
-						
-						</td>
-						<td width="10%">
-							<divname="div_prser_roaming_status"><img  id="div_prser_roaming_status" ></div>
-						</td>
-						<td width="24%">
-						
-							<a href="javascript:openWin3()"alt="Click Here for more details">Top-up </a>  
-						
-						</td>
-						<td width="10%">
-							<div  name="div_enaser_topup_status"><img id="div_enaser_topup_status"></div>
-						</td>
-						<td width="23%">
-						
-							<a href="javascript:openWin4()"alt="Click Here for more details">Telephony(PBX)  </a>
-						
-						</td>
-						<td width="10%">
-							<div  name="div_corpser_telephony_status"><img id="div_corpser_telephony_status"></div>
-						</td>
-					</tr>
-				{#--ROW 6--#}
-					<tr bgcolor="#E0E0E0">
-						<td width="23%">
-						
-							<a href="javascript:openWin2()"alt="Click Here for more details">2G Network </a>
-						
-						</td>
-						<td width="10%">
-							<div name="div_prser_2gnetwork_status"><img id="div_prser_2gnetwork_status" ></div>
-						</td>
-						<td width="24%">
-						
-							<a href="javascript:openWin3()"alt="Click Here for more details">Retail/POS </a> 
-						
-						</td>
-						<td width="10%">
-						
-							<div  name="div_enaser_retailpos_status"><img id="div_enaser_retailpos_status"></div>
-						
-						</td>
-						<td width="23%">
-						
-							<a href="javascript:openWin4()"alt="Click Here for more details">ERP/BSS</a>
-						
-						</td>
-						<td width="10%">
-		                    <div name="div_corpser_erpbss_status"><img id="div_corpser_erpbss_status" ></div>
-						</td>
-					</tr>
-				{#--ROW 7--#}
-					<tr>
-						<td width="23%">
-							<a href="javascript:openWin2()"alt="Click Here for more details">3G Network </a>
-						</td>
-						<td width="10%">
-							<div  name="div_prser_3gnetwork_status"><img id="div_prser_3gnetwork_status"></div>
-						</td>
-						<td width="24%">
-							&nbsp   
-						</td>
-						<td width="10%">
-							&nbsp 
-						</td>
-						<td width="23%">
-							&nbsp 
-						</td>
-						<td width="10%">
-							&nbsp 
-						</td>
-					</tr>
-						
-				</table>
-			</div>{# div topTableContainer end #}
-		</div> {# div currentServiceStatus end #}
+<header>
+    <div class="row" id="header1">
+        <div class="container">
+            <div class="col-sm-8 noSpace">
+                <img src="img/meteor_logo.png" alt="corporate-logo" class="noSpace">
+            </div>
+            <div class="col-sm-4 loggedIn">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="row" id="header2">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <h1>Services Dashboard</h1>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="row">
+        <div class="container">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <h4 class="featureBoxSide">Change Management</h4>
+                        <div id="div1_left" class="featureBoxSide">
+                            See <a href="http://fsc.meteor.ie/" target="blank">here</a> for details of recently sheduled and implemented change requests.<BR><BR>
+                            For queries, please contact the <a href="mailto:TechnologyOperationsChangeManagement@meteor.ie?subject=Change Request Query">Change Management Team</a>
+                        </div>
 
-		{#--EXPLANATION TABLE--#}
-		<div id="explanationTable">
-			<table id="Network_Status_Table3" BORDER ="0" cellpadding="4" width="770"  class='featurebox_center4'>
-				<tr>
-					<td colspan="2">
-						To view the details of what each Primary, Enablement or Corporate service covers, <i>CLICK ON THE TITLE OF THE SERVICE</i> above.  
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<center>
-						<i><a href="http://sharepoint/technology/Operations/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2ftechnology%2fOperations%2fShared%20Documents%2fOperations%20KPI%20Reporting%2fPublished%20KPI%20Reports&FolderCTID=&View={AD5608FF-E5CB-44F2-94FB-BF44B34" target="_blank">*********Click here to see monthly service/process performance**********</a></i> 
-						</center>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						See below for explanation of the <I>Current Service Status</I>. The status can be either Green, Amber, or Red.<br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src='./img/led_green.gif' border='0'>
-					</td>
-					<td>
-							
-						Green – Service functioning normally.  No major issues affecting service. (KPI’s all on or within 5% of target)
-			
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src='./img/led_amber.gif' border='0'>
-					</td>
-					<td>
-						Amber – Service impaired (partial functionality, limited service or degraded performance).  P1 issue effecting service / 2 or more service KPI’s below target or any service KPI 5% or more below target.
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src='./img/led_red.gif' border='0'>
-					</td>
-					<td>
-						Red – Service severely degraded or unavailable (major issue affecting service).  Critical issue effecting service / any service KPI more than 10% below target
-					</td>
-				</tr>
-	 
-			</table>
-		</div> {#---- end explanation table div -------#}
-		<div class="networkStatusTable">
-			<div class="featureboxCenter" > Network Service Checks</div>
-			<div id="kpiTableContainer">
-			{#--KPI TABLE--#}
-			<table id="networkStatusTable2" width="770"  cellpadding="2" cellspacing="2"  class='featurebox_center3'>
-				{#--ROW 1--#}
-				<tr bgcolor="#E54800" >
-					<th width="14%">
-						Service
-					</th>
-					<th width="1%" class="spacer"></td>			
-					<th width="14%">
-						Service Metric
-					</th>
-					<th width="14%">
-						Target
-					</th>
-					<th width="14%">
-						Yesterday's Performance
-					</th>
-					<th width="1%" class="spacer"></td>		
-					<th width="14%">
-						Service Metric
-					</th>
-					<th width="14%">
-						Target
-					</th>
-					<th width="14%">
-						Yesterday's Performance
-					</th>
-				</tr>
-				<tr>
-					<td >
-						&nbsp
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>		
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-				</tr>
-				{#--ROW 2--#}		
-				<tr class="trRow">
-					<td ROWSPAN="3" >
-						<span class="title">2G/3G Network</span>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						<span >2G Network Availability (%)
-					</td>
-					<td class="col3" >
-						<span >99.65%
-					</td>
-					<td class="col4" class="centered">
-						<div id="div_performance_2G3GNetwork_2Gavailability" name="div_performance_2G3GNetwork_2Gavailability"  class="centered"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						3G Network Availability (%)
-					</td>
-					<td class="col3" class="centered">
-						99.65%
-					</td>
-					<td class="col4">
-						<div id="div_performance_2G3GNetwork_3Gavailability" name="div_performance_2G3GNetwork_3Gavailability" class="centered"></div>
-					</td>
-				</tr>
-				<tr >
-					<td class="spacer">
-						&nbsp
-					</td>		
-					<td class="col2">
-						2G Traffic Volume (Erlangs)
-					</td>
-					<td class="col3">
-						N/A
-					</td>
-					<td class="col4">
-						<div id="div_performance_2G3GNetwork_2Gvolume" name="div_performance_2G3GNetwork_2Gvolume"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						3G Traffic Volume (Erlangs)
-					</td>
-					<td class="col3">
-						N/A
-					</td>
-					<td class="col4">
-						<div id="div_performance_2G3GNetwork_3Gvolume" name="div_performance_2G3GNetwork_3Gvolume"></div>
-					</td>
-				</tr>
-			{#--		
-				<tr class="col4" >
-					
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col4">
-						2G Handover Success Rate
-					</td>
-					<td class="col3">
-						97.00%
-					</td>
-					<td class="col4">
-						<div id="div_performance_2G3GNetwork_2Ghandover" name="div_performance_2G3GNetwork_2Ghandover">&nbsp</div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col4">
-						3G Handover Success Rate
-					</td>
-					<td class="col3">
-						97.00%
-					</td>
-					<td class="col4">
-						<div id="div_performance_2G3GNetwork_3Ghandover" name="div_performance_2G3GNetwork_3Ghandover">&nbsp</div>
-					</td>
-				</tr>
-			--#}		
-				<tr class="col4" >
-					
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						Network Location Update Success Rate
-					</td>
-					<td class="col3">
-						94.00%
-					</td>
-					<td class="col4">
-						<div id="div_performance_2G3GNetwork_Location" name="div_performance_2G3GNetwork_Location"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						&nbsp
-					</td>
-					<td class="col3">
-						&nbsp
-					</td>
-					<td class="col4">
-						{#--<div id="div_performance_2G3GNetwork_irat" name="div_performance_2G3GNetwork_irat">&nbsp</div>--#}
-						&nbsp
-					</td>
-				</tr>
+                        <h4 class="featureBoxSide">On Call Roster</h4>
+                        <div id="On-Call"  class="featureBoxSide" >
+                            Click <a href="http://sharepoint/technology/Operations/Shared%20Documents/Forms/AllItems.aspx" Target="_blank">here</a> for the current on call roster
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <form class="form-horizontal" action="./authCreateTicker" method="POST">
+                            <div class="form-group">
+                                <label for="tickerDesc" class="control-label">Ticker Description:</label>
+                                <input type="text" class="form-control" name="tickerDesc" id="tickerDesc" value="scrolling ticker" size="100" maxlength="190">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-orange btn-block" name="createTicker" value="Create" type="submit">Button</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-2">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
-				<tr >
-					<td>
-						&nbsp
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-				</tr> 
-					{#--ROW 6--#}
-				<tr class="trRow">
-					<td rowspan="3">
-						<span class="title">Voice Service
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						Voice Traffic(mins)
-					</td>
-					<td class="col3">
-						N/A
-					</td>
-					<td class="col4">
-						<div id="div_performance_voice_traffic" name="div_performance_voice_traffic"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						3G Call Completion Rate
-					</td>
-					<td class="col3">
-						96.00%
-					</td>
-					<td class="col4">
-						<div id="div_performance_voice_3g_completion" name="div_performance_voice_3g_completion"></div>
-					</td>
-				</tr>
-				
-				<tr >
-					<td class="spacer">
-						&nbsp
-					</td>		
-					<td class="col2">
-						2G Call Completion Rate
-					</td>
-					<td class="col3">
-						96.00%
-					</td>
-					<td class="col4">
-						<div id="div_performance_voice_2g_completion" name="div_performance_voice_2g_completion"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						3G Call Setup Success Rate
-					</td>
-					<td class="col3">
-						99.50%
-					</td>
-					<td class="col4">
-						<div id="div_performance_voice_3g_setup" name="div_performance_voice_3g_setup"></div>
-					</td>
-				</tr>
-				{#--ROW 6--#}		
-				<tr class="col4" >
-		 
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						2G Call Success Rate
-					</td>
-					<td class="col3">
-						99.50%
-					</td>
-					<td class="col4">
-						<div id="div_performance_voice_2g_setup" name="div_performance_voice_2g_setup"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						&nbsp
-					</td>
-					<td class="col3">
-						&nbsp
-					</td>
-					<td class="col4">
-						&nbsp
-					</td>
-				</tr>	
-				{#--ROW 7--#}
-				<tr >
-					<td>
-						&nbsp
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-				</tr>	
-				{#--ROW 8--#}
-				<tr class="trRow">
-					<td rowspan="3">
-						<span class="title">Data Service</span>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						 2G Data Volumes (GB)
-					</td>
-					<td class="col3">
-						N/A
-					</td>
-					<td class="col4">
-						<div id="div_performance_data_2g_volumes" name="div_performance_data_2g_volumes"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						3G Data Volumes (GB)
-					</td>
-					<td class="col3">
-						N/A
-					</td>
-					<td class="col4">
-						<div id="div_performance_data_3g_volumes" name="div_performance_data_3g_volumes"></div>
-					</td>
-				</tr>	
-						
-				<tr >
-					
-					<td class="spacer">
-						&nbsp
-					</td>		
-					<td class="col2">
-						Edge Throughput (Kb/s)
-					</td>
-					<td class="col3">
-						80 Kb/s
-					</td>
-					<td class="col4">
-						<div id="div_performance_data_edge" name="div_performance_data_edge"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						3G Packet Setup Success Rate
-					</td>
-					<td class="col3">
-						97.00%
-					</td>
-					<td class="col4">
-						<div id="div_performance_data_3g_packet_setup" name="div_performance_data_3g_packet_setup"></div>
-					</td>
-				</tr>
-				{#--ROW 9--#}
-				<tr bgcolor="##EFEFEF" >
-					
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						GPRS Throughput Kb/s
-					</td>
-					<td class="col3">
-						30 Kb/s
-					</td>
-					<td class="col4">
-						<div id="div_performance_data_gprs_throughput" name="div_performance_data_gprs_throughput"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						3G Packet Completion Rate
-					</td>
-					<td class="col3">
-						96.00%
-					</td>
-					<td class="col4">
-						<div id="div_performance_data_3g_packet_completion" name="div_performance_data_3g_packet_completion"></div>
-					</td>
-				</tr>	
-				{#--BLANK ROW--#}
-				<tr >
-					<td>
-						&nbsp
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-					<td>
-						&nbsp
-					</td>
-				</tr>	
-				{#--ROW 11--#}
-				<tr class="trRow">
-					<td>
-						<span class="title">Messaging Service</span>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						MMS Completion Rate
-					</td>
-					<td class="col3">
-						92.00%
-					</td>
-					<td class="col4">
-						<div id="div_performance_messaging_mms" name="div_performance_messaging_mms"></div>
-					</td>
-					<td class="spacer">
-						&nbsp
-					</td>
-					<td class="col2">
-						SMS Delivery Success Rate
-					</td>
-					<td class="col3">
-						99.00%
-					</td>
-					<td class="col4">
-						<div id="div_performance_messaging_sms" name="div_performance_messaging_sms"></div>
-					</td>
-				</tr>			
-				
-			</table>
-			</div>	{#---- end kpiTableContainer div -------#}
-		
-		</div>{#---- network status table ----#}
-		
-		{#--Major issues in the center--#}
-		
-		<div class="featureboxCenter" >Current Major Incidents</div>
-		<div id="div_major_incidents" name="div_major_incidents" class="featurebox_center2"></div>
-		
-		<div class="featureboxCenter" >Service Incidence Notices</div>
-		<div id="div_minor_incidents" name="div_minor_incidents" class="featurebox_center2"></div>
-		
 
-		<div class="featureboxCenter2">
-			The information in this website is issued in the strictest confidence and contains proprietary information of Meteor. 
-			It should not be reproduced, transmitted, or disclosed to others. 
-			It should not be copied or used for any other purpose than that which it is intended for without prior written consent of Meteor.
-			<br><br><a href="mailto:smc@meteor.ie?subject=Network Status Webpage">EMAIL THE SMC</a> or phone (01)430 7080 or (01)430 7070
-		</div>		
-
- 	</div>
- 	
-	{# --------------- RIGHT SIDE COLUMN --------------  #}
- 	<div id="rightSide">
-			&nbsp;
-			<h3>Performance Reports</h3>
-			<div class='featureboxSide' border=1 >
-			<a href="\\Dubfp1\D\Network Operations\NOC\OffAirSiteTracker" Target="_blank">Click here to view daily outage reports</a>
-			</div>
-			<h3>COO Reports</h3>
-			<div class="featureboxSide" border=1 >
-			<a href="http://sharepoint/technology/Operations/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2ftechnology%2fOperations%2fShared%20Documents%2fOperations%20KPI%20Reporting%2fPublished%20KPI%20Reports&FolderCTID=&View={AD5608FF-E5CB-44F2-94FB-BF44B34A743E}" Target="_blank">Click here to view Monthly COO Packs</a>
-			</div>
-			</p>
- 
-			<h3>Weather Forecast</h3>
-			<div class="featureboxSide">
-			Rainfall affects the performance of the Radio Network.<br> <br>
-			Check out the latest weather on the <a target="_blank" href="http://www.met.ie/latest/rainfall_radar.asp?ani=y">RAINFALL RADAR</a>
-			</div>
-			<p>Forecast for Today<br><img title="forecastToday" style="width: 145px; height: 150px" alt="ft" src="http://www.met.ie/weathermaps/nat00_weather.png" /></p>
-			<p>Forecast for Tomorrow<br><img title="forecastTomorrrow" style="width: 145px; height: 150px" alt="ft" src="http://www.met.ie/weathermaps/nat01_weather.png" /></p>
-			<p>Forecast for day after Tomorrow<br><img title="forecastTomorrow+1" style="width: 145px; height: 150px" alt="ft+1" src="http://www.met.ie/weathermaps/nat02_weather.png" /></p>
-			</div> 
-
- 	<script type="text/javascript" src="js/openWindow.js"></script>
-    <script type="text/javascript" src="js/cl_dashboard2.js"></script>
- 
- 
- </div>
 </body>
 </html>
