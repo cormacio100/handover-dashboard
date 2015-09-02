@@ -56,6 +56,7 @@
         <div class="container">
             <div class="col-sm-12">
                 <div class="row">
+                    <!-- LEFT HAND COLUMN -->
                     <div class="col-sm-2">
                         <h4 class="featureBoxSide">Change Management</h4>
                         <div id="div1_left" class="featureBoxSide">
@@ -67,7 +68,13 @@
                         <div id="On-Call"  class="featureBoxSide" >
                             Click <a href="http://sharepoint/technology/Operations/Shared%20Documents/Forms/AllItems.aspx" Target="_blank">here</a> for the current on call roster
                         </div>
+                        <h4 class="featureBoxSide">Number of NON Triggered SMS</h4>
+                        <div id="div_Free_SMS" name="div_Free_SMS" class="featureBoxSide"></div>
+
+                        <h4 class="featureBoxSide">Sectors Off Air</h4>
+                        <div id="div_sectors" name="div_sectors" class="featureBoxSide" ></div>
                     </div>
+                    <!-- CENTER COLUMN -->
                     <div class="col-sm-8">
                         <form class="form-horizontal" action="./authCreateTicker" method="POST">
                             <div class="form-group">
@@ -79,7 +86,27 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-sm-2">&nbsp;</div>
+                    <!-- RIGHT HAND COLUMN -->
+                    <div class="col-sm-2">
+                        <h4 class="featureBoxSide">Performance Reports</h4>
+                        <div class='featureBoxSide' border=1 >
+                            Click <a href="\\Dubfp1\D\Network Operations\NOC\OffAirSiteTracker" Target="_blank">here</a> to view daily outage reports
+                        </div>
+                        <h4 class="featureBoxSide">COO Reports</h4>
+                        <div class="featureBoxSide" border=1 >
+                            Click <a href="http://sharepoint/technology/Operations/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2ftechnology%2fOperations%2fShared%20Documents%2fOperations%20KPI%20Reporting%2fPublished%20KPI%20Reports&FolderCTID=&View={AD5608FF-E5CB-44F2-94FB-BF44B34A743E}" Target="_blank">here</a> to view Monthly COO Packs
+                        </div>
+                        <h4 class="featureBoxSide">Weather Forecast</h4>
+                        <div class="featureBoxSide">
+                            Rainfall affects the performance of the Radio Network.<br> <br>
+                            Check out the latest weather on the <a target="_blank" href="http://www.met.ie/latest/rainfall_radar.asp?ani=y">Rainfall Radar</a>
+
+                            <p>Forecast for Today<br><img title="forecastToday" style="width: 145px; height: 150px" alt="ft" src="http://www.met.ie/weathermaps/nat00_weather.png" /></p>
+                            <p>Forecast for Tomorrow<br><img title="forecastTomorrrow" style="width: 145px; height: 150px" alt="ft" src="http://www.met.ie/weathermaps/nat01_weather.png" /></p>
+                            <p>Forecast for day after Tomorrow<br><img title="forecastTomorrow+1" style="width: 145px; height: 150px" alt="ft+1" src="http://www.met.ie/weathermaps/nat02_weather.png" /></p>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

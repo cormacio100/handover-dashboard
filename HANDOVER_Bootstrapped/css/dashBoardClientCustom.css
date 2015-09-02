@@ -23,6 +23,13 @@ h4.featureBoxSide
 
 .featureBoxSide
 {
-    border:1px solid #e7e7e7;
+    border:1px solid #4d4d4d;
     padding:0.5em;
+    background-color: #e7e7e7;
+}
+
+.featureBoxSide p
+{
+    margin-top:1em;
+
 }
