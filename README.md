@@ -7,7 +7,7 @@ The Network Operations Centre *NOC" is a central department for a Mobile Telecom
 
 ### Site Requirements to operate:
 * WAMP Installed
-* In phpmyadmin create db with handover.sql file from db_setup folder
+* In phpmyadmin create db named 'handover' Using contents of handover.sql file from db_setup folder
 
 ###	Technologies used:
 * PHP (EPIPHANY MINI-FRAMEWORK)
