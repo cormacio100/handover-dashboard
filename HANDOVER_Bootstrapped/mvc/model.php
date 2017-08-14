@@ -10,7 +10,7 @@
   * 
   * @return $authenticatedUser array containiing user details
   */ 
- function isValidUsernamePassword($userName,$userPassword)
+ function isValidUsernamePassword($userLogin,$userPassword)
  {
  	# default value
  	$authenticatedUser=array();
@@ -19,8 +19,8 @@
 	$db=new Database();
 	
 	# create query
-	$query="SELECT userFName,userSName,userCat FROM user WHERE userName='".$userName."' AND userPassword='".$userPassword."' LIMIT 1";
-	//echo $query;exit;
+	$query="SELECT userFName,userSName,userCat FROM user WHERE userLogin='".$userLogin."' AND userPassword='".$userPassword."' LIMIT 1";
+
 	$authenticatedUser=$db->getSingleRecord($query);
 	
 	# housekeeping - remove reference to object
@@ -159,8 +159,10 @@ function getUser($userId)
 	$db=new Database();
 	
 	# create a query
-	$query="SElECT * FROM user WHERE userId='".$userId."' LIMIT 1";
+	$query="SELECT * FROM user WHERE userId='".$userId."' LIMIT 1";
 	
+	//echo $query; //exit;
+
 	$userArr=$db->getSingleRecord($query);
 	
 	# housekeeping - remove reference to object
@@ -200,16 +202,20 @@ function findUserCat()
  */
  function createUser($userFName,$userSName,$userEmail,$userName,$userPasswordEncrypted,$userCat)
  {
+ 	echo 'in createUser function';
+
  	$createUser=false;	
 		
  	# create a database object	
 	$db=new Database();
 	
 	# create the query
-	$query="INSERT INTO `user` (`userId`, `userFName`, `userSName`, `userName`, `userPassword`, `userCat`, `userEmail`, `userActive`)
+	$query="INSERT INTO `user` (`userId`, `userFName`, `userSName`, `userLogin`, `userPassword`, `userCat`, `userEmail`, `userActive`)
 			VALUES(NULL,'".$userFName."','".$userSName."','".$userName."','".$userPasswordEncrypted."','".$userCat."','".$userEmail."','Yes')";
 	
 	
+
+
 	# execute query and save result to an array
 	$createUser=$db->updateRecord($query);
 	
@@ -224,7 +230,7 @@ function findUserCat()
  * @param $userId,$userFName,$userSName,$userEmail,$userName,$userPasswordEncrypted,$userCat
  * @return - boolean value depending on if value was updated
  */
- function updateUser($userId,$userFName,$userSName,$userEmail,$userName,$userPasswordEncrypted,$userCat)
+ function updateUser($userId,$userFName,$userSName,$userEmail,$userLogin,$userPasswordEncrypted,$userCat)
  {
  	$updateUser=false;	
 		
@@ -233,7 +239,7 @@ function findUserCat()
 	
 	# create the query
 	$query="UPDATE user 
-			SET userFName ='".$userFName."',userSName='".$userSName."',userName='".$userName."',userPassword='".$userPasswordEncrypted."', userCat='".$userCat."', userEmail='".$userEmail."'
+			SET userFName ='".$userFName."',userSName='".$userSName."',userLogin='".$userLogin."',userPassword='".$userPasswordEncrypted."', userCat='".$userCat."', userEmail='".$userEmail."'
 			WHERE userId='".$userId."'";
 	
 	# execute query and save result to an array
@@ -415,7 +421,8 @@ function findUserCat()
 	{
 		$query.=" LIMIT ".$start.", ".$count;
 	}
-	
+
+
 	# execute query and save result to an array
 	$incArr=$db->getMultiRecords($query);
 
@@ -473,8 +480,10 @@ function getIncRecord($incId)
 	
 	# create the query
 	$query="INSERT INTO `incident` (`incId`, `incStatus`, `incCat`, `incStartDate`, `incFinishDate`, `incRef`, `incDesc`, `incUpdatedOn`, `incDashDisplay`,`_userId`) 
-			VALUES(NULL,'".$incStatus."','".$incCat."','".$incStartDate."','NULL','".$incRef."','".$incDesc."',CURRENT_TIMESTAMP, '".$incDashDisplay."', '".$userId."')";
+			VALUES(NULL,'".$incStatus."','".$incCat."','".$incStartDate."','0000-00-00 00:00:00','".$incRef."','".$incDesc."',CURRENT_TIMESTAMP, '".$incDashDisplay."', '".$userId."')";
 	
+	//echo $query; exit;
+
 	# execute query and save result to an array
 	$incAdded=$db->updateRecord($query);
 	

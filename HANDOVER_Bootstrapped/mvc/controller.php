@@ -61,21 +61,28 @@ function loggingIn()
 	# if  this option is clicked then the user is assumed to not be logged in
 	unset($_SESSION['authenticated']);
 
+
 	# process the script only if the login button has been pressed
 	if(array_key_exists('login',$_POST))
 	{
 		# Retrieve entered login details if set
-		if(!empty($_POST['userName']))
-			$userName=filter_input(INPUT_POST, 'userName',FILTER_SANITIZE_STRING);
-		
+		if(!empty($_POST['userLogin']))
+			$userLogin=filter_input(INPUT_POST, 'userLogin',FILTER_SANITIZE_STRING);
+
 		if(isset($_POST['userPassword']))
 			$userPassword=filter_input(INPUT_POST, 'userPassword',FILTER_SANITIZE_STRING);	
 
 		# DB stored passwords include a SALT and encryption so need to do the same to values passed in for comparison		
 		$userPasswordEncrypted=md5($userPassword);
 
-		$userArr=isValidUsernamePassword($userName,$userPasswordEncrypted);
-			
+		//echo 'userLogin:'+userLogin; exit;
+
+		$userArr=isValidUsernamePassword($userLogin,$userPasswordEncrypted);
+
+		//$userArr=isValidUsernamePassword($userName,$userPassword);
+		
+		print_r($userArr);
+
 		if(!empty($userArr))
 		{
 			# save user details to SESSION
@@ -86,13 +93,13 @@ function loggingIn()
 			$_SESSION['userCat']=$userArr['userCat'];
 			
 			$userName=$userArr['userFName'].' '.$userArr['userSName'];	
-			$_SESSION['userName']=$userName;
+			$_SESSION['loggedInText']=$userName;
+			$_SESSION['userLogin']=$userLogin;
 			
 			//$loggedInText=$userName.' is logged in<br><a href="./messageDisplay?messageId=4" class="logOut">log out</a>';
             //$loggedInText=$userName
 			//$_SESSION['loggedInText']=$loggedInText;
-            $_SESSION['loggedInText']=$userName;
-	
+            
 			# allow the user access	
 			header('Location: ./messageDisplay?messageId=3');
 			exit;
@@ -387,6 +394,9 @@ function logOut()
 
 		}
 	}	
+
+
+	//echo 'location is '+$location; exit; 
 	
  	# check if page needs to be forwarded after the message is displayed
 	if($forward==true)

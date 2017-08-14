@@ -1,0 +1,374 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 14, 2017 at 02:03 AM
+-- Server version: 5.7.11
+-- PHP Version: 5.6.19
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `handover`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cr`
+--
+
+CREATE TABLE `cr` (
+  `cr_id` int(1) NOT NULL DEFAULT '0',
+  `updates` text,
+  `inc_updatedOn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cr`
+--
+
+INSERT INTO `cr` (`cr_id`, `updates`, `inc_updatedOn`) VALUES
+(0, '', '2011-09-20 17:10:26');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dashstatus`
+--
+
+CREATE TABLE `dashstatus` (
+  `id` int(11) NOT NULL,
+  `freeSms` int(11) NOT NULL,
+  `sectors` int(11) NOT NULL,
+  `netAvail2G` int(11) NOT NULL,
+  `trafVol2G` int(11) NOT NULL,
+  `netLocSuc2G` int(11) NOT NULL,
+  `netAvail3G` int(11) NOT NULL,
+  `trafVol3G` int(11) NOT NULL,
+  `voiceTraf2G` int(11) NOT NULL,
+  `callCompRate2G` int(11) NOT NULL,
+  `callSuccRate2G` int(11) NOT NULL,
+  `callCompRate3G` int(11) NOT NULL,
+  `callSuccRate3G` int(11) NOT NULL,
+  `dataVol2G` int(11) NOT NULL,
+  `edgeThru2G` int(11) NOT NULL,
+  `gprsThru2G` int(11) NOT NULL,
+  `dataVol3G` int(11) NOT NULL,
+  `pakSetSuc3G` int(11) NOT NULL,
+  `pakCompRate3G` int(11) NOT NULL,
+  `mmsCompRate` int(11) NOT NULL,
+  `smsCompRate` int(11) NOT NULL,
+  `pssVoice` varchar(10) NOT NULL,
+  `pssData` varchar(10) NOT NULL,
+  `pssMessaging` varchar(10) NOT NULL,
+  `pssRoaming` varchar(10) NOT NULL,
+  `pss2GNetwork` varchar(10) NOT NULL,
+  `pss3GNetwork` varchar(10) NOT NULL,
+  `essCustMgmnt` varchar(10) NOT NULL,
+  `essCustBill` varchar(10) NOT NULL,
+  `essServProv` varchar(10) NOT NULL,
+  `essTopUp` varchar(10) NOT NULL,
+  `essRetPos` varchar(10) NOT NULL,
+  `cssDataWareBI` varchar(10) NOT NULL,
+  `cssEmail` varchar(10) NOT NULL,
+  `cssNetwork` varchar(10) NOT NULL,
+  `cssTelePbx` varchar(10) NOT NULL,
+  `cssErpBss` varchar(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `dashstatus`
+--
+
+INSERT INTO `dashstatus` (`id`, `freeSms`, `sectors`, `netAvail2G`, `trafVol2G`, `netLocSuc2G`, `netAvail3G`, `trafVol3G`, `voiceTraf2G`, `callCompRate2G`, `callSuccRate2G`, `callCompRate3G`, `callSuccRate3G`, `dataVol2G`, `edgeThru2G`, `gprsThru2G`, `dataVol3G`, `pakSetSuc3G`, `pakCompRate3G`, `mmsCompRate`, `smsCompRate`, `pssVoice`, `pssData`, `pssMessaging`, `pssRoaming`, `pss2GNetwork`, `pss3GNetwork`, `essCustMgmnt`, `essCustBill`, `essServProv`, `essTopUp`, `essRetPos`, `cssDataWareBI`, `cssEmail`, `cssNetwork`, `cssTelePbx`, `cssErpBss`) VALUES
+(1, 57, 97, 93, 96, 57, 92, 91, 93, 95, 96, 56, 40, 446, 112, 47, 117, 46, 119, 32, 40, 'amber', 'amber', 'amber', 'green', 'green', 'amber', 'red', 'green', 'red', 'red', 'red', 'green', 'red', 'amber', 'green', 'green');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `incident`
+--
+
+CREATE TABLE `incident` (
+  `incId` int(8) NOT NULL,
+  `incStatus` text NOT NULL,
+  `incCat` text NOT NULL,
+  `incStartDate` datetime NOT NULL,
+  `incFinishDate` datetime DEFAULT NULL,
+  `incRef` int(10) DEFAULT NULL,
+  `incDesc` text NOT NULL,
+  `incUpdatedOn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `incDashDisplay` text NOT NULL,
+  `_userId` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `incident`
+--
+
+INSERT INTO `incident` (`incId`, `incStatus`, `incCat`, `incStartDate`, `incFinishDate`, `incRef`, `incDesc`, `incUpdatedOn`, `incDashDisplay`, `_userId`) VALUES
+(3647, 'Open', 'RAN', '2011-06-23 14:01:21', '2011-06-23 14:01:21', 288772, 'GSM_WH_2064 Flancare Athlone (DXU)', '2015-03-19 00:22:50', 'No', 12),
+(3648, 'Open', 'RAN', '2011-06-23 17:41:32', '2011-06-23 17:41:33', 288849, 'GSM_WW_4501_eircom Arklow have PSU and Eltek ', '2015-03-19 00:22:50', 'No', 12),
+(3649, 'Open', 'RAN', '2011-06-23 21:49:20', '2011-06-23 21:49:20', 288864, 'Edgeworthstown Hotel off air LOS on LTU on TN', '2015-03-19 00:22:50', 'No', 6),
+(3650, 'Open', 'RAN', '2011-06-23 21:51:18', '2011-06-23 21:51:18', 288860, 'Barretts farm power alarms no esb outatge', '2015-03-19 00:22:50', 'No', 6),
+(3651, 'Open', 'INTERNET', '2011-06-23 21:52:44', '2011-06-23 21:52:44', 288858, 'DISTRIBUTED GROUP SWITCH FAULT', '2015-03-19 00:22:50', 'No', 6),
+(3652, 'New', 'RAN', '2011-06-24 06:07:55', '2011-06-24 06:07:55', 288866, '4001 power issues', '2015-03-19 00:22:50', 'No', 10),
+(3653, 'Open', 'RAN', '2011-06-24 16:50:16', '2011-06-24 16:50:16', 288942, 'GSM_TY_3029_Drumroe Greenfield is off air', '2015-03-19 00:22:50', 'No', 12),
+(3654, 'Open', 'DASHDISPLAYED', '2011-06-24 17:44:00', '2011-06-24 17:44:00', 288893, 'GSM_LK_2473 Askeaton Water Tower (power)', '2015-03-19 00:20:40', 'Major-Incident', 0),
+(3655, 'Open', 'RAN', '2011-06-24 17:58:08', '2011-06-24 17:58:08', 288947, 'GSM_KY_4113_Fenit is off air ', '2015-03-19 00:22:50', 'No', 12),
+(3656, 'Resolved', 'RAN', '2011-06-28 04:35:52', '2011-06-28 04:35:52', 289140, '3 tri-band sites off air. 1035 and 1434 also', '2015-03-19 00:22:50', 'No', 4),
+(3657, 'Resolved', 'RAN', '2011-06-28 04:40:58', '2011-06-28 04:40:58', 289095, 'Hogans bar off air', '2015-03-19 00:22:50', 'No', 4),
+(3658, 'Open', 'INTERNET', '2011-06-29 06:45:42', '2011-06-29 06:45:42', 289296, 'MSC2 IO Printout Destination Fault', '2015-03-19 00:22:50', 'No', 4),
+(3659, 'Resolved', 'RAN', '2011-06-29 06:59:29', '2011-06-29 06:59:29', 289298, 'ESB outage on 2435 Ferrypoint Youghal', '2015-03-19 00:22:50', 'No', 4),
+(3660, 'Open', 'RAN', '2011-07-02 10:01:41', '2011-07-02 10:01:41', 289684, '1688-Sportsman Inn off air', '2015-03-19 00:22:50', 'No', 6),
+(3661, 'Open', 'INTERNET', '2011-07-02 15:26:26', '2011-07-02 15:26:26', 289692, 'CM performance issue', '2015-03-19 00:22:50', 'No', 6),
+(3662, 'Open', 'RAN', '2011-07-02 15:28:48', '2011-07-02 15:28:48', 0, 'ESB Loughlinstown off air DXU ordered byb MD', '2015-03-19 00:22:50', 'No', 6),
+(3663, 'Open', 'VAS', '2011-07-02 22:37:54', '2011-07-02 22:37:54', 289706, '(BGLEA02 - R3RKA02 155N001) AIS, Threshold cross ', '2017-08-14 01:52:52', 'No', 12),
+(3664, 'Resolved', 'RAN', '2011-07-03 09:24:41', '2011-07-03 09:24:41', 289716, 'Whelans Farm off air due to power outage', '2015-03-19 00:22:50', 'No', 6),
+(3665, 'Open', 'CRM', '2011-07-03 09:30:03', '2011-07-03 09:30:03', 289710, 'rtrgalwayu35 node down ', '2017-08-14 01:53:41', 'No', 6),
+(3666, 'Resolved', 'RAN', '2011-07-03 09:46:40', '2011-07-03 09:46:40', 289708, 'GSM1691-Mulhuddart Vodafone Off Air', '2015-03-19 00:22:50', 'No', 6),
+(3667, 'Open', 'RAN', '2011-07-03 14:09:02', '2011-07-03 14:09:02', 289729, 'GSM_WX_2056_Coillte Slieveboy have Hi Temp', '2015-03-19 00:22:50', 'No', 12),
+(3668, 'Open', 'RAN', '2011-07-03 14:25:54', '2011-07-03 14:25:54', 289730, 'DCS_DN_1210_Nutgrove SC radios are off air ', '2015-03-19 00:22:50', 'No', 12),
+(3669, 'Resolved', 'RAN', '2011-07-03 16:27:28', '2011-07-03 16:27:28', 289734, 'GSM_DN_1313_Pembroke CC ( radio 8, 9 )', '2015-03-19 00:22:50', 'No', 12),
+(3670, 'Open', 'RAN', '2011-07-04 15:27:18', '2011-07-04 15:27:18', 289849, 'DCS_KE_ 4471 Whitewater SC off air', '2015-03-19 00:22:50', 'No', 6),
+(3671, 'New', 'INTERNET', '2011-07-05 00:03:51', '2011-07-05 00:03:51', 289869, 'Cannot connect to NNM Maps', '2015-03-19 00:22:50', 'No', 10),
+(3672, 'Open', 'RAN', '2011-07-05 16:25:17', '2011-07-05 16:25:17', 289983, 'UMTS_MN_4260 Monaghan ESB off air', '2015-03-19 00:22:50', 'No', 6),
+(3673, 'New', 'INTERNET', '2011-07-07 04:04:57', '2011-07-07 04:04:57', 290117, 'HLR file system approaching capacity', '2015-03-19 00:22:50', 'No', 10),
+(3674, 'New', 'INTERNET', '2011-07-08 06:14:49', '2011-07-08 06:14:49', 290251, 'Roaming SMS issue', '2015-03-19 00:22:50', 'No', 10),
+(3675, 'New', 'INTERNET', '2011-07-08 06:15:10', '2011-07-08 06:15:10', 290252, 'Roaming congestion issue', '2015-03-19 00:22:50', 'No', 10),
+(3676, 'New', 'RAN', '2011-07-08 06:15:38', '2011-07-08 06:15:38', 290254, '3 x Sites off air in Donegal', '2015-03-19 00:22:50', 'No', 10),
+(3677, 'Open', 'CRM', '2011-07-11 03:35:16', '2011-07-11 03:35:16', 290446, 'CFLDA02-Churchfield (System Clock Unlocked (SET_Un', '2017-08-14 01:53:31', 'No', 12),
+(3678, 'Resolved', 'RAN', '2011-07-11 03:48:02', '2011-07-11 03:48:02', 290447, 'UMT_LK_3810_Limerick Express H3G off air', '2015-03-19 00:22:50', 'No', 12),
+(3679, 'Resolved', 'RAN', '2011-07-14 08:29:17', '2011-07-14 08:29:17', 290846, 'DCS_DN_1009_R & H Hall is off air', '2015-03-19 00:22:50', 'No', 12),
+(3680, 'Open', 'INTERNET', '2011-07-15 11:04:11', '2011-07-15 11:04:11', 290973, 'Mymeteor had to be restarted 4 times since 14/07', '2015-03-19 00:22:50', 'No', 6),
+(3681, 'Open', 'INTERNET', '2011-07-18 19:21:51', '2011-07-18 19:21:51', 291256, 'Mymeteorcms1&2 swap utlilization Santhosh aware', '2015-03-19 00:22:50', 'No', 6),
+(3682, 'Open', 'RAN', '2011-07-22 18:16:29', '2011-07-22 18:16:29', 291739, 'GSM_1204 Threerock Hockey Club high temp and psu', '2015-03-19 00:22:50', 'No', 6),
+(3683, 'Open', 'RAN', '2011-07-23 17:25:22', '2011-07-23 17:25:22', 291790, 'DCS_DN_1098 Dept of Agriculture has high temp&psu', '2015-03-19 00:22:50', 'No', 6),
+(3684, 'Open', 'RAN', '2011-07-24 12:47:07', '2011-07-24 12:47:07', 291803, 'low fuel alarm on site please notify Sean on Mon', '2015-03-19 00:22:50', 'No', 6),
+(3685, 'Open', 'RAN', '2011-07-24 12:48:26', '2011-07-24 12:48:26', 291809, 'Ballydebearna intermittent psu and eltek rectifier', '2015-03-19 00:22:50', 'No', 6),
+(3686, 'New', 'INTERNET', '2011-08-03 12:38:03', '2011-08-03 12:38:03', 0, 'Singleview issue. SMS alerts to be sent until Fri', '2015-03-19 00:22:50', 'No', 10),
+(3687, 'New', 'INTERNET', '2011-08-03 12:38:30', '2011-08-03 12:38:30', 292294, 'Issue with cross talk in VFNR area', '2015-03-19 00:22:50', 'No', 10),
+(3688, 'New', 'INTERNET', '2011-08-16 03:39:54', '2011-08-16 03:39:54', 294011, 'MSC3 SNT Fault', '2015-03-19 00:22:50', 'No', 10),
+(3689, 'New', 'INTERNET', '2011-08-16 03:43:22', '2011-08-16 03:43:22', 294012, 'MMH cannot be reached', '2015-03-19 00:22:50', 'No', 10),
+(3690, 'New', 'RAN', '2011-08-16 07:00:05', '2011-08-16 07:00:05', 294013, '1204 HS carrier off air', '2015-03-19 00:22:50', 'No', 10),
+(3691, 'New', 'RAN', '2011-08-17 21:35:26', '2011-08-17 21:35:26', 294280, '2013 B2 C1 C2 off air', '2015-03-19 00:22:50', 'No', 10),
+(3692, 'New', 'INTERNET', '2011-08-19 01:12:55', '2011-08-19 01:12:55', 294390, 'SGSN2/3 Heartbeat Failure', '2015-03-19 00:22:50', 'No', 10),
+(3693, 'New', 'INTERNET', '2011-08-19 04:54:32', '2011-08-19 04:54:32', 294393, 'MAR issues', '2015-03-19 00:22:50', 'No', 10),
+(3694, 'New', 'RAN', '2011-08-19 21:17:40', '2011-08-19 21:17:40', 294522, 'RTE Skyrne power issues', '2015-03-19 00:22:50', 'No', 10),
+(3695, 'New', 'INTERNET', '2011-08-20 00:48:31', '2011-08-20 00:48:31', 294277, 'OVO is down', '2015-03-19 00:22:50', 'No', 10),
+(3696, 'New', 'RAN', '2011-08-20 01:15:08', '2011-08-20 01:15:08', 294525, '1102 G is off air', '2015-03-19 00:22:50', 'No', 10),
+(3697, 'New', 'RAN', '2011-08-25 19:23:39', '2011-08-25 19:23:39', 4767, '2G off air', '2015-03-19 00:22:50', 'No', 10),
+(3698, 'New', 'RAN', '2011-08-26 16:49:42', '2011-08-26 16:49:42', 295226, '1503 locked', '2015-03-19 00:22:50', 'No', 10),
+(3699, 'Resolved', 'RAN', '2011-09-08 13:38:09', '2011-09-08 13:38:09', 123456, '1234 Site off air', '2015-03-19 00:22:50', 'No', 10),
+(3700, 'Resolved', 'RAN', '2011-09-08 13:40:21', '2011-09-08 13:40:21', 0, 's', '2015-03-19 00:22:50', 'No', 10),
+(3701, 'Resolved', 'RAN', '2011-09-08 13:40:35', '2011-09-08 13:40:35', 756756, '', '2015-03-19 00:22:50', 'No', 10),
+(3702, 'Open', 'RAN', '2011-09-14 18:53:34', '2011-09-14 18:53:34', 297166, '1042 off air IPRAN site', '2011-09-20 16:11:05', 'No', 10),
+(3703, 'Closed', 'RAN', '2011-09-14 18:54:07', '2011-09-14 18:54:07', 297159, '9 sites in Balbriggin off air due to LL issue', '2011-09-21 13:56:32', 'Minor Incident', 10),
+(3704, 'Resolved', 'INTERNET', '2011-09-16 14:21:50', '2011-09-16 14:21:50', 297381, 'OVO 172..... down. Ticket raised with Eircom', '2015-03-19 00:22:50', 'No', 10),
+(3705, 'Closed', 'INTERNET', '2011-09-20 20:12:18', '2011-09-20 20:12:18', 123456, 'test', '2015-03-18 09:25:44', 'No', 4),
+(3706, 'Closed', 'INTERNET', '2011-09-21 12:41:50', '2011-09-21 12:41:50', 294277, 'MSC3 RCEFILE alarms', '2015-03-18 09:25:44', 'No', 10),
+(3707, 'Closed', 'INTERNET', '2011-09-21 12:42:18', '2011-09-21 12:42:18', 297827, 'BSC24 SL fail alarms', '2015-03-18 09:25:44', 'No', 10),
+(3708, 'Closed', 'DASHDISPLAYED', '2011-09-21 16:03:03', '2015-03-19 00:11:27', 0, 'CE2457,2289,3604,3619 down. TXN being investigated', '2015-03-19 00:22:50', 'No', 0),
+(3709, 'Open', 'INTERNET', '2011-09-22 12:07:35', '2011-09-22 12:07:35', 297932, 'MSC4 SDIP 4ET155 VC12s blocked', '2015-03-18 09:25:44', 'No', 10),
+(3710, 'Closed', 'INTERNET', '2011-09-22 12:08:07', '2011-09-22 12:08:07', 297940, 'Provisioning queue over 500 SMC to monitor', '2015-03-18 09:25:44', 'No', 10),
+(3711, 'Open', 'INTERNET', '2011-09-22 12:08:43', '2011-09-22 12:08:43', 297917, 'MSC2 external alarms not clearing', '2015-03-18 09:25:44', 'No', 10),
+(3712, 'Open', 'INTERNET', '2011-09-23 12:59:05', '2011-09-23 12:59:05', 298035, 'Filespace on DUBMAILBOX 1 and 2', '2015-03-18 09:25:44', 'No', 10),
+(3713, 'Open', 'RAN', '2011-09-25 03:11:37', '2011-09-25 03:11:37', 298173, '3131 Strandhill UMTS/GSM off air.Call FOPS AM', '2011-09-27 00:57:32', 'No', 4),
+(3714, 'Open', 'INTERNET', '2011-09-25 05:48:31', '2011-09-25 05:48:31', 298174, 'MSC2 and 3 Logical Disk Space alerts', '2015-03-18 09:25:44', 'No', 4),
+(3715, 'Closed', 'RAN', '2011-09-25 06:01:38', '2011-09-25 06:01:38', 298175, '4108 / 4809 Castleisland off air--> back on air', '2011-09-26 04:56:37', 'No', 4),
+(3716, 'Open', 'RAN', '2011-09-25 06:41:26', '2011-09-25 06:41:26', 298134, '2758 DCS Patrick Street Cork is off air', '2011-09-25 04:41:26', 'No', 4),
+(3717, 'Open', 'RAN', '2011-09-25 06:43:03', '2011-09-25 06:43:03', 298145, '3645 Dublin Postal Sports Soc  UMT off air', '2011-09-26 04:56:57', 'No', 4),
+(3718, 'Open', 'RAN', '2011-09-25 06:43:41', '2011-09-25 06:43:41', 297837, 'Arklow sites taking hits. Spectrum changes no improvement.  ', '2011-09-25 10:51:02', 'No', 4),
+(3719, 'Open', 'RAN', '2011-09-25 06:45:00', '2011-09-25 06:45:00', 298165, '1123D Parnell Park GAA off air. DXU ordered', '2011-09-26 04:57:09', 'No', 4),
+(3720, 'Open', 'VAS', '2011-09-25 06:46:16', '2011-09-25 06:46:16', 298150, 'BSC21- Air Con Fault alarm - intermittent fault.', '2017-08-14 01:52:41', 'No', 4),
+(3721, 'Open', 'INTERNET', '2011-09-25 06:47:02', '2011-09-25 06:47:02', 298157, 'Clockwise Alarming that  it\'s down. It\'s not??', '2015-03-18 09:25:44', 'No', 4),
+(3722, 'Closed', 'INTERNET', '2011-09-25 06:48:05', '2011-09-25 06:48:05', 298158, 'TATA reported Netw Congestion. Eircom Investigatin', '2015-03-18 09:25:44', 'No', 4),
+(3723, 'Closed', 'RAN', '2011-09-25 09:20:29', '2011-09-25 09:20:29', 298176, '2489G Holyfr KPI B High Temp ', '2011-09-26 05:11:10', 'No', 36),
+(3724, 'Open', 'RAN', '2011-09-25 12:53:49', '2011-09-25 12:53:49', 298179, '3533 Clonmel RC . FOPS Monday AM', '2011-09-26 04:57:45', 'No', 36),
+(3725, 'Closed', 'RAN', '2011-09-25 12:57:33', '2011-09-25 12:57:33', 298178, '1330 U Rochestown Hotel KPI-A. With Mark.D FOPS', '2011-09-26 05:12:12', 'No', 36),
+(3726, 'Open', 'RAN', '2011-09-25 17:50:23', '2011-09-25 17:50:23', 298170, '4349G TRX-2 on  ESB Drogheda off air.  Reset/failed', '2011-09-26 04:58:03', 'No', 36),
+(3727, 'Open', 'RAN', '2011-09-25 17:52:30', '2011-09-25 17:52:30', 298186, '3335 Keatings Pharmacy. Constant hits on UMT', '2011-09-26 04:58:45', 'No', 36),
+(3728, 'Open', 'RAN', '2011-09-25 17:54:07', '2011-09-25 17:54:07', 298190, '4697 Drumacare KPI C off air DIP is AIS ', '2011-09-25 15:54:07', 'No', 36),
+(3729, 'Open', 'RAN', '2011-09-25 19:58:43', '2011-09-25 19:58:43', 298183, '3465 TXN issue SRAL escalate to E//', '2011-09-26 04:59:04', 'No', 15),
+(3730, 'Open', 'RAN', '2011-09-25 20:01:08', '2011-09-25 20:01:08', 298196, 'Power alarms WX_4491 HOC Site. DKealy enroute ', '2011-09-25 18:01:08', 'No', 15),
+(3731, 'Closed', 'RAN', '2011-09-16 01:33:42', '2011-09-16 01:33:42', 1234567, 'test 1 test2 test 1 test2 test 1 test2 test 1 test2 test 1 test2 test 1 test2 test 1 test2 test 1 test2 test 1 test2 test 1 test2 test 1 test2 test 1 test2 test', '2011-09-26 01:05:24', 'No', 4),
+(3732, 'Open', 'VAS', '2011-09-26 02:15:31', '2011-09-26 02:15:31', 298201, 'MED01 Filesystem utilisation at 81%', '2017-08-14 01:52:30', 'No', 4),
+(3733, 'Open', 'RAN', '2011-09-26 03:02:24', '2011-09-26 03:02:24', 298202, '2485 Kilsheehan VF Kilsheehan OML- Alert Sent', '2011-09-26 04:55:52', 'No', 4),
+(3734, 'Open', 'INTERNET', '2011-09-26 03:20:55', '2011-09-26 03:20:55', 298188, 'Problem detected with emrep@rhgrid1.intmet.ie database. JC aware', '2015-03-18 09:25:44', 'No', 4),
+(3735, 'Open', 'INTERNET', '2011-09-26 04:54:48', '2011-09-26 04:54:48', 298203, 'MSC CP AP Communication Faults', '2015-03-19 00:26:22', 'Minor-Incident', 0),
+(3736, 'Closed', 'RAN', '2011-09-26 06:22:37', '2011-09-26 06:22:37', 298204, '4207 Beechmount  Mains Failure. GSM locked. KN going to site', '2011-09-27 01:00:34', 'No', 4),
+(3737, 'Open', 'RAN', '2015-02-03 06:52:55', '2015-02-03 06:52:55', 297854, '4526 Waterford GS off air. DIP is RDI. TN Issue', '2015-03-18 09:26:24', 'No', 4),
+(3738, 'Open', 'RAN', '2015-02-03 06:55:12', '2015-02-03 06:55:12', 297853, '3705 silver springs off air. DIP is RDI. TN Issue', '2015-03-19 00:09:50', 'Major-Incident', 0),
+(3739, 'Open', 'RAN', '2015-02-06 07:00:51', '0000-00-00 00:00:00', 295517, '3674 CIE Smithsbridge Mast is off air with heartbeat fail. With 3G Rollout', '2015-03-18 09:27:21', 'No', 4),
+(3740, 'Open', 'RAN', '2015-02-26 23:04:44', '0000-00-00 00:00:00', 298295, 'UMT_DN_3353_Farmleigh Clock Tower- 3rd sector', '2015-03-18 09:27:44', 'No', 12),
+(3741, 'Open', 'VAS', '2015-02-26 23:17:46', '0000-00-00 00:00:00', 298296, 'Access to OVO 172.... down', '2017-08-14 01:52:20', 'No', 10),
+(3742, 'Open', 'RAN', '2015-02-27 00:34:38', '0000-00-00 00:00:00', 298298, 'GSM_CK_2258_Frank O\'Mahony\'s- 3rd E1 down', '2015-03-18 09:28:26', 'No', 12),
+(3743, 'Open', 'VAS', '2015-02-27 01:11:30', '0000-00-00 00:00:00', 298300, 'Clockwise login alert', '2017-08-14 01:51:56', 'No', 10),
+(3744, 'Open', 'VAS', '2015-02-27 19:43:11', '0000-00-00 00:00:00', 298296, 'OVO 172.16.32 cannot connect to server', '2017-08-14 01:52:09', 'No', 15),
+(3745, 'Open', 'RAN', '2015-02-28 02:02:40', '0000-00-00 00:00:00', 298405, 'GSM_KY_2412_Knockanore- TRX 8,9', '2015-03-18 09:29:11', 'No', 12),
+(3746, 'Open', 'RAN', '2015-02-28 04:26:42', '0000-00-00 00:00:00', 298543, '4108 / 4809 Castleisland off air', '2015-03-19 00:14:53', 'Major-Incident', 0),
+(3747, 'Open', 'DASHDISPLAYED', '2015-02-28 04:29:53', '0000-00-00 00:00:00', 297873, '2050 & 4469 Taking Hits / Sites Locked', '2015-03-19 00:57:13', 'No', 0),
+(3748, 'Open', 'INTERNET', '2015-03-18 10:50:39', '0000-00-00 00:00:00', 12933, 'Internet test', '2015-03-18 09:50:39', 'Major-Incident', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ongoingcr`
+--
+
+CREATE TABLE `ongoingcr` (
+  `crId` int(11) NOT NULL,
+  `crDesc` varchar(1000) NOT NULL,
+  `crDashDisplay` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ongoingcr`
+--
+
+INSERT INTO `ongoingcr` (`crId`, `crDesc`, `crDashDisplay`) VALUES
+(1, '0', 'No');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ticker`
+--
+
+CREATE TABLE `ticker` (
+  `tickerDisplay` varchar(5) NOT NULL DEFAULT 'yes',
+  `tickerDesc` varchar(190) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ticker`
+--
+
+INSERT INTO `ticker` (`tickerDisplay`, `tickerDesc`) VALUES
+('yes', 'scrolling ticker');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `userId` int(11) NOT NULL,
+  `userFName` varchar(20) NOT NULL,
+  `userSName` varchar(20) NOT NULL,
+  `userLogin` varchar(20) NOT NULL,
+  `userPassword` varchar(50) NOT NULL,
+  `userCat` varchar(10) NOT NULL DEFAULT 'general',
+  `userEmail` varchar(30) NOT NULL,
+  `userActive` varchar(5) NOT NULL DEFAULT 'Yes'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`userId`, `userFName`, `userSName`, `userLogin`, `userPassword`, `userCat`, `userEmail`, `userActive`) VALUES
+(4, 'Cormac', 'Liston', 'cliston', 'fae3c9ed5e3988be63150bff73a32e9a', 'admin', 'cormac.liston@gmail.com', 'yes'),
+(8, 'Silvia', 'Alvarez', 'salvarez', '6f08220be522d3b29bb78958dce000e3', 'admin', 'cormac.liston@gmail.com', 'yes'),
+(6, 'Alicja', 'Sielecka', 'asielecka', 'dc00875d5ec47a4115eacf7b67195ab2', 'admin', 'cormac.liston@gmail.com', 'yes'),
+(7, 'Darragh', 'Killeen2', 'dkilleen', 'a2e7625f43', 'general', 'cormac.liston@gmail.com', 'no'),
+(9, 'Declan', 'McNamara', 'dmcnamara', 'password1', 'admin', 'cormac.liston@gmail.com', 'no'),
+(10, 'Justin', 'Donovan', 'jdonovan', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(11, 'Brian', 'Lawlor', 'blawlor', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(12, 'Talal', 'Tariq', 'ttariq', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(13, 'John', 'Doyle', 'jdoyle', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(14, 'Peter', 'Sherry', 'psherry', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(15, 'Christina', 'Offutt', 'coffutt', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(16, 'John Paul', 'Tuohy', 'jptuohy', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(17, 'Asim', 'Muhammad', 'amuhammad', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(18, 'Brendan', 'Farrell', 'bfarrell', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(19, 'John', 'Kerr', 'jkerr', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(20, 'Adeyemi', 'Okeshola', 'aokeshola', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(21, 'Paul', 'Gray', 'pgray', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(22, 'Daniel', 'Sweeney', 'dsweeney', '83f41c80d88aa3bd4202d77212f349c2', 'general', 'cormac.liston@gmail.com', 'yes'),
+(23, 'Sam', 'McCarthy', 'smccarthy', 'a1fbf86c3627adb9ef2e4245658ff9e0', 'general', 'cormac.liston@gmail.com', 'yes'),
+(24, 'Noel', 'Spillane', 'nspillane', 'faeb99f3e00fe6ebc289c2b9679b1c66', 'general', 'cormac.liston@gmail.com', 'yes'),
+(25, 'Michael', 'Gallagher', 'mgallagher', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(26, 'Robert', 'Gleeson', 'rgleeson', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(27, 'Ciara', 'Cassidy', 'ccassidy', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(28, 'Ronan', 'Henry', 'rhenry', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(29, 'George', 'Corcoran', 'gcorcoran', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(30, 'Richard', 'O\'Reilly', 'roreilly', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(31, 'Matthew', 'Butler', 'mbutler', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(32, 'Graham', 'Jones', 'gjones', 'b2c57e319094d861b4699fbcd626e65f', 'general', 'cormac.liston@gmail.com', 'yes'),
+(33, 'Kevin ', 'Bayliss', 'kbayliss', 'e2f8263a711ad47df0e0dd6f2af45a37', 'general', 'cormac.liston@gmail.com', 'yes'),
+(34, 'Ivor', 'Reynolds', 'ireynolds', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(35, 'Marek', 'Hajnce', 'mhajnce', '0304004549fa8bb134c92abff751fbe5', 'general', 'cormac.liston@gmail.com', 'yes'),
+(36, 'David', 'Ryall', 'dryall', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(37, 'David', 'Flynn', 'dflynn', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(38, 'Martin', 'McCormack', 'mmccormack', 'password', 'general', 'cormac.liston@gmail.com', 'no'),
+(41, 'luhven', 'Echenique', 'lechenique', '440d40c5ceb7bfdfccb0d16051cb48dd', 'general', 'luhvenechenique@gmail.com', 'No'),
+(42, 'luhven', 'Echenique', 'lechenique', '03f740053d186ece0793a0b3e2e734a5', 'general', 'luhvenechenique@gmail.com', 'Yes'),
+(43, 'bertie', 'Wooster', 'bwooster', 'f8773f695d3b0e7f7f44669ab0d8bf8b', 'admin', 'cccd@meteor.ie', 'no'),
+(44, 'Daley', 'Thompson', 'genUser1', 'bac33f83f882ed4edb6630926cc6d14b', 'general', 'cccd@meteor.ie', 'no'),
+(45, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'cormac.liston@gmail.com', 'Yes'),
+(46, 'Luhven', 'Echenique', 'lechenique', '03f740053d186ece0793a0b3e2e734a5', 'general', 'cormac.liston@gmail.com', 'No');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `dashstatus`
+--
+ALTER TABLE `dashstatus`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `incident`
+--
+ALTER TABLE `incident`
+  ADD PRIMARY KEY (`incId`),
+  ADD KEY `fkUserId` (`_userId`);
+
+--
+-- Indexes for table `ongoingcr`
+--
+ALTER TABLE `ongoingcr`
+  ADD PRIMARY KEY (`crId`);
+
+--
+-- Indexes for table `ticker`
+--
+ALTER TABLE `ticker`
+  ADD PRIMARY KEY (`tickerDesc`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`userId`),
+  ADD UNIQUE KEY `user_id` (`userId`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `incident`
+--
+ALTER TABLE `incident`
+  MODIFY `incId` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3749;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

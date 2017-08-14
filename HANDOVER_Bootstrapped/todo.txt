@@ -1,0 +1,4 @@
+-	Creation of new incidents failing as incFinishDate is in wrong format in  function addIncident of model.php
+-	Styling for Log out needs to be fixed
+-	Authorised access to all pages needs to be checked
+-	Dashboard client needs to be finished

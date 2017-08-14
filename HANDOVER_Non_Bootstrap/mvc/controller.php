@@ -55,6 +55,9 @@ function login()
 
 		$userArr=isValidUsernamePassword($userLogin,$userPassword);//Encrypted);
 			
+		print_r($userArr); exit;
+
+
 		if(!empty($userArr))
 		{
 			# save user details to SESSION

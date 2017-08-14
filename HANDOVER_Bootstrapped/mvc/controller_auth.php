@@ -109,7 +109,7 @@ function authIncident()
 		exit;
 	}
 	
-	# get the total number of incidents of type RAN
+	# get the total number of incidents the type 
 	$totalRecords=sizeof(getIncRecordArr($searchParam));
 	
 	# check what values have been passed in by Pager links to see if start and count limit have changed
@@ -977,7 +977,10 @@ function authUserCreated()
 		if(isset($_POST['userCat']))
 			$userCat=filter_input(INPUT_POST,'userCat',FILTER_SANITIZE_STRING);
 
-		# update the database and check if successful
+		echo 'before createUser';
+
+		# 	update the database and check if successful
+		#	see model.php
 		$created=createUser($userFName,$userSName,$userEmail,$userLogin,$userPasswordEncrypted,$userCat);
 		
 		if($created)
@@ -1141,6 +1144,7 @@ function authEditUser()
 	}
 
 	# retrieve the user details
+	# see model.php
 	$userArr = getUser($userId);
 
 	//$userName='Edit User: '.$userArr['userFName'].' '.$userArr['userSName'];

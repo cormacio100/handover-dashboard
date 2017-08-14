@@ -23,7 +23,7 @@ define("DB_HOST","localhost");
 #	LOCALHOST (DESKTOP) USERNAME AND PASSWORD
 #######################################
 define("DB_USER","root");
-define("DB_PASSWORD", "");
+define("DB_PASSWORD", "root");
 
 # DATABASE
 define("DB_DATABASE","handover");
