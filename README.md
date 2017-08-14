@@ -6,7 +6,8 @@
 The Network Operations Centre *NOC" is a central department for a Mobile Telecoms Company operated on a 24-7 basis. This app allows each team in the NOC to record relevant incidents and to hand them over to the person on the next shift for their team. This app also allows users to post relevent incidents onto a Dashboard webpage if Major Incidents occur. The Dashboard would be accessible company-wide. The app also allows users to portray the current health of the network as well as daily statistics on the Dashboard
 
 ### Site Requirements to operate:
-WAMP Installed
+* WAMP Installed
+* In phpmyadmin create db with handover.sql file from db_setup folder
 
 ###	Technologies used:
 * PHP (EPIPHANY MINI-FRAMEWORK)
