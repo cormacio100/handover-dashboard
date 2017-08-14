@@ -9,20 +9,20 @@ The Network Operations Centre *NOC" is a central department for a Mobile Telecom
 WAMP Installed
 
 ###	Technologies used:
-PHP (EPIPHANY MINI-FRAMEWORK)
-MYSQL
-JQUERY
-CSS
-HTML
-BOOTSTRAP
+* PHP (EPIPHANY MINI-FRAMEWORK)
+* MYSQL
+* JQUERY
+* CSS
+* HTML
+* BOOTSTRAP
 
 ###	Logins
-Database: root/root
-App: admin/admin
+* Database: root/root
+* App: admin/admin
 
 ### Status of Project
 Unfinished - In Progress
 
 ### Versions
-There are 2 versions of the Handover App
+There are 2 versions of the Handover App. 
 The newer version uses Bootstrap
